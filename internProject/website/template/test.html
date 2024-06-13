@@ -7,6 +7,18 @@
     <script type="text/javascript" src="{{url_for('static', filename='scripts/test.js')}}"></script>
 </head>
 <body>
+    <div class="nav-container">
+        <nav>
+            <ul class="desktop-nav">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('account') }}">Account</a></li>
+                <li><a href="{{ url_for('test') }}">Test</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="wrapper">
         <div class="container">
             <input type="radio" name="slide" id="c1" checked>
