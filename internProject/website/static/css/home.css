@@ -157,13 +157,11 @@ nav .desktop-nav li a:hover{
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
-      background-color: transparent;
+  width: 12px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background-color: transparent;
 }
 
 /* Handle */

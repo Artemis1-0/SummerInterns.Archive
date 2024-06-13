@@ -148,3 +148,26 @@ h1 {
     color: white;
     background-color: #333;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(#134074, #183960);
+  border-radius: 5px;
+  opacity: 0.3;
+  transition: opacity 400ms;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(#183960, #102544);
+  opacity: 1;
+}
