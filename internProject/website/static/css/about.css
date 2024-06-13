@@ -10,10 +10,12 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Etihad_Stadium.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: rgb(20, 20, 20);
+    display: grid;
+    height: 100vh;
+    margin: opx;
+    padding: 0px;
+    place-items: center;
 }
 
 /* Header styles */
@@ -107,48 +109,6 @@ h1 {
     opacity: 1;
 }
 
-.text {
-    background-color: #04AA6D;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-}
-
-.tab {
-    overflow: hidden;
-    border: 1px solid #333;
-    background-color: #333;
-}
-
-.tab button {
-    background-color: #333;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-    color: white;
-}
-
-.tab button:hover {
-    background-color: #111;
-}
-
-.tab button.active {
-    background-color: #ccc;
-}
-
-.tabcontent {
-    display: none;
-    padding: 7px 4px;
-    border: 2px solid #333;
-    border-top: none;
-    color: white;
-    background-color: #333;
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 12px;
@@ -170,4 +130,39 @@ h1 {
 ::-webkit-scrollbar-thumb:hover {
     background-image: linear-gradient(#183960, #102544);
   opacity: 1;
+}
+
+.card {
+    background-color: rgb(30, 30, 30);
+    border-radius: 10px;
+    height: 250px;
+    position: relative;
+    width: 400px;
+}
+
+.card-content {
+    background-color: rgb(30, 30, 30);
+    border-radius: inherit;
+    inset: 1px;
+    position: absolute;
+}
+
+.card:hover:before {
+    opacity: 1;
+    transparent: 400ms;
+}
+
+.card:before {
+    background: linear-gradient(
+        45deg,
+        transparent 5%,
+        rgb(255, 215, 137) 50%,
+        transparent 99%
+    );
+    border-radius: inherit;
+    content: "";
+    inset: 0px;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
 }
