@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+ <div class="nav-container">
+        <nav>
+            <ul class="desktop-nav">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('account') }}">Account</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1>About us</h1>
+
+    <div class="container">
+        <div class="middle">
+            <div class="text">About Us Information</div>
+        </div>
+    </div>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Pitch1')">Pitch 1</button>
+        <button class="tablinks" onclick="openTab(event, 'Pitch2')">Pitch 2</button>
+        <button class="tablinks" onclick="openTab(event, 'Pitch3')">Pitch 3</button>
+    </div>
+
+    <div id="Pitch1" class="tabcontent">
+        <h3>Pitch 1</h3>
+        <p>This pitch is a football pitch with floodlights that have solar sensors, that automatically turn on during late training sessions. The clubhouse can be added for an extra price but much of the equipment is locked away. You can add many amenities such as a dressing room, and gym for and extra price</p>
+        <p>Price: Є40</p>
+    </div>
+
+    <div id="Pitch2" class="tabcontent">
+        <h3>Pitch 2</h3>
+        <p>This pitch is a gaelic pitch which includes a clubhouse that has lots of different pieces of training equipment, such as; gaelic footballs, cones, bibs, etc. There is a first aid station, that is well equipped with a first aid bag and a physio table, however staff are not provided.</p>
+        <p>Price: Є50</p>
+    </div>
+
+    <div id="Pitch3" class="tabcontent">
+        <h3>Pitch 3</h3>
+        <p>This pitch has grand stands for fans, and includes and entrance area with a ticket sales area. There is also facilities for food production however staff are not supplied. This pitch can be used for a variety of sports events as we have basketball courts, gaelic goals, football goals, tennis court, and rugby goals that can be added to the pitch. The stands have a capacity for 1300, and have many accessibility features for people's every need. There are ramps for wheelchairs and special seats for easy access.</p>
+        <p>Price: Є120/Hour</p>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

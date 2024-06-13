@@ -1,0 +1,161 @@
+*,*::after,*::before { margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b8/Etihad_Stadium.jpg");
+
+}
+
+.nav-container{
+    background: rgba(0, 0, 0, 0.8);
+    height: 44px;
+    z-index: 300;
+    position: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.nav-container nav{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 8px;
+    height: 100%;
+    list-style: none;
+}
+
+nav .desktop-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+}
+
+nav .desktop-nav li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 400ms
+    list-style: none;
+}
+
+nav .desktop-nav li a:hover{
+    opacity: 1;
+}
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.banner {
+    text-align: center;
+    padding: 50px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner h1 {
+    margin: 20px 0;
+    font-size: 36px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+.contact-form, .contact-info, .social-media {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.contact-info h2, .social-media h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info address {
+    font-style: normal;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #4CAF50;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account login/sign up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/account.css') }}">
+        <script src="script.js"></script>
+</head>
+        <style>
+            body {
+                background-image: url("{{ url_for('static', filename='/media/madrid-santiago.jpg') }}")
+            }
+        </style>
+<test></test>
+    <body class="account-page">
+    <div class="nav-container">
+    <nav>
+        <ul class="desktop-nav">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('booking') }}">Booking</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('account') }}">Account</a></li>
+        </ul>
+    </nav>
+</div>
+    <div></div>
+<div id="accountform">
+    <form class="container">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password1">Password</label>
+        <input type="password" id="password1" name="password1" required><br>
+
+        <label for="password2">Confirm Password</label>
+        <input type="password" id="password2" name="password2" required><br>
+
+        <button type="submit" class="button-group" id="submit_account" onclick="doConfirm();">Submit</button>
+    </form>
+</div>
+
+<!-- Remember to also copy the code in the CSS area! -->
+<div id="snow" class="snowflakes" style="display: none;">
+  <!-- add your 'snowflake' images below - you can add more or less if needed -->
+  <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+  <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+   <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+  <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+  <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+</div>
+</div>
+</body>
+</html>
