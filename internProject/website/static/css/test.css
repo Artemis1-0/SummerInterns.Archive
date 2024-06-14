@@ -17,6 +17,12 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+@media(prefers-reduced-motion) {
+    .title-text {
+        transition: none;
+    }
+}
+
 h1 {
     pointer-events: none;
     font-size: 10rem;
@@ -27,6 +33,7 @@ h1 {
 }
 
 .title-text {
+    pointer-events: none;
     animation: fade ease-in 1s;
 }
 
