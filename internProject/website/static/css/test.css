@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* General styles */
 body {
     background-color: #eeeeea;
@@ -13,6 +15,13 @@ body {
     padding: 0;
     background-size: cover;
     font-family: "Roboto", sans-serif;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
 }
 
 /* Header styles */

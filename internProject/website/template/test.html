@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/test.css') }}">
-    <script type="text/javascript" src="{{url_for('static', filename='scripts/test.js')}}"></script>
+    <script type="text/javascript" defer src="{{url_for('static', filename='scripts/test.js')}}"></script>
 </head>
 <body>
     <div class="nav-container">
@@ -19,6 +19,30 @@
             </ul>
         </nav>
     </div>
+    <section class="hidden">
+        <h1>About us</h1>
+    </section>
+
+    <section class="hidden">
+        <h2>Loreum Ipsum</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sapien eros, laoreet ac condimentum sit amet, finibus vitae leo. Aenean iaculis nisi in vehicula volutpat.
+            Aliquam non dignissim velit, in rutrum quam. Nulla facilisi. Vivamus sollicitudin tempor augue, nec semper eros efficitur vitae. Cras sollicitudin, ex vel fermentum egestas, tortor eros semper metus, quis feugiat ligula felis scelerisque tortor.
+            Cras tincidunt dolor non molestie finibus. Sed consectetur in sem quis accumsan. Nam vehicula mattis enim, non tempus diam tincidunt quis. Proin malesuada nisl at ante dapibus venenatis. Pellentesque arcu metus, tempus non nunc et, condimentum suscipit enim.
+            Vivamus convallis justo risus, et lacinia justo pulvinar a. Etiam faucibus imperdiet lectus eu congue. Maecenas ac condimentum velit. Donec condimentum velit in pretium sagittis. Pellentesque justo ex, interdum sit amet sem vel, laoreet lacinia odio.
+        </p>
+    </section>
+
+    <section class="hidden">
+        <h2>Loreum Ipsum</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sapien eros, laoreet ac condimentum sit amet, finibus vitae leo. Aenean iaculis nisi in vehicula volutpat.
+            Aliquam non dignissim velit, in rutrum quam. Nulla facilisi. Vivamus sollicitudin tempor augue, nec semper eros efficitur vitae. Cras sollicitudin, ex vel fermentum egestas, tortor eros semper metus, quis feugiat ligula felis scelerisque tortor.
+            Cras tincidunt dolor non molestie finibus. Sed consectetur in sem quis accumsan. Nam vehicula mattis enim, non tempus diam tincidunt quis. Proin malesuada nisl at ante dapibus venenatis. Pellentesque arcu metus, tempus non nunc et, condimentum suscipit enim.
+            Vivamus convallis justo risus, et lacinia justo pulvinar a. Etiam faucibus imperdiet lectus eu congue. Maecenas ac condimentum velit. Donec condimentum velit in pretium sagittis. Pellentesque justo ex, interdum sit amet sem vel, laoreet lacinia odio.
+        </p>
+    </section>
+
     <div class="wrapper">
         <div class="container">
             <input type="radio" name="slide" id="c1" checked>
