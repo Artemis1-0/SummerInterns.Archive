@@ -10,10 +10,9 @@
 
 /* General styles */
 body {
-    background-color: #eeeeea;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b8/Etihad_Stadium.jpg");
     margin: 0;
     padding: 0;
-    background-size: cover;
     font-family: "Roboto", sans-serif;
 }
 
@@ -45,6 +44,7 @@ h2 {
     animation: fade 3s linear;
     animation-timeline: view();
     animation-range: entry 20% cover 50%;
+    text-align: center
 }
 
 p {
@@ -162,6 +162,64 @@ nav .desktop-nav li a:hover{
     opacity: 1;
 }
 
+/* Media Queries */
+@media (max-width: 1100px) {
+    .nav-container nav {
+        width: 100%
+        padding: 0 32px;
+    }
+}
+
+.main {
+    background-color: #eeeeea;
+}
+
+.image-text {
+    position: relative;
+    z-index: 10;
+}
+
+.text {
+    color: white;
+    background-image: linear-gradient(#183960, #102544);
+    z-index: 10;
+    position: relative;
+}
+
+.image {
+  position: absolute;
+  border-radius: 10%;
+}
+
+.images {
+  position: relative;
+  height: 270px;
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.image-1 {
+      height: 250px;
+  width: 350px;
+  top: -90px;
+  left: -120px;
+    background-image: url('../media/pitch1.jpg');
+    background-size: 350px;
+    object-fit: contain;
+    z-index: -10;
+}
+.image-2 {
+  height: 333.5px;
+  width: 500px;
+  bottom: -90px;
+  right: -90px;
+    background-image: url('../media/soccer_pitch.jpg');
+    background-size: 500px;
+    object-fit: contain;
+    z-index: -30;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -187,7 +245,7 @@ nav .desktop-nav li a:hover{
     justify-content: start;
 }
 
-.card {
+.card-radio {
     width: 80px;
     border-radius: .75rem;
     background-size: cover;
@@ -201,13 +259,13 @@ nav .desktop-nav li a:hover{
     box-shadow: 0 10px 10px -10px rgba(0,0,0,0.8);
 }
 
-.card > .row {
+.card-radio > .row {
     color: white;
     display: flex;
     flex-wrap: nowrap;
 }
 
-.card > .row > .icon {
+.card-radio > .row > .icon {
     background: #223;
     color: white;
     border-radius: 50%;
@@ -218,7 +276,7 @@ nav .desktop-nav li a:hover{
     margin: 15px;
 }
 
-.card > .row > .description {
+.card-radio > .row > .description {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -230,6 +288,7 @@ nav .desktop-nav li a:hover{
     transition-delay: .3s;
     transition: all .3s ease;
 }
+
 .description p {
     color: #b0b0ba;
     padding-top: 5px;
@@ -252,22 +311,22 @@ input:checked + label .description {
     transform: translateY(0) !important;
 }
 
-.card[for="c1"] {
+.card-radio[for="c1"] {
     background-image: url('../media/pitch1.jpg');
     object-fit: cover;
 }
 
-.card[for="c2"] {
+.card-radio[for="c2"] {
     background-image: url('../media/pitch2.webp');
     object-fit: cover;
 }
 
-.card[for="c3"] {
+.card-radio[for="c3"] {
     background-image: url('../media/pitch3.jpg');
     object-fit: cover;
 }
 
-.card[for="c4"] {
+.card-radio[for="c4"] {
     background-image: url('../media/soccer_ball.jpg');
     object-fit: cover;
 }
