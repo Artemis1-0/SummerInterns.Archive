@@ -7,6 +7,7 @@
     <script type="text/javascript" defer src="{{url_for('static', filename='scripts/test.js')}}"></script>
 </head>
 <body>
+<div class="content">
     <div class="nav-container">
         <nav>
             <ul class="desktop-nav">
@@ -19,29 +20,56 @@
             </ul>
         </nav>
     </div>
-    <section class="hidden">
-        <h1>About us</h1>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Go Back Up</button>
+    <section>
+        <h1>Sports</h1>
+        <p class="title-text">It's a wonderful thing</p>
     </section>
 
     <section class="hidden">
-        <h2>Loreum Ipsum</h2>
+        <h2>But to do wonderful things, you need wonderful tools</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sapien eros, laoreet ac condimentum sit amet, finibus vitae leo. Aenean iaculis nisi in vehicula volutpat.
-            Aliquam non dignissim velit, in rutrum quam. Nulla facilisi. Vivamus sollicitudin tempor augue, nec semper eros efficitur vitae. Cras sollicitudin, ex vel fermentum egestas, tortor eros semper metus, quis feugiat ligula felis scelerisque tortor.
-            Cras tincidunt dolor non molestie finibus. Sed consectetur in sem quis accumsan. Nam vehicula mattis enim, non tempus diam tincidunt quis. Proin malesuada nisl at ante dapibus venenatis. Pellentesque arcu metus, tempus non nunc et, condimentum suscipit enim.
-            Vivamus convallis justo risus, et lacinia justo pulvinar a. Etiam faucibus imperdiet lectus eu congue. Maecenas ac condimentum velit. Donec condimentum velit in pretium sagittis. Pellentesque justo ex, interdum sit amet sem vel, laoreet lacinia odio.
+            That's where we come in.
         </p>
     </section>
 
     <section class="hidden">
-        <h2>Loreum Ipsum</h2>
+        <h2>At Nexus</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sapien eros, laoreet ac condimentum sit amet, finibus vitae leo. Aenean iaculis nisi in vehicula volutpat.
-            Aliquam non dignissim velit, in rutrum quam. Nulla facilisi. Vivamus sollicitudin tempor augue, nec semper eros efficitur vitae. Cras sollicitudin, ex vel fermentum egestas, tortor eros semper metus, quis feugiat ligula felis scelerisque tortor.
-            Cras tincidunt dolor non molestie finibus. Sed consectetur in sem quis accumsan. Nam vehicula mattis enim, non tempus diam tincidunt quis. Proin malesuada nisl at ante dapibus venenatis. Pellentesque arcu metus, tempus non nunc et, condimentum suscipit enim.
-            Vivamus convallis justo risus, et lacinia justo pulvinar a. Etiam faucibus imperdiet lectus eu congue. Maecenas ac condimentum velit. Donec condimentum velit in pretium sagittis. Pellentesque justo ex, interdum sit amet sem vel, laoreet lacinia odio.
+            We believe that you should play the sports you want, with the best possible tools for it,
+            be it equipment, personnel or venues.
         </p>
     </section>
+
+    <section class="hidden">
+        <p>
+            That's why you work with us, because we have the ability to get it done.
+        </p>
+    </section>
+
+    <section class="hidden">
+        <h2><a href="{{ url_for('booking') }}">Book Now!</a></h2>
+    </section>
+
+    <section class="carousel-des">
+        <h2>What we can do</h2>
+        <p>
+            We have some of the best venues and facilities available.
+        </p>
+    </section>
+
+<div class="container">
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
 
     <div class="wrapper">
         <div class="container">
@@ -87,5 +115,6 @@
             </label>
         </div>
     </div>
+</div>
 </body>
 </html>

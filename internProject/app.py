@@ -66,6 +66,10 @@ def account():
 def test():
     return render_template('test.html')
 
+@app.route('/falling')
+def falling():
+    return render_template('falling.html')
+
 
 # Define the route to handle form submission for entering a submission
 @app.route('/booking', methods=['POST'])
