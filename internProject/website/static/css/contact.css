@@ -159,3 +159,23 @@ footer {
     color: white;
     margin-top: 20px;
 }
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #333;
+    background-color: #333;
+}
