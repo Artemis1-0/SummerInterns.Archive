@@ -93,10 +93,6 @@ nav .desktop-nav li a:hover{
 
 @import "compass/css3";
 
-body, canvas {
-		background:red;
-		color:white;
-	}
 
 	.canvas-holder {
     	display:block;
