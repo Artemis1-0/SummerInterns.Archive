@@ -46,7 +46,7 @@ h2 {
     -webkit-text-fill-color: transparent;
     animation: fade 3s linear;
     animation-timeline: view();
-    animation-range: entry 20% cover 90%;
+    animation-range: entry 20% cover 70%;
     text-align: center
 }
 
@@ -54,7 +54,7 @@ p {
     font-size: 2rem;
     animation: fade 3s linear;
     animation-timeline: view();
-    animation-range: entry 20% cover 50%;
+    animation-range: entry 20% cover 90%;
     text-align: center
 }
 
@@ -74,11 +74,21 @@ section {
     padding: 30px;
 }
 
-.text {
+.second {
     display: grid;
     place-items: center;
     align-content: center;
     min-height: 100vh;
+    padding: 30px;
+}
+
+.third {
+    background-image: linear-gradient(#183960, #102544);
+    color: white;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 110vh;
     padding: 30px;
 }
 
@@ -100,12 +110,15 @@ section {
     }
 }
 
-.container {
+.new-carousel {
+    animation: fade 3s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 10%;
   overflow: auto;
   display: flex;
   scroll-snap-type: x mandatory;
     gap: 10px;
-    padding-left: 10px;
+    padding: 10px;
 }
 
 .box {
@@ -200,44 +213,13 @@ nav .desktop-nav li a:hover{
 }
 
 .text {
+    display: grid;
+    place-items: center;
+    align-content: center;
     color: white;
     background-image: linear-gradient(#183960, #102544);
     z-index: 10;
     position: relative;
-}
-
-.image {
-  position: absolute;
-  border-radius: 10%;
-}
-
-.images {
-  position: relative;
-  height: 270px;
-  width: 450px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.image-1 {
-      height: 250px;
-  width: 350px;
-  top: -90px;
-  left: -120px;
-    background-image: url('../media/pitch1.jpg');
-    background-size: 350px;
-    object-fit: contain;
-    z-index: -10;
-}
-.image-2 {
-  height: 333.5px;
-  width: 500px;
-  bottom: -90px;
-  right: -90px;
-    background-image: url('../media/soccer_pitch.jpg');
-    background-size: 500px;
-    object-fit: contain;
-    z-index: -30;
 }
 
 * {
@@ -372,4 +354,15 @@ input:checked + label .description {
 ::-webkit-scrollbar-thumb:hover {
     background-image: linear-gradient(#183960, #102544);
   opacity: 1;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }

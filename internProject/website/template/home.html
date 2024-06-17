@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home - Football Pitch Booking</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
-    <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/test.css') }}">
+    <script type="text/javascript" defer src="{{url_for('static', filename='scripts/test.js')}}"></script>
 </head>
 <body>
+<div class="content">
     <div class="nav-container">
         <nav>
             <ul class="desktop-nav">
@@ -17,64 +17,69 @@
                 <li><a href="{{ url_for('about') }}">About</a></li>
                 <li><a href="{{ url_for('account') }}">Account</a></li>
                 <li><a href="{{ url_for('test') }}">Test</a></li>
-                <li><a href="{{ url_for('falling') }}">Falling</a></li>
             </ul>
         </nav>
     </div>
-    <div class="slideshow-container">
-         <div class="mySlides fade">
-            <div class="card">
-                <div class="card-content">
-                <div class="numbertext">1 / 3</div>
-                <img src="{{ url_for('static', filename='media/pitch1.jpg') }}" style="width:100%">
-                <div class="text">Book Your Pitch Today!</div>
-                </div>
-            </div>
-        </div>
-
-
-         <div class="mySlides fade">
-            <div class="card">
-                <div class="card-content">
-                <div class="numbertext">2 / 3</div>
-                <img src="{{ url_for('static', filename='media/pitch2.webp') }}" style="width:100%">
-                <div class="text">Quality Equipment Available</div>
-                </div>
-            </div>
-        </div>
-
-         <div class="mySlides fade">
-            <div class="card">
-                <div class="card-content">
-                <div class="numbertext">3 / 3</div>
-                <img src="{{ url_for('static', filename='media/pitch3.jpg') }}">
-                <div class="text">Join Our Community</div>
-                </div>
-            </div>
-        </div>
-                <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-</div>
-
-
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-
-    <!-- Welcome section -->
-    <section class="welcome">
-        <h1>Welcome to Our Football Pitch Booking Site</h1>
-        <p>We provide the best football pitches for you and your team. Book a pitch online quickly and easily.</p>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Go Back Up</button>
+    <section>
+        <h1>Sports</h1>
+        <p class="title-text">It's a wonderful thing</p>
     </section>
 
-    <!-- Footer -->
+    <div class="main">
+    <section class="first">
+        <h2>But to do wonderful things, you need wonderful tools</h2>
+        <p>
+            That's where we come in.
+        </p>
+    </section>
+
+    <div class="second">
+        <h2>At Nexus</h2>
+        <p>
+            We believe that you should play the sports you want, with the best possible tools for it,
+            be it equipment, personnel or venues.
+        </p>
+    </div>
+
+    <div class="third">
+        <p>
+            That's why you work with us, because we have the ability to get it done.
+        </p>
+        <img src="{{ url_for('static', filename='media/ericsson-logo.png') }}">
+    </div>
+
+    <section class="hidden">
+        <h2><a href="{{ url_for('booking') }}">Book Now!</a></h2>
+    </section>
+
+    <div class="new-carousel">
+      <div class="box">
+        <img src="{{ url_for('static', filename='media/pitch1.jpg') }}" style="width:100%">
+        <div class="text">Book Your Pitch Today!</div>
+      </div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <section class="carousel-des">
+        <h2>What we can do</h2>
+        <p>
+            We have some of the best venues and facilities available.
+        </p>
+    </section>
+</div>
     <footer>
+
         <p>&copy; 2024 Football Pitch Booking. All rights reserved.</p>
     </footer>
+</div>
 </body>
 </html>
