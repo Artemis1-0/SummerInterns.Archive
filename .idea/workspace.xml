@@ -10,7 +10,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_22_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_22_03__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internProject/website/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/template/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/static/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/template/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/contact.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

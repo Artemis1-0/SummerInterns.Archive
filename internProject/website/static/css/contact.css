@@ -1,11 +1,17 @@
-*,*::after,*::before { margin: 0; padding: 0; box-sizing: border-box;}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
+    background-image: url("https://germinalamenity.com/media/ggb/wp/wp-content/uploads/2022/12/Football-pitch-maintenance-Stirling-Albion-2.webp");
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b8/Etihad_Stadium.jpg");
 
 }
 
@@ -50,7 +56,8 @@ nav .desktop-nav li a:hover{
 
 
 .container {
-    width: 80%;
+    text-align: center;
+    width: 80%;a
     margin: auto;
     overflow: hidden;
 }
@@ -79,7 +86,7 @@ nav .desktop-nav li a:hover{
 .contact-form, .contact-info, .social-media {
     margin: 20px 0;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -107,21 +114,7 @@ nav .desktop-nav li a:hover{
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-}
 
-.submit-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.submit-button:hover {
-    background-color: #45a049;
 }
 
 .contact-info h2, .social-media h2 {
@@ -159,7 +152,7 @@ footer {
     color: white;
     margin-top: 20px;
 }
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -171,7 +164,6 @@ html,body{
   height: 100%;
   width: 100%;
   place-items: center;
-  background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 }
 .wrapper{
   display: inline-flex;
@@ -256,3 +248,4 @@ html,body{
 .wrapper .instagram:hover .tooltip:before{
   background: #e1306c;
 }
+
