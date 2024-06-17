@@ -1,62 +1,79 @@
-/* General Styles */
+*,*::after,*::before { margin: 0; padding: 0; box-sizing: border-box;}
+
 body {
+
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-/* Header */
-header {
+.nav-container{
     background: rgba(0, 0, 0, 0.8);
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
+    height: 44px;
+    z-index: 300;
+    position: auto;
     left: 0;
-    z-index: 1000;
+    top: 0;
+    right: 0;
 }
 
-.nav-container {
-    max-width: 1200px;
+.nav-container nav{
+    width: 1000px;
     margin: 0 auto;
-}
-
-nav ul {
+    padding: 0 8px;
+    height: 100%;
     list-style: none;
-    padding: 0;
-    margin: 0;
+}
+
+nav .desktop-nav{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 14px 20px;
-    display: block;
-    transition: background 0.3s, color 0.3s;
-}
-
-nav ul li a:hover {
-    background: #575757;
-    border-radius: 5px;
+nav .desktop-nav li a{
     color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 400ms
+    list-style: none;
 }
 
-/* Parallax */
+nav .desktop-nav li a:hover{
+    opacity: 1;
+}
+
+
+
+.container {
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    font-weight: bold;
+}
+
+
+   /* Parallax Background */
 .parallax {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZFQFh6hCOHFXdiU6EoNmJRjRi7IxvCrciOQ&s');
+    background-image: url('https://cdn.pafc.co.uk/sites/default/files/styles/cc_640x480/public/2022-12/book_pitch.png?h=d1cb525d&itok=hWPdBKGr'); /* Replace with your image URL */
     height: 500px; /* Adjust height as needed */
-    background-attachment: fixed;
+    background-attachment: fixed; /* Optional: for a parallax effect */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
 }
 
 /* Main content adjustments */
