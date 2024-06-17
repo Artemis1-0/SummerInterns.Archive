@@ -32,13 +32,6 @@ class User(db.Model):
     date = db.Column(db.Date, nullable=False)
     amenities = db.Column(db.String(255), nullable=False)
 
-class User(db.Model):
-    # Name of the table in the database
-    __tablename__ = 'account'
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(255), nullable=False)
-    email = db.Column(db.String(255), nullable=False)
-    password = db.Column(db.String(255), nullable=False)
 
 
     # Constructor to initialize the User object
@@ -98,7 +91,7 @@ def enter_name():
 
 
     # Redirect to the booking page after form submission
-    return redirect(url_for('home'))
+    return redirect(url_for('booking'))
 #test
 
 # Run the Flask application in debug mode
