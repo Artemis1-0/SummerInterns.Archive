@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="social media icons" />
+    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="Fixed it">
+      <change beforePath="$PROJECT_DIR$/.idea/SummerInterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SummerInterns.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/static/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/scripts/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/template/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/account.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="UX" />
+        <entry key="$PROJECT_DIR$" value="Vidhur" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +36,9 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2hp8jJiAb1smP1rfNj28yKkl3y3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,11 +52,6 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="." />
-    </option>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -175,23 +180,7 @@
       <option name="project" value="LOCAL" />
       <updated>1718368364955</updated>
     </task>
-    <task id="LOCAL-00015" summary="Fixed it">
-      <option name="closed" value="true" />
-      <created>1718375242004</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1718375242004</updated>
-    </task>
-    <task id="LOCAL-00016" summary="social media icons">
-      <option name="closed" value="true" />
-      <created>1718616643187</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1718616643187</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -207,7 +196,6 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml" />
     <MESSAGE value="Fixed it Makayala &gt;:( - Emmanuel" />
     <MESSAGE value="Fixed it" />
-    <MESSAGE value="social media icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="social media icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed it" />
   </component>
 </project>
