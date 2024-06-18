@@ -32,6 +32,8 @@ class User(db.Model):
     date = db.Column(db.Date, nullable=False)
     amenities = db.Column(db.String(255), nullable=False)
 
+
+
     # Constructor to initialize the User object
     def __init__(self, email, pitch, start, end, date, amenities):
         self.email = email
