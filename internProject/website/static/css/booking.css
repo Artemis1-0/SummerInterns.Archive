@@ -55,6 +55,7 @@ nav .desktop-nav li a:hover{
 
 /* Track */
 ::-webkit-scrollbar-track {
+  background-color: #eeeeea;
 }
 
 /* Handle */

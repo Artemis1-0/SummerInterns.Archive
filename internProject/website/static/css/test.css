@@ -342,6 +342,7 @@ input:checked + label .description {
 
 /* Track */
 ::-webkit-scrollbar-track {
+    background-color: #eeeeea;
 }
 
 /* Handle */
