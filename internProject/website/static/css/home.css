@@ -28,7 +28,7 @@ h1 {
     background-image: linear-gradient(#183960, #102544);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 3px;
+    /* -webkit-text-stroke-width: 3px; */
     -webkit-text-stroke-color: #eeeeea;
     animation: fade ease-in 1s;
 }
