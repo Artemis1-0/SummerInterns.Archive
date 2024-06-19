@@ -63,6 +63,9 @@ def about():
 @app.route('/account')
 def account():
     return render_template('account.html')
+@app.route('/map')
+def map():
+    return render_template('map.html')
 
 
 # Define the route to handle form submission for entering a submission

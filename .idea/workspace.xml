@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml">
+      <change afterPath="$PROJECT_DIR$/internProject/website/static/media/svg/map.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internProject/website/template/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SummerInterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SummerInterns.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_13_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_13_32__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_13_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_13_34__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_22_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_22_03__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internProject/website/template/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/template/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/template/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/template/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/template/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +54,15 @@
     &quot;Python.app.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;development&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/emlcrao/PycharmProjects/SummerInterns/internProject/website/static/media/svg&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\emlcrao\PycharmProjects\SummerInterns\internProject\website\static\media\svg" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -204,6 +221,7 @@
     <MESSAGE value="snap" />
     <MESSAGE value="Scroll animations?" />
     <MESSAGE value="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml" />
+    <MESSAGE value="i added the map but the about page is kinda messed up now" />
+    <option name="LAST_COMMIT_MESSAGE" value="i added the map but the about page is kinda messed up now" />
   </component>
 </project>
