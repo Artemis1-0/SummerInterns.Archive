@@ -46,7 +46,7 @@ nav .desktop-nav li a{
     text-decoration: none;
     font-size: 14px;
     opacity: 0.8;
-    transition: opacity 400ms
+    transition: opacity 400ms;
     list-style: none;
 }
 
@@ -57,7 +57,7 @@ nav .desktop-nav li a:hover{
 
 .container {
     text-align: center;
-    width: 80%;a
+    width: 80%;
     margin: auto;
     overflow: hidden;
 }
