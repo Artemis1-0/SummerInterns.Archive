@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SummerInterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SummerInterns.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_13_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_13_32__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_13_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_13_34__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_22_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_22_03__Changes_.xml" afterDir="false" />
+    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="sorted out pagees">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/static/css/booking.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/booking.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/static/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/scripts/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/template/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/template/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/static/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/contact.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +192,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718638738702</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="sorted out pagees">
+      <option name="closed" value="true" />
+      <created>1718793882390</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1718793882390</updated>
+    </task>
+    <task id="LOCAL-00018" summary="sorted out pagees">
+      <option name="closed" value="true" />
+      <created>1718798123052</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1718798123052</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -217,6 +224,18 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml" />
     <MESSAGE value="Fixed it Makayala &gt;:( - Emmanuel" />
     <MESSAGE value="Fixed it" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="sorted out pagees" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorted out pagees" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/internProject/app.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
