@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Login Form</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/form-r.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form_r.css') }}">
     <script type="text/javascript" defer src="{{url_for('static', filename='scripts/test.js')}}"></script>
 </head>
 <body>
@@ -65,13 +65,13 @@
                 <div class="toggle-panel toggle-left">
                     <h1>Welcome Back!</h1>
                     <p>Enter your personal details to use all of site features</p>
-                    <a href="{{ url_for('test') }}">Go back Home</a>
+                    <a href="{{ url_for('index') }}">Go back Home</a>
                     <button class="hidden" id="login">Sign In</button>
                 </div>
                 <div class="toggle-panel toggle-right">
                     <h1>Hello, User!</h1>
                     <p>Register with your personal details to use all of site features</p>
-                    <a href="{{ url_for('test') }}">Go back Home</a>
+                    <a href="{{ url_for('index') }}">Go back Home</a>
                     <button class="hidden" id="register">Sign Up</button>
                 </div>
             </div>
