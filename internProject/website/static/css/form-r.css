@@ -288,3 +288,43 @@ body{
         z-index: 1;
     }
 }
+
+/* Header styles */
+.nav-container{
+    background: rgba(0, 0, 0, 0.8);
+    height: 44px;
+    z-index: 300;
+    position: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.nav-container nav{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 8px;
+    height: 100%;
+    list-style: none;
+}
+
+nav .desktop-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+}
+
+nav .desktop-nav li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 400ms;
+    list-style: none;
+}
+
+nav .desktop-nav li a:hover{
+    opacity: 1;
+}
