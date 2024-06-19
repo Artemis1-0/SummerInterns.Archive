@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/test.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
     <script type="text/javascript" defer src="{{url_for('static', filename='scripts/test.js')}}"></script>
 </head>
 <body>
@@ -17,8 +17,6 @@
                     <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     <li><a href="{{ url_for('about') }}">About</a></li>
                     <li><a href="{{ url_for('account') }}">Account</a></li>
-                    <li><a href="{{ url_for('test') }}">Test</a></li>
-                    <li><a href="{{ url_for('falling') }}">Falling</a></li>
                 </ul>
             </nav>
         </div>
@@ -79,8 +77,8 @@
         </section>
     </div>
     <footer>
-
         <p>&copy; 2024 Football Pitch Booking. All rights reserved.</p>
+        <a href="{{ url_for('test') }}">Test</a>
     </footer>
 </div>
 </body>

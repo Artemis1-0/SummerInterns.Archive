@@ -70,6 +70,10 @@ def test():
 def falling():
     return render_template('falling.html')
 
+@app.route('/form-r')
+def form_r():
+    return render_template('form-r.html')
+
 
 # Define the route to handle form submission for entering a submission
 @app.route('/booking', methods=['POST'])
