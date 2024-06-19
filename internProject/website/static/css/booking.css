@@ -1,62 +1,100 @@
-*,*::after,*::before { margin: 0; padding: 0; box-sizing: border-box;}
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b8/Etihad_Stadium.jpg");
     background-size: cover;
-    color: #333;
+    background-position: center;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.nav-container{
-    background: rgba(0, 0, 0, 0.8);
+.nav-container {
+    background: rgba(144, 238, 144, 0.9); /* Light green background */
     height: 44px;
-    z-index: 300;
-    position: auto;
-    left: 0;
+    position: fixed;
+    width: 100%;
     top: 0;
-    right: 0;
+    z-index: 300;
 }
 
-.nav-container nav{
-    width: 1000px;
+.nav-container nav {
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 8px;
     height: 100%;
-    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav .desktop-nav{
+nav .desktop-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    list-style: none;
+    width: 100%;
 }
 
-nav .desktop-nav li a{
+nav .desktop-nav li {
+    list-style: none;
+    height: 100%;
+}
+
+nav .desktop-nav li a {
     color: #fff;
     text-decoration: none;
-    font-size: 14px;
-    opacity: 0.8;
-    transition: opacity 400ms
-    list-style: none;
+    font-size: 16px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: background-color 400ms;
 }
 
-nav .desktop-nav li a:hover{
-    opacity: 1;
+nav .desktop-nav li:hover {
+    background-color: #006400; /* Dark green on hover */
 }
 
+.parallax {
+    background-image: url(https://www.fifeleisure.org.uk/livepublic/assets/Image/iStock-954142740.jpg); /* Replace with your new image URL */
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+/* Main content adjustments */
+main {
+    background-color: white;
+    padding-top: 20px;
+    margin-top: 44px; /* To offset the fixed nav bar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-#bookingform {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    margin: 50px auto;
-    width: 300px;
+.booking-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.booking-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 #bookingform form {
@@ -65,90 +103,39 @@ nav .desktop-nav li a:hover{
 }
 
 #bookingform label {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: bold;
+    color: #333;
 }
 
 #bookingform input {
-    margin-bottom: 15px;
-    padding: 10px;
+    margin-bottom: 20px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    width: 100%;
 }
 
 #bookingform button {
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     background-color: #4CAF50;
     color: white;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 300ms;
 }
 
 #bookingform button:hover {
     background-color: #45a049;
 }
 
-@import "compass/css3";
-
-
-	.canvas-holder {
-    	display:block;
-		width:98%;
-		height:100vh;
-	}
-
-	// Sample class for detecting browser size in jQuery
-
-	.phone {
-	    float:left;
-	}
-
-	.tablet {
-	  float:left;
-	}
-
-	.small-desktop {
-	  float:left;
-	}
-
-	.large-desktop {
-	  float:left;
-	}
-
-	/* Smartphones (portrait and landscape) ----------- */
-	@media only screen
-	and (min-width : 320px)
-	and (max-width : 768px) {
-	   .phone {
-	      float:none;
-	  }
-	}
-
-	/* iPads (portrait and landscape) ----------- */
-	@media only screen
-	and (min-width : 768px)
-	and (max-width : 1024px) {
-	  .tablet {
-	      float:none;
-	  }
-	}
-
-	/* Desktops and laptops ----------- */
-	@media only screen
-	and (min-width: 1025px)
-	and (max-width:1600px) {
-	  .small-desktop {
-	      float:none;
-	  }
-	}
-
-	/* Large screens ----------- */
-	@media only screen
-	and (min-width : 1601px) {
-	  .large-desktop {
-	      float:none;
-	  }
-	}
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
