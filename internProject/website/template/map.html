@@ -8,7 +8,7 @@
 </head>
         <style>
             body {
-                background-image: url("{{ url_for('static', filename='/media/madrid-santiago.jpg') }}")
+                background-image: url("{{ url_for('static', filename='/media/madrid-santiago.jpg') }}");
             }
         </style>
     <body class="map page">
@@ -24,7 +24,6 @@
         </ul>
     </nav>
 </div>
+    <img decoding="async" src="{{ url_for('static', filename='/media/Slide1.jpg') }}" alt="Here is our map of our pitch campus" title="Our map">
     </body>
-HTML
-<img decoding="async" src="map.jpg" alt="Here is our map of our pitch campus" title="Our map">
 </html>
