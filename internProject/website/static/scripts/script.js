@@ -25,17 +25,3 @@ function showSlides() {
     dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 5000); // Change image every 5 seconds
 }
-
-const container = document.getElementById('container');
-
-const registerBtn = document.getElementById('register');
-
-const loginBtn = document.getElementById('login');
-
-registerBtn.addEventListener('click', () => {
-    container.classList.add("active");
-});
-
-loginBtn.addEventListener('click', () => {
-    container.classList.remove("active");
-});
