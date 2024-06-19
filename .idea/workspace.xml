@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml">
-      <change afterPath="$PROJECT_DIR$/internProject/website/static/media/svg/map.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internProject/website/template/map.html" afterDir="false" />
+    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="Fixed it">
       <change beforePath="$PROJECT_DIR$/.idea/SummerInterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SummerInterns.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_13_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_13_32__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_13_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_13_34__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_22_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_06_2024_22_03__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/template/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/template/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/template/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/booking.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internProject/website/template/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/template/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="UX" />
+        <entry key="$PROJECT_DIR$" value="Vidhur" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,6 +34,9 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2hp8jJiAb1smP1rfNj28yKkl3y3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -54,15 +47,9 @@
     &quot;Python.app.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;development&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/emlcrao/PycharmProjects/SummerInterns/internProject/website/static/media/svg&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\emlcrao\PycharmProjects\SummerInterns\internProject\website\static\media\svg" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -183,29 +170,29 @@
       <option name="project" value="LOCAL" />
       <updated>1718366880426</updated>
     </task>
-    <task id="LOCAL-00014" summary="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml">
+    <task id="LOCAL-00014" summary="Fixed it">
       <option name="closed" value="true" />
-      <created>1718367199843</created>
+      <created>1718368364955</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1718367199843</updated>
+      <updated>1718368364955</updated>
     </task>
-    <task id="LOCAL-00015" summary="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml">
+    <task id="LOCAL-00015" summary="Fixed it">
       <option name="closed" value="true" />
-      <created>1718370821603</created>
+      <created>1718637994045</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1718370821603</updated>
+      <updated>1718637994045</updated>
     </task>
-    <task id="LOCAL-00016" summary="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml">
+    <task id="LOCAL-00016" summary="Fixed it">
       <option name="closed" value="true" />
-      <created>1718637171092</created>
+      <created>1718638738702</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1718637171092</updated>
+      <updated>1718638738702</updated>
     </task>
     <option name="localTasksCounter" value="17" />
     <servers />
@@ -221,7 +208,8 @@
     <MESSAGE value="snap" />
     <MESSAGE value="Scroll animations?" />
     <MESSAGE value="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml" />
-    <MESSAGE value="i added the map but the about page is kinda messed up now" />
-    <option name="LAST_COMMIT_MESSAGE" value="i added the map but the about page is kinda messed up now" />
+    <MESSAGE value="Fixed it Makayala &gt;:( - Emmanuel" />
+    <MESSAGE value="Fixed it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed it" />
   </component>
 </project>
