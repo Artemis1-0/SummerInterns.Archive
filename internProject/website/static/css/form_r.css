@@ -8,7 +8,7 @@
 }
 
 body{
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background: linear-gradient(-45deg, #218400, #80C2AF, #4D7EA8, #212738);
     background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
     display: flex;
@@ -17,6 +17,19 @@ body{
     flex-direction: column;
     height: 100vh;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 .container{
     background-color: #fff;
@@ -48,7 +61,7 @@ body{
 }
 
 .container button{
-    background-color: #f12711;
+    background-color: #80C2AF;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -59,6 +72,22 @@ body{
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
+}
+
+.container button:hover{
+    animation: hover 1s linear 0;
+    background-color: #218400;
+}
+
+@keyframes hover {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+    
 }
 
 .container button.hidden{
@@ -162,9 +191,9 @@ body{
 }
 
 .toggle{
-    background-color: #f12711;
+    background-color: #4D7EA8;
     height: 100%;
-    background: linear-gradient(to right, #f12711, #f5af19);
+    background: linear-gradient(to right, #4D7EA8, #218400);
     color: #fff;
     position: relative;
     left: -100%;
