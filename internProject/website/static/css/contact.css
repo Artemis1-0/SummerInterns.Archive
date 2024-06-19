@@ -14,46 +14,53 @@ body {
     color: #333;
 
 }
-
-.nav-container{
-    background: rgba(0, 0, 0, 0.8);
+.nav-container {
+    background: rgba(144, 238, 144, 0.9); /* Light green background */
     height: 44px;
-    z-index: 300;
-    position: auto;
-    left: 0;
+    position: fixed;
+    width: 100%;
     top: 0;
-    right: 0;
+    z-index: 300;
 }
 
-.nav-container nav{
-    width: 1000px;
+.nav-container nav {
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 8px;
     height: 100%;
-    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav .desktop-nav{
+nav .desktop-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    list-style: none;
+     width: 100%;
 }
 
-nav .desktop-nav li a{
+nav .desktop-nav li {
+    list-style: none;
+    height: 100%;
+}
+
+nav .desktop-nav li a {
     color: #fff;
     text-decoration: none;
-    font-size: 14px;
-    opacity: 0.8;
-    transition: opacity 400ms
-    list-style: none;
+    font-size: 16px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: background-color 400ms;
 }
 
-nav .desktop-nav li a:hover{
-    opacity: 1;
+nav .desktop-nav li:hover {
+    background-color: #006400; /* Dark green on hover */
 }
-
 
 .container {
     text-align: center;
