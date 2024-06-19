@@ -1,7 +1,6 @@
-*,*::after,*::before { margin: 0; padding: 0; box-sizing: border-box;}
+*, *::after, *::before { margin: 0; padding: 0; box-sizing: border-box;}
 
 body {
-
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
@@ -9,77 +8,67 @@ body {
     padding: 0;
 }
 
-.nav-container{
-    background: rgba(0, 0, 0, 0.8);
+.nav-container {
+    background: rgba(144, 238, 144, 0.9); /* Light green background */
     height: 44px;
-    z-index: 300;
-    position: auto;
-    left: 0;
+    position: fixed;
+    width: 100%;
     top: 0;
-    right: 0;
+    z-index: 300;
 }
 
-.nav-container nav{
-    width: 1000px;
+.nav-container nav {
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 8px;
     height: 100%;
-    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav .desktop-nav{
+nav .desktop-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-
+    width: 100%;
 }
 
-nav .desktop-nav li a{
+nav .desktop-nav li {
+    list-style: none;
+    height: 100%;
+}
+
+nav .desktop-nav li a {
     color: #fff;
     text-decoration: none;
-    font-size: 14px;
-    opacity: 0.8;
-    transition: opacity 400ms;
-    list-style: none;
+    font-size: 16px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: background-color 400ms;
 }
 
-nav .desktop-nav li a:hover{
-    opacity: 1;
+nav .desktop-nav li:hover {
+    background-color: #006400; /* Dark green on hover */
 }
-
-
-
-.container {
-    margin: auto;
-    width: 50%;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-}
-
-label {
-    font-weight: bold;
-}
-
-
-   /* Parallax Background */
 .parallax {
-    background-image: url('https://cdn.pafc.co.uk/sites/default/files/styles/cc_640x480/public/2022-12/book_pitch.png?h=d1cb525d&itok=hWPdBKGr'); /* Replace with your image URL */
-    height: 500px; /* Adjust height as needed */
-    background-attachment: fixed; /* Optional: for a parallax effect */
+    background-image: url(https://cdn.pafc.co.uk/sites/default/files/styles/cc_640x480/public/2022-12/book_pitch.png?h=d1cb525d&itok=hWPdBKGr); /* Replace with your new image URL */
+    height: 500px;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
 }
 
 /* Main content adjustments */
 main {
     background-color: white;
     padding-top: 20px;
+    margin-top: 44px; /* To offset the fixed nav bar */
 }
 
 /* Slideshow Styles */
@@ -129,7 +118,7 @@ main {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .slide-text {
@@ -137,7 +126,7 @@ main {
     font-size: 24px;
     padding: 8px 12px;
     position: absolute;
-    bottom: 8px;
+    bottom: 4px;
     width: 100%;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
