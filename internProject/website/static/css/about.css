@@ -169,7 +169,7 @@ input:checked + label .description {
 }
 
 .card[for="c4"] {
-    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gymleco.com%2Fstart-a-gym-how-you-keep-your-gym-members-and-grow-your-business%2F&psig=AOvVaw1NLnE78Ufyva0s4_T_Mr8G&ust=1718789533543000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCLCgnJfs5IYDFQAAAAAdAAAAABAE");
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAC2CAMAAABDLoc2AAAAA1BMVEUAAACnej3aAAAAN0lEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8A2CGgABvGlVPgAAAABJRU5ErkJggg==");
     object-fit: cover;
 }
 
