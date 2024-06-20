@@ -4,95 +4,71 @@
     <meta charset="UTF-8">
     <title>Contact Us</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-
-<div class="nav-container">
-<nav>
-        <div class="logo">
-             <h1><img src="{{ url_for('static', filename='media/ericsson-logo.png') }}" alt="Logo"></h1>
-        </div>
-        <ul id="menuList">
-             <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('booking') }}">Booking</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-        </ul>
-        <div class="menu-icon">
-            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-        </div>
-    </nav>
-</div>
-
-    <div class="container">
-        <!-- banner section  -->
-        <section class="banner">
-            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230822131732/images.png" alt="Welcome to our Contact Us page">
-            <h1>Get in Touch With Us</h1>
-            <p>We're here to answer any questions you may have.</p>
-        </section>
-
-        <!-- Company contact info -->
-        <section class="contact-info">
-            <h2>Contact Information</h2>
-            <address>
-                Nexus<br>
-                Ericsson Software Campus<br>
-                Cornamaddy, Athlone, Co. Westmeath<br>
-                Phone: <a href="tel:(090) 643 1000">123-456-7890</a><br>
-                Email: <a href="mailto:Nexus@gmail.com">Nexus@ericsson.com</a>
-            </address>
-        </section>
-
-
-      <meta charset="utf-8">
-      <title>Social Media Buttons with Tooltip | CodingNepal</title>
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-
-      <div class="wrapper">
-         <div class="icon facebook">
-            <div class="tooltip">
-               Facebook
-            </div>
-            <span><i class="fab fa-facebook-f"></i></span>
-             <p><a href="https://www.facebook.com/profile.php?id=61560768166642"><img  style="width:50px;height:50px;"></a></p>
-         </div>
-
-         <div class="icon twitter">
-              <div class="tooltip">
-               Twitter
-            </div>
-            <span><i class="fab fa-twitter"></i></span>
-             <html>
-
-   <p><a href="https://x.com/Nexus716902"><img style="width:50px;height:50px;"></a></p>
-
-        </div>
-
-            <div class="icon instagram">
-                <div class="tooltip">
-               Instagram
-                </div>
-            <span><i class="fab fa-instagram"></i></span>
-                <html>
-
-   <p><a href="https://www.instagram.com/"><img style="width:50px;height:50px;"></a></p>
-
-            </div>
-
-
-         </div>
-
-         </div>
+  <div class="nav-container">
+    <nav>
+      <div class="logo">
+        <h1><img src="{{ url_for('static', filename='media/ericsson-logo.png') }}" alt="Logo"></h1>
       </div>
-
-</svg></a></div>
-
-        </section>
+      <ul id="menuList">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('booking') }}">Booking</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+      </ul>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+    </nav>
+  </div>
+  <div class="container">
+    <!-- banner section  -->
+      <section class="banner">
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230822131732/images.png" alt="Welcome to our Contact Us page">
+        <h1>Get in Touch With Us</h1>
+        <p>We're here to answer any questions you may have.</p>
+      </section>
+      <!-- Company contact info -->
+      <section class="contact-info">
+        <h2>Contact Information</h2>
+          <address>
+            Nexus<br>
+            Ericsson Software Campus<br>
+            Cornamaddy, Athlone, Co. Westmeath<br>
+            Phone: <a href="tel:(090) 643 1000">123-456-7890</a><br>
+            Email: <a href="mailto:Nexus@gmail.com">Nexus@ericsson.com</a>
+          </address>
+      </section>
+  <div class="wrapper">
+    <div class="icon facebook">
+      <div class="tooltip">
+        Facebook
+      </div>
+    <span><i class="fab fa-facebook-f"></i></span>
+    <p><a href="https://www.facebook.com/profile.php?id=61560768166642"><img  style="width:50px;height:50px;"></a></p>
     </div>
+
+    <div class="icon twitter">
+      <div class="tooltip">
+        Twitter
+      </div>
+      <span><i class="fab fa-twitter"></i></span>
+      <p><a href="https://x.com/Nexus716902"><img style="width:50px;height:50px;"></a></p>
+    </div>
+
+    <div class="icon instagram">
+      <div class="tooltip">
+        Instagram
+      </div>
+      <span><i class="fab fa-instagram"></i></span>
+      <p><a href="https://www.instagram.com/"><img style="width:50px;height:50px;"></a></p>
+    </div>
+  </div>
+</div>
 
     <!-- Footer section -->
     <footer>
