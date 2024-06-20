@@ -2,90 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Booking</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
-    <meta name="wineport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/booking.css') }}">
-    <script src="/static/scripts/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Booking - Football Pitch Booking</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/booking.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}">
 </head>
 <body>
-<div class="nav-container">
-    <nav>
-        <ul class="desktop-nav">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('booking') }}">Booking</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('account') }}">Account</a></li>
-        </ul>
-    </nav>
-</div>
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.container {
-  position: relative;
-  width: 50%;
-}
+    <header>
+        <nav class="nav-container">
+            <ul class="desktop-nav">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('account') }}">Account</a></li>
+            </ul>
+        </nav>
+    </header>
 
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
+    <div class="parallax"></div>
 
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
+    <main>
+        <div class="booking-container">
+            <h2>Book Your Pitch</h2>
+            <div id="bookingform">
+                <form action="{{ url_for('booking') }}" method="post">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required><br>
 
+                    <label for="pitch">Pitch</label>
+                    <input type="number" id="pitch" name="pitch" required><br>
 
-</style>
-</head>
-<body>
-<div class="container">
- <div class="middle">
-    <div class="text">E</div>
-  </div>
-</div>
+                    <label for="start">Start Time</label>
+                    <input type="time" id="start" name="start" required><br>
 
-</body>
-</html>
+                    <label for="end">End Time</label>
+                    <input type="time" id="end" name="end" required><br>
 
-    <div id="bookingform">
-        <form action="{{ url_for('booking') }}" method="post">
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required><br>
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required><br>
 
-    <label for="pitch">Pitch</label>
-    <input type="number" id="pitch" name="pitch" required><br>
+                    <label for="amenities">Amenities</label>
+                    <input type="text" id="amenities" name="amenities"><br>
 
-    <label for="start">Start Time</label>
-    <input type="time" id="start" name="start" required><br>
-
-    <label for="end">End Time</label>
-    <input type="time" id="end" name="end" required><br>
-
-    <label for="date">Date</label>
-    <input type="date" id="date" name="date" required><br>
-
-    <label for="amenities">Amenities</label>
-    <input type="text" id="amenities" name="amenities" ><br>
-
-    <button type="submit" class="button-group" id="submit_booking">Submit</button>
-</form>
-    </div>
+                    <button type="submit" class="button-group" id="submit_booking">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Football Pitch Booking. All rights reserved.</p>
+    </footer>
 </body>
 </html>

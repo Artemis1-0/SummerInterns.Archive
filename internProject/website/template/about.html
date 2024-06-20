@@ -4,12 +4,12 @@
     <title>About</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
     <script src="{{ url_for('static', filename='scripts/test.js') }}"></script>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}">
 </head>
 
 <body>
@@ -27,6 +27,7 @@
                 <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 <li><a href="{{ url_for('about') }}">About</a></li>
                 <li><a href="{{ url_for('account') }}">Account</a></li>
+                 <li><a href="{{ url_for('map') }}">map</a></li>
             </ul>
         </nav>
     </div>
@@ -43,7 +44,7 @@
                     <div class="description">
                         <h4>Pitch 1</h4>
                         <p>A football pitch with floodlights that have solar sensors, that automatically turn on during late training sessions. Ammenities such as the clubhouse, dressing room and gym can be added as extras</p>
-                        <p>Price: Є40</p>
+                        <p>Price: Є40/hr</p>
                     </div>
                 </div>
             </label>
@@ -54,7 +55,7 @@
                     <div class="description">
                         <h4>Pitch 2</h4>
                         <p>A gaelic pitch which includes a clubhouse that has lots of different pieces of training equipment, such as; gaelic footballs, cones, bibs, etc. There is a first aid station, that is well equipped with a first aid bag and a physio table, however staff are not provided.</p>
-                        <p>Price: Є50</p>
+                        <p>Price: Є50/hr</p>
                     </div>
                 </div>
             </label>
@@ -65,7 +66,7 @@
                     <div class="description">
                         <h4>Pitch 3</h4>
                         <p>This pitch has grand stands for fans, and includes and entrance area with a ticket sales area. . This pitch can be used for a variety of sports events as we have basketball courts, gaelic goals, football goals, tennis court, and rugby goals that can be added to the pitch. The stands have a capacity for 1300.</p>
-                        <p>Price: Є120/Hour</p>
+                        <p>Price: Є120/hr</p>
                     </div>
                 </div>
             </label>
