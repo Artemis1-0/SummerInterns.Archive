@@ -1,63 +1,81 @@
-*, *::after, *::before {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-body {
-    background-size: cover;
-    background-position: center;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-container {
-    background: rgba(144, 238, 144, 0.9); /* Light green background */
-    height: 44px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 300;
-}
-
-.nav-container nav {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 8px;
+html,body{
     height: 100%;
+    width: 100%;
+    background: transparent;
+}
+
+nav{
+    padding: 10px 30px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-nav .desktop-nav {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+    background: #257400;
+    position: relative;
+    height: 70px;
 }
 
-nav .desktop-nav li {
-    list-style: none;
-    height: 100%;
-}
-
-nav .desktop-nav li a {
+.logo{
     color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    transition: background-color 400ms;
 }
 
-nav .desktop-nav li:hover {
-    background-color: #006400; /* Dark green on hover */
+.logo img {
+    width: 100px;  /* Adjust the width as necessary */
+    height: auto;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.menu-icon i{
+    color: #fff;
+    font-size: 30px;
+}
+
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #004274;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
 }
 
 .parallax {

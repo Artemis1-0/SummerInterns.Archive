@@ -11,76 +11,79 @@
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
     <script src="{{ url_for('static', filename='scripts/test.js') }}"></script>
 </head>
-
 <body>
-<div class="container">
-    <div class="middle">
-        <div class="text">U</div>
-    </div>
-</div>
+    <div class="parallax"></div>
 
- <div class="nav-container">
+    <div class="content">
+        <div class="nav-container">
         <nav>
-            <ul class="desktop-nav">
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('booking') }}">Booking</a></li>
-                <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                <li><a href="{{ url_for('about') }}">About</a></li>
-                <li><a href="{{ url_for('account') }}">Account</a></li>
-                 <li><a href="{{ url_for('map') }}">map</a></li>
-            </ul>
-        </nav>
-    </div>
+        <div class="logo">
+             <h1><img src="{{ url_for('static', filename='media/ericsson-logo.png') }}" alt="Logo"></h1>
+        </div>
+        <ul id="menuList">
+             <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('booking') }}">Booking</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('account') }}">Account</a></li>
+             <li><a href="{{ url_for('map') }}">map</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+        </div>
 
-    <section>
-        <h1>What we offer</h1>
-    </section>
-    <div class="wrapper">
-        <div class="container">
-            <input type="radio" name="slide" id="c1" checked>
-            <label for="c1" class="card">
-                <div class="row">
-                    <div class="icon">1</div>
-                    <div class="description">
-                        <h4>Pitch 1</h4>
-                        <p>A football pitch with floodlights that have solar sensors, that automatically turn on during late training sessions. Ammenities such as the clubhouse, dressing room and gym can be added as extras</p>
-                        <p>Price: Є40/hr</p>
+        <section>
+            <h1>What we offer</h1>
+        </section>
+        <div class="wrapper">
+            <div class="container">
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon">1</div>
+                        <div class="description">
+                            <h4>Pitch 1</h4>
+                            <p>A football pitch with floodlights that have solar sensors, that automatically turn on during late training sessions. Amenities such as the clubhouse, dressing room and gym can be added as extras</p>
+                            <p>Price: Є40/hr</p>
+                        </div>
                     </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c2">
-            <label for="c2" class="card">
-                <div class="row">
-                    <div class="icon">2</div>
-                    <div class="description">
-                        <h4>Pitch 2</h4>
-                        <p>A gaelic pitch which includes a clubhouse that has lots of different pieces of training equipment, such as; gaelic footballs, cones, bibs, etc. There is a first aid station, that is well equipped with a first aid bag and a physio table, however staff are not provided.</p>
-                        <p>Price: Є50/hr</p>
+                </label>
+                <input type="radio" name="slide" id="c2">
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                        <div class="description">
+                            <h4>Pitch 2</h4>
+                            <p>A gaelic pitch which includes a clubhouse that has lots of different pieces of training equipment, such as; gaelic footballs, cones, bibs, etc. There is a first aid station, that is well equipped with a first aid bag and a physio table, however staff are not provided.</p>
+                            <p>Price: Є50/hr</p>
+                        </div>
                     </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c3">
-            <label for="c3" class="card">
-                <div class="row">
-                    <div class="icon">3</div>
-                    <div class="description">
-                        <h4>Pitch 3</h4>
-                        <p>This pitch has grand stands for fans, and includes and entrance area with a ticket sales area. . This pitch can be used for a variety of sports events as we have basketball courts, gaelic goals, football goals, tennis court, and rugby goals that can be added to the pitch. The stands have a capacity for 1300.</p>
-                        <p>Price: Є120/hr</p>
+                </label>
+                <input type="radio" name="slide" id="c3">
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                        <div class="description">
+                            <h4>Pitch 3</h4>
+                            <p>This pitch has grand stands for fans, and includes an entrance area with a ticket sales area. This pitch can be used for a variety of sports events as we have basketball courts, gaelic goals, football goals, tennis court, and rugby goals that can be added to the pitch. The stands have a capacity for 1300.</p>
+                            <p>Price: Є120/hr</p>
+                        </div>
                     </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c4">
-            <label for="c4" class="card">
-                <div class="row">
-                    <div class="icon">4</div>
-                    <div class="description">
-                        <h4>Amenities</h4>
-                        <p>This pitch has grand stands for fans, and includes and entrance area with a ticket sales area. This pitch can be used for a variety of sports events as we have basketball courts, gaelic goals, football goals, tennis court, and rugby goals that can be added to the pitch. The stands have a capacity for 1300.</p>
-                        <p>Price: Є120/Hour</p>
+                </label>
+                <input type="radio" name="slide" id="c4">
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">4</div>
+                        <div class="description">
+                            <h4>Amenities</h4>
+                            <p>This pitch has grand stands for fans, and includes an entrance area with a ticket sales area. This pitch can be used for a variety of sports events as we have basketball courts, gaelic goals, football goals, tennis court, and rugby goals that can be added to the pitch. The stands have a capacity for 1300.</p>
+                            <p>Price: Є120/Hour</p>
+                        </div>
                     </div>
-                </div>
-            </label>
+                </label>
+            </div>
         </div>
     </div>
 </body>

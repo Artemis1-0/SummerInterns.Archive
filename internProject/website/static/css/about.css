@@ -1,121 +1,91 @@
-*,
-*::after,
-*::before {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-h1 {
-    text-align: center;
-    color: white;
-}
-
-body {
-    font-family: "Roboto", sans-serif;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Etihad_Stadium.jpg');
-    background-color: rgba(20, 20, 20, 0.6);
-    display: grid;
-    height: 100vh;
-    margin: opx;
-    padding: 0px;
-    place-items: center;
-}
-
-/* Header styles */
-
-.nav-container {
-    background: rgba(144, 238, 144, 0.9); /* Light green background */
-    height: 44px;
-    position: fixed;
+html,body{
+    height: 100%;
     width: 100%;
-    top: 0;
-    z-index: 300;
+    background: transparent;
 }
 
-.nav-container nav {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 8px;
-    height: 100%;
+nav{
+    padding: 10px 30px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
+    background: #257400;
+    position: relative;
+    height: 70px;
 }
 
-nav .desktop-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-        width: 100%;
-}
-
-nav .desktop-nav li {
-    list-style: none;
-    height: 100%;
-}
-
-nav .desktop-nav li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    transition: background-color 400ms;
-}
-
-nav .desktop-nav li:hover {
-    background-color: #006400; /* Dark green on hover */
-}
 .logo{
-    background: url('../media/svg/home.svg');
-    display: block;
-    background-position: center;
-    height: 40px;
-    width: 40px;
-    background-size: 18;
-    background-repeat: no-repeat;
+    color: #fff;
 }
 
-.image {
-    opacity: 1;
-    display: block;
-    width: 100%;
+.logo img {
+    width: 100px;  /* Adjust the width as necessary */
     height: auto;
-    transition: 0.5s ease;
-    backface-visibility: hidden;
 }
 
-.middle {
-    transition: 0.5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family:Roboto, Helvetica, sans-serif;
+nav ul li{
+    list-style-type: none;
 }
 
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.menu-icon i{
+    color: #fff;
+    font-size: 30px;
+}
+
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #004274;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+}
+/* Card styles */
 .wrapper {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    background: white; /* Changed to white */
 }
-
 
 .card {
     width: 80px;
@@ -132,7 +102,7 @@ nav .desktop-nav li:hover {
 }
 
 .card > .row {
-    color: #b0b0ba;
+    color: #333; /* Changed to a darker color for readability on white background */
     display: flex;
     flex-wrap: nowrap;
 }
@@ -160,8 +130,9 @@ nav .desktop-nav li:hover {
     transition-delay: .3s;
     transition: all .3s ease;
 }
+
 .description p {
-    color: #d6e4e9;
+    color: #333; /* Changed to a darker color for readability on white background */
     padding-top: 17px;
 }
 
@@ -202,25 +173,19 @@ input:checked + label .description {
     object-fit: cover;
 }
 
-/* width */
+/* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 16px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-}
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background-image: linear-gradient(#134074, #183960);
-  border-radius: 5px;
-  opacity: 0.3;
-  transition: opacity 400ms;
+    border-radius: 5px;
+    opacity: 0.3;
+    transition: opacity 400ms;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background-image: linear-gradient(#183960, #102544);
-  opacity: 1;
+    opacity: 1;
 }

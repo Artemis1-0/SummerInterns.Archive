@@ -10,15 +10,21 @@
 <body>
 
 <div class="nav-container">
-    <nav>
-        <ul class="desktop-nav">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
+<nav>
+        <div class="logo">
+             <h1><img src="{{ url_for('static', filename='media/ericsson-logo.png') }}" alt="Logo"></h1>
+        </div>
+        <ul id="menuList">
+             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('booking') }}">Booking</a></li>
             <li><a href="{{ url_for('contact') }}">Contact</a></li>
             <li><a href="{{ url_for('about') }}">About</a></li>
             <li><a href="{{ url_for('account') }}">Account</a></li>
              <li><a href="{{ url_for('map') }}">map</a></li>
         </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
     </nav>
 </div>
 <!DOCTYPE html>
