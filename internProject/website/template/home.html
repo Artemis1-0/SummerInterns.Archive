@@ -6,6 +6,7 @@
     <title>Home - Football Pitch Booking</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}">
 </head>
 <body>
     <header>
@@ -16,6 +17,7 @@
                 <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 <li><a href="{{ url_for('about') }}">About</a></li>
                 <li><a href="{{ url_for('account') }}">Account</a></li>
+                 <li><a href="{{ url_for('map') }}">map</a></li>
             </ul>
         </nav>
     </header>
@@ -41,9 +43,6 @@
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-
-
-        <br>
 
         <!-- The dots/circles -->
         <div style="text-align:center">

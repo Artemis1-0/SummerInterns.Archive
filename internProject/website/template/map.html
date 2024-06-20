@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map of pitch campus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+        <script src="script.js"></script>
+</head>
+        <style>
+            body {
+                background-image: url("{{ url_for('static', filename='/media/madrid-santiago.jpg') }}");
+            }
+        </style>
+    <body class="map page">
+    <div class="nav-container">
+    <nav>
+        <ul class="desktop-nav">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('booking') }}">Booking</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('account') }}">Account</a></li>
+             <li><a href="{{ url_for('map') }}">map</a></li>
+        </ul>
+    </nav>
+</div>
+    <img decoding="async" src="{{ url_for('static', filename='/media/Slide1.jpg') }}" alt="Here is our map of our pitch campus" title="Our map">
+    </body>
+</html>
