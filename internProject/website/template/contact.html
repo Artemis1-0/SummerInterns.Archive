@@ -3,54 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script type="text/javascript" src="script.js"></script>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}">
 </head>
 <body>
-  <style>
-    .container {
-      position: relative;
-      width: 50%;
-    }
-    
-    .image {
-      opacity: 1;
-      display: block;
-      width: 100%;
-      height: auto;
-      transition: .5s ease;
-      backface-visibility: hidden;
-    }
-    
-    .middle {
-      transition: .5s ease;
-      opacity: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      text-align: center;
-    }
-    
-    .container:hover .image {
-      opacity: 0.3;
-    }
-    
-    .container:hover .middle {
-      opacity: 1;
-    }
-    
-    .text {
-      background-color: #0d200e;
-      color: white;
-      font-size: 16px;
-      padding: 16px 32px;
-    }
-  </style>
+
 <div class="nav-container">
 <nav>
         <div class="logo">
@@ -62,71 +20,105 @@
             <li><a href="{{ url_for('contact') }}">Contact</a></li>
             <li><a href="{{ url_for('about') }}">About</a></li>
             <li><a href="{{ url_for('account') }}">Account</a></li>
-             <li><a href="{{ url_for('map') }}">map</a></li>
         </ul>
         <div class="menu-icon">
             <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
         </div>
     </nav>
 </div>
-
-<div class="container">
-  <img src="data:https://static.vecteezy.com/system/resources/thumbnails/014/625/624/small/art-blur-and-speed-of-light-gray-and-black-light-and-color-like-fog-and-smoke-photo.jpg"  style="width:9%">
-  <div class="middle">
-    <div class="text">X</div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<div class="container">
-  <!-- banner section  -->
-  <section class="banner">
-    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230822131732/images.png" alt="Welcome to our Contact Us page">
-      <h1>Get in Touch With Us</h1>
-      <p>We're here to answer any questions you may have.</p>
-  </section>
 
-  <!-- Company contact info -->
-  <section class="contact-info">
-    <h2>Contact Information</h2>
-      <address>
-        Nexus<br>
-        Ericsson Software Campus<br>
-        Cornamaddy, Athlone, Co. Westmeath<br>
-        Phone: <a href="tel:(090) 643 1000">123-456-7890</a><br>
-        Email: <a href="mailto:Nexus@gmail.com">Nexus@ericsson.com</a>
-      </address>
-  </section>
-</div>
+    <div class="container">
+        <!-- banner section  -->
+        <section class="banner">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230822131732/images.png" alt="Welcome to our Contact Us page">
+            <h1>Get in Touch With Us</h1>
+            <p>We're here to answer any questions you may have.</p>
+        </section>
 
-<div class="wrapper">
-  <div class="icon facebook">
-    <div class="tooltip">
-      Facebook
+        <!-- Contact form -->
+
+
+        <!-- Company contact info -->
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <address>
+                Nexus<br>
+                Ericsson Software Campus<br>
+                Cornamaddy, Athlone, Co. Westmeath<br>
+                Phone: <a href="tel:(090) 643 1000">123-456-7890</a><br>
+                Email: <a href="mailto:Nexus@gmail.com">Nexus@ericsson.com</a>
+            </address>
+        </section>
+
+       <div style
+
+       <html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Social Media Buttons with Tooltip | CodingNepal</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="icon facebook">
+            <div class="tooltip">
+               Facebook
+            </div>
+            <span><i class="fab fa-facebook-f"></i></span>
+             <p><a href="https://www.facebook.com/profile.php?id=61560768166642"><img  style="width:50px;height:50px;"></a></p>
+         </div>
+
+         <div class="icon twitter">
+              <div class="tooltip">
+               Twitter
+            </div>
+            <span><i class="fab fa-twitter"></i></span>
+             <html>
+<body>
+   <p><a href="https://x.com/Nexus716902"><img style="width:50px;height:50px;"></a></p>
+</body>
+</html>
+        </div>
+
+            <div class="icon instagram">
+                <div class="tooltip">
+               Instagram
+                </div>
+            <span><i class="fab fa-instagram"></i></span>
+                <html>
+<body>
+   <p><a href="https://www.instagram.com/"><img style="width:50px;height:50px;"></a></p>
+</body>
+</html>
+            </div>
+
+
+         </div>
+
+         </div>
+      </div>
+   </body>
+</html>
+
+
+
+</svg></a></div>
+
+        </section>
     </div>
-      <span><i class="fab fa-facebook-f"></i></span>
-      <p><a href="https://www.facebook.com/profile.php?id=61560768166642"><img  style="width:50px;height:50px;"></a></p>
-  </div>
 
-  <div class="icon twitter">
-    <div class="tooltip">
-      Twitter
-    </div>
-      <span><i class="fab fa-twitter"></i></span>
-      <p><a href="https://x.com/Nexus716902"><img style="width:50px;height:50px;"></a></p>
-    </div>
 
-  <div class="icon instagram">
-    <div class="tooltip">
-      Instagram
-    </div>
-      <span><i class="fab fa-instagram"></i></span>
-      <p><a href="https://www.instagram.com/"><img style="width:50px;height:50px;"></a></p>
-  </div>
-</div>
     <!-- Footer section -->
     <footer>
         <p>@nexus</p>
-    </footer>
+    </footer><ul>
+
 </body>
 </html>
