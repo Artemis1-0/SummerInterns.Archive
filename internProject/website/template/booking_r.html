@@ -5,35 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Login Form</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/form_r.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/booking_r.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}">
 </head>
 <body>
     
     <div class="container" id="container">
         <div class="form-container sign-in">
-            <form >
-                <div class="social-icons">
-                    <a href="#" class="icon">
-                        <i class="fa-brands fa-google-plus-g"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </div>
-                <span>or use your email and password</span>
-                <input type="email" 
-                placeholder="Email">
-                <input type="password" 
-                placeholder="Password">
-                <a href="">Forgot your email or password?</a>
-                <button>Sign in</button>
+            <form action="{{ url_for('booking') }}" method="post">
+                <label for="pitch">Pitch</label>
+                <input type="number" id="pitch" name="pitch" required><br>
+
+                <label for="start">Start Time</label>
+                <input type="time" id="start" name="start" required><br>
+
+                <label for="end">End Time</label>
+                <input type="time" id="end" name="end" required><br>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required><br>
+
+                <label for="amenities">Amenities</label>
+                <input type="text" id="amenities" name="amenities"><br>
+
+                <button type="submit" class="button-group" id="submit_booking">Submit</button>
             </form>
         </div>
         <div class="toggle-container">
