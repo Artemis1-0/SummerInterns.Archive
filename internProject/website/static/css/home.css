@@ -45,6 +45,10 @@ nav ul li a{
     color: #fff;
 }
 
+nav ul li a:hover{
+    color: rgb(182, 255, 200);
+}
+
 .menu-icon{
     display: none;
 }
