@@ -80,7 +80,7 @@ def gradient():
     return render_template('gradient.html')
 
 @app.route('/navbar')
-def gradient():
+def navbar():
     return render_template('navbar.html')
 
 
