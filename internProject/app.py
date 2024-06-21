@@ -79,6 +79,10 @@ def booking_r():
 def gradient():
     return render_template('gradient.html')
 
+@app.route('/navbar')
+def gradient():
+    return render_template('navbar.html')
+
 
 # Define the route to handle form submission for entering a submission
 @app.route('/booking', methods=['POST'])
