@@ -62,7 +62,15 @@ def about():
 
 @app.route('/account')
 def account():
-    return render_template('account.html')
+    if 'user_id' in session:
+        user_id = session['user_id']
+        account = Account.query.filter_by(id=user_id).first()
+        if account:
+            username = account.username
+            return render_template('account.html', username=username, logged_in=True)
+
+    # If user is not logged in or account not found, render account.html with default values
+    return render_template('account.html', username=None, logged_in=False)
 
 
 @app.route('/signup')
@@ -114,6 +122,10 @@ def login():
 def logout():
     session.pop('user_id', None)
     return redirect(url_for('home'))
+
+
+# Route for the account page
+
 
 
 # Route for booking classes
