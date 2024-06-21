@@ -77,7 +77,6 @@ nav ul li a{
         transition: all 0.5s;
     }
 }
-
 .parallax {
     background-image: url(https://www.fifeleisure.org.uk/livepublic/assets/Image/iStock-954142740.jpg); /* Replace with your new image URL */
     height: 500px;
