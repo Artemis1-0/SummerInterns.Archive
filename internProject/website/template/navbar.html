@@ -15,13 +15,13 @@
                 <li id="booking"><a href="{{ url_for('booking') }}">Booking</a></li>
                 <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 <li><a href="{{ url_for('about') }}">About</a></li>
-                <li><a href="{{ url_for('account') }}">Account</a></li>
+                <li id="account"><a href="{{ url_for('account') }}">Account</a></li>
                 <li id="log_in"><a href="{{ url_for('form_r') }}">Log In</a></li>
             </ul>
         </nav>
     </div>
-    <button onclick="hide()"> Hide Element </button>
-    <button onclick="show()"> Show Element </button>
+    <button onclick="log_out()"> Logged Out </button>
+    <button onclick="log_in()"> Logged In </button>
 </div>
 </body>
 </html>
