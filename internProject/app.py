@@ -101,6 +101,8 @@ def login():
         account = Account.query.filter_by(email=email, password=password).first()
         if account:
             session['user_id'] = account.id
+            username = account.username
+            return render_template('account.html', username=username, logged_in=True)
             return redirect(url_for('booking'))
         else:
             flash('Invalid email or password', 'error')
