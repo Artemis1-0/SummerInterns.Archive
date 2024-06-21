@@ -87,7 +87,7 @@ def navbar():
 def test():
     return render_template('test.html')
 
-@app.route('/myaccount.html')
+@app.route('/myaccount')
 def myaccount():
     return render_template('myaccount.html')
 
