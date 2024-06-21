@@ -71,6 +71,10 @@ def test():
 def about_r():
     return render_template('about_r.html')
 
+@app.route('/form_r')
+def form_r():
+    return render_template('form_r.html')
+
 
 @app.route('/account')
 def account():
