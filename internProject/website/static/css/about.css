@@ -132,12 +132,13 @@ nav ul li a{
 }
 
 .description p {
-    color: #333; /* Changed to a darker color for readability on white background */
+    color: white;
     padding-top: 17px;
 }
 
 .description h4 {
     text-transform: uppercase;
+    color: white;
 }
 
 input {
