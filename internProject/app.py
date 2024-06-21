@@ -87,6 +87,10 @@ def navbar():
 def test():
     return render_template('test.html')
 
+@app.route('/myaccount.html')
+def myaccount():
+    return render_template('myaccount.html')
+
 
 # Define the route to handle form submission for entering a submission
 @app.route('/booking', methods=['POST'])
