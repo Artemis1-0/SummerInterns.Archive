@@ -59,6 +59,10 @@ def contact():
 def about():
     return render_template('about.html')
 
+@app.route('/nav')
+def nav():
+    return render_template('nav.html')
+
 
 @app.route('/account')
 def account():
