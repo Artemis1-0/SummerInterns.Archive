@@ -71,6 +71,26 @@ def map():
 def form_r():
     return render_template('form_r.html')
 
+@app.route('/booking_r')
+def booking_r():
+    return render_template('booking_r.html')
+
+@app.route('/gradient')
+def gradient():
+    return render_template('gradient.html')
+
+@app.route('/navbar')
+def navbar():
+    return render_template('navbar.html')
+
+@app.route('/test')
+def test():
+    return render_template('test.html')
+
+@app.route('/myaccount.html')
+def myaccount():
+    return render_template('myaccount.html')
+
 
 # Define the route to handle form submission for entering a submission
 @app.route('/booking', methods=['POST'])
