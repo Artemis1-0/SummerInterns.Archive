@@ -67,6 +67,10 @@ def nav():
 def test():
     return render_template('test.html')
 
+@app.route('/about_r')
+def about_r():
+    return render_template('about_r.html')
+
 
 @app.route('/account')
 def account():
