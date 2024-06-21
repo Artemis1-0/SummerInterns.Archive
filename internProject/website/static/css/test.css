@@ -1,0 +1,371 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* General styles */
+body {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b8/Etihad_Stadium.jpg");
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+@media(prefers-reduced-motion) {
+    .title-text {
+        transition: none;
+    }
+}
+
+h1 {
+    pointer-events: none;
+    font-size: 10rem;
+    background-image: linear-gradient(#183960, #102544);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #eeeeea;
+    animation: fade ease-in 1s;
+}
+
+.title-text {
+    color: white;
+    pointer-events: none;
+    animation: fade ease-in 1s;
+}
+
+h2 {
+    font-size: 4rem;
+    background-image: linear-gradient(#0C2441, #0046AD);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fade 3s linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 70%;
+    text-align: center
+}
+
+p {
+    font-size: 2rem;
+    animation: fade 3s linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 90%;
+    text-align: center
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.first {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.second {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.third {
+    background-image: linear-gradient(#183960, #102544);
+    color: white;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 110vh;
+    padding: 30px;
+}
+
+.carousel-des {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 30vh;
+    padding: 30px;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.new-carousel {
+    animation: fade 3s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 10%;
+  overflow: auto;
+  display: flex;
+  scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 10px;
+}
+
+.box {
+  height: 300px;
+  width: 400px;
+  background: #fafafa;
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  margin-right: 5px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+    background-image: linear-gradient(#183960, #102544); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-image: linear-gradient(#183960, #102544);
+}
+
+/* Header styles */
+.nav-container{
+    background: rgba(0, 0, 0, 0.8);
+    height: 44px;
+    z-index: 300;
+    position: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.nav-container nav{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 8px;
+    height: 100%;
+    list-style: none;
+}
+
+nav .desktop-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+}
+
+nav .desktop-nav li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 400ms;
+    list-style: none;
+}
+
+nav .desktop-nav li a:hover{
+    opacity: 1;
+}
+
+/* Media Queries */
+@media (max-width: 1100px) {
+    .nav-container nav {
+        width: 100%;
+        padding: 0 32px;
+    }
+}
+
+.main {
+    background-color: #eeeeea;
+}
+
+.image-text {
+    position: relative;
+    z-index: 10;
+}
+
+.text {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    color: white;
+    background-image: linear-gradient(#183960, #102544);
+    z-index: 10;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:Roboto, Helvetica, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fade 3s linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 50%;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card-radio {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0 10px 10px -10px rgba(0,0,0,0.8);
+}
+
+.card-radio > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card-radio > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card-radio > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card-radio[for="c1"] {
+    background-image: url('../media/pitch1.jpg');
+    object-fit: cover;
+}
+
+.card-radio[for="c2"] {
+    background-image: url('../media/pitch2.webp');
+    object-fit: cover;
+}
+
+.card-radio[for="c3"] {
+    background-image: url('../media/pitch3.jpg');
+    object-fit: cover;
+}
+
+.card-radio[for="c4"] {
+    background-image: url('../media/soccer_ball.jpg');
+    object-fit: cover;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #eeeeea;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(#134074, #183960);
+  border-radius: 5px;
+  opacity: 0.3;
+  transition: opacity 400ms;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(#183960, #102544);
+  opacity: 1;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}

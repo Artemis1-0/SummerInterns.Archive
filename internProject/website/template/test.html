@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/test.css') }}">
+    <script type="text/javascript" defer src="{{url_for('static', filename='scripts/test.js')}}"></script>
+</head>
+<body>
+<div class="content">
+    <div class="nav-container">
+        <nav>
+            <ul class="desktop-nav">
+                <li><a href="{{ url_for('test') }}">Home</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('account') }}">Account</a></li>
+            </ul>
+        </nav>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Go Back Up</button>
+    <section>
+        <h1>Test Home</h1>
+        <p class="title-text">Welcome to the dev playground</p>
+    </section>
+
+    <div class="main">
+    <section class="first">
+        <h2>Sample text, sample text, sample text</h2>
+        <p>
+            What else am I supposed to say?
+        </p>
+    </section>
+
+    <div class="second">
+        <h2>At Nexus</h2>
+        <p>
+            We believe that you should play the sports you want, with the best possible tools for it,
+            be it equipment, personnel or venues.
+        </p>
+    </div>
+
+    <div class="new-carousel">
+        <div class="box"><a href="{{ url_for('form_r') }}">Form Redesign</a></div>
+        <div class="box"><a href="{{ url_for('gradient') }}">Gradient</a></div>
+        <div class="box"><a href="{{ url_for('booking_r') }}">Booking Redesign</a></div>
+        <div class="box"><a href="{{ url_for('navbar') }}">Navbar</a></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+        
+    <section class="hidden">
+        <h2><a href="{{ url_for('index') }}">Return Home</a></h2>
+    </section>
+
+    </section>
+</div>
+    <footer>
+        <p>&copy; 2024 Football Pitch Booking. All rights reserved.</p>
+    </footer>
+</div>
+</body>
+</html>

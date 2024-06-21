@@ -83,6 +83,10 @@ def gradient():
 def navbar():
     return render_template('navbar.html')
 
+@app.route('/test')
+def test():
+    return render_template('test.html')
+
 
 # Define the route to handle form submission for entering a submission
 @app.route('/booking', methods=['POST'])
