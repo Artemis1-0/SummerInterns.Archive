@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/account.css') }}">
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}">
+</head>
+<style>
+    body {
+        background-image: url("{{ url_for('static', filename='media/madrid-santiago.jpg') }}");
+    }
+</style>
+<body class="account-page">
+    <div class="nav-container">
+        <nav>
+            <ul class="desktop-nav">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('account') }}">Account</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="middle">
+            <div class="text">Sign Up</div>
+        </div>
+    </div>
+    <div id="signupform">
+        <form class="container" action="{{ url_for('create_account') }}" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit" class="button-group" id="signup">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+ 
