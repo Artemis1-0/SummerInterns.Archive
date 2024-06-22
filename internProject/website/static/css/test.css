@@ -26,8 +26,8 @@ h1 {
     pointer-events: none;
     font-size: 10rem;
     background-image: linear-gradient(#183960, #102544);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #eeeeea;
@@ -43,8 +43,8 @@ h1 {
 h2 {
     font-size: 4rem;
     background-image: linear-gradient(#0C2441, #0046AD);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fade 3s linear;
     animation-timeline: view();

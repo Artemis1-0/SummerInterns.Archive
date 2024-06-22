@@ -12,7 +12,7 @@
     <header>
      <nav>
         <div class="logo">
-             <h1><img src="{{ url_for('static', filename='media/ericsson-logo.png') }}" alt="Logo"></h1>
+            <img src="{{ url_for('static', filename='media/ericsson-logo.png') }}" alt="Logo">
         </div>
         <ul id="menuList">
              <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -26,10 +26,11 @@
         </div>
     </nav>
     </header>
-    <div class="parallax"></div>
+    <div class="parallax">
+        <h1>Book A Pitch</h1>
+    </div>
     <main>
         <div class="booking-container">
-            <h2>Book Your Pitch</h2>
             <div id="bookingform">
                 <form action="{{ url_for('new_booking') }}" method="post">
                     <label for="email">Email</label>
