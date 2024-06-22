@@ -1,23 +1,24 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
 
-# init SQLAlchemy so we can use it later in our models
-db = SQLAlchemy()
+app = Flask(__name__)
+Bootstrap(app)
 
-def create_app():
-    app = Flask(__name__)
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-    app.config['SECRET_KEY'] = 'secret-key-goes-here'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + USERNAME + ':' + PASSWORD + '@' + HOST + '/' + DB_NAME
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
-    db.init_app(app)
+@app.route('/register')
+def register():
+    return render_template('register.html')
 
-    # blueprint for auth routes in our app
-    from .auth import auth as auth_blueprint
-    app.register_blueprint(auth_blueprint)
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
 
-    # blueprint for non-auth parts of app
-    from .main import main as main_blueprint
-    app.register_blueprint(main_blueprint)
-
-    return app
+if __name__ == '__main__':
+    app.run(debug=True)
