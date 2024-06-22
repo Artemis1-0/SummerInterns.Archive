@@ -148,13 +148,23 @@ def logout():
 def new_booking():
     if 'user_id' not in session:
         return redirect(url_for('signinpage'))
-    email = request.form.get('email')
+
+    user_id = session['user_id']
+    user_account = Account.query.filter_by(id=user_id).first()
+
+    if not user_account:
+        flash('User account not found.', 'error')
+        return redirect(url_for('signin'))
+
+    email = user_account.email  # Retrieve the email from the user's account
     pitch = request.form.get('pitch')
     start = request.form.get('start')
     end = request.form.get('end')
     date = request.form.get('date')
     amenities = request.form.get('amenities')
+
     new_booking = Booking(email=email, pitch=pitch, start=start, end=end, date=date, amenities=amenities)
+
     try:
         db.session.add(new_booking)
         db.session.commit()
@@ -162,6 +172,7 @@ def new_booking():
     except Exception as e:
         db.session.rollback()
         flash('An error occurred while booking the class.', 'error')
+
     return redirect(url_for('home'))
 
 
