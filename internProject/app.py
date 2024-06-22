@@ -107,7 +107,6 @@ def create_account():
         # Check if email or username already exists
         existing_user = Account.query.filter((Account.email == email) | (Account.username == username)).first()
         if existing_user:
-            flash('Email or username already exists!', 'error')
             return redirect(url_for('signup'))
         new_account = Account(username=username, email=email, password=password)
         db.session.add(new_account)
@@ -130,7 +129,7 @@ def login():
             return redirect(url_for('booking'))
         else:
             flash('Invalid email or password', 'error')
-    return render_template('signin.html')
+            return render_template('signin.html')
 
 
 # Route for logging out
@@ -148,7 +147,7 @@ def logout():
 @app.route('/new_booking', methods=['POST'])
 def new_booking():
     if 'user_id' not in session:
-        return redirect(url_for('signin'))
+        return redirect(url_for('signinpage'))
     email = request.form.get('email')
     pitch = request.form.get('pitch')
     start = request.form.get('start')
