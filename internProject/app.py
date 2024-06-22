@@ -154,7 +154,7 @@ def new_booking():
 
     if not user_account:
         flash('User account not found.', 'error')
-        return redirect(url_for('signin'))
+        return redirect(url_for('home'))
 
     email = user_account.email  # Retrieve the email from the user's account
     pitch = request.form.get('pitch')
