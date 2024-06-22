@@ -4,14 +4,19 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField
 from wtforms.validators import InputRequired, Email, Length
 
-class LoginForm(FlaskForm)
+app = Flask(__name__, template_folder='website/template', static_folder='website/static')
+app.config['SECRET_KEY'] = 'topsecret!'
+Bootstrap(app)
+
+class LoginForm(FlaskForm):
     username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
     remember = BooleanField('remember')
 
-
-app = Flask(__name__, template_folder='website/template', static_folder='website/static')
-Bootstrap(app)
+class RegisterForm(FlaskForm):
+    email = StringField('email', validators=[InputRequired(), Email(message = 'Invalid Email'), Length(max=50)])
+    username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
+    password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
 
 @app.route('/')
 def index():
@@ -25,7 +30,9 @@ def login():
 
 @app.route('/register')
 def register():
-    return render_template('register.html')
+    form = RegisterForm()
+
+    return render_template('register.html', form=form)
 
 @app.route('/dashboard')
 def dashboard():
