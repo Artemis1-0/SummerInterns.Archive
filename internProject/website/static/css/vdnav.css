@@ -1,0 +1,69 @@
+/* Reset and basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.hdcarwallpapers.com/walls/porsche_911_turbo_s_4k_2-HD.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+}
+
+.logo {
+  color: #fff;
+}
+
+.logo img {
+  width: auto;
+  height: 30px;
+  padding-left: 50px
+}
+
+#menuList {
+  display: flex;
+  justify-content: center; /
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menuList li {
+  margin-right: 75px;
+  letter-spacing: 4px;
+}
+
+#menuList li:last-child {
+  margin-right: 50px;
+}
+
+#menuList li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+  font-size: 15px;
+}
+
+#menuList li a:hover {
+  padding-bottom: 25px;
+  border-bottom: 3px solid white;
+}
+
+.menu-icon {
+  display: none; /* Initially hide the menu icon for larger screens */
+}
+
+.menu-icon i {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}

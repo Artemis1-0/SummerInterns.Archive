@@ -63,6 +63,10 @@ def about():
 def nav():
     return render_template('nav.html')
 
+@app.route('/vdnav')
+def vdnav():
+    return render_template('vdnav.html')
+
 @app.route('/test')
 def test():
     return render_template('test.html')
