@@ -83,10 +83,11 @@ def account():
         account = Account.query.filter_by(id=user_id).first()
         if account:
             username = account.username
-            return render_template('account.html', username=username, logged_in=True)
+            bookings = Booking.query.filter_by(email=account.email).all()
+            return render_template('account.html', username=username, logged_in=True, bookings=bookings)
 
     # If user is not logged in or account not found, render account.html with default values
-    return render_template('account.html', username=None, logged_in=False)
+    return render_template('account.html', username=None, logged_in=False, bookings=[])
 
 
 @app.route('/signup')
@@ -124,9 +125,7 @@ def login():
         account = Account.query.filter_by(email=email, password=password).first()
         if account:
             session['user_id'] = account.id
-            username = account.username
-            return render_template('account.html', username=username, logged_in=True)
-            return redirect(url_for('booking'))
+            return redirect(url_for('account'))
         else:
             flash('Invalid email or password', 'error')
             return render_template('signin.html')
@@ -139,41 +138,40 @@ def logout():
     return redirect(url_for('home'))
 
 
-# Route for the account page
-
-
-
-# Route for booking classes
-@app.route('/new_booking', methods=['POST'])
-def new_booking():
-    if 'user_id' not in session:
-        return redirect(url_for('signinpage'))
-
-    user_id = session['user_id']
-    user_account = Account.query.filter_by(id=user_id).first()
-
-    if not user_account:
-        flash('User account not found.', 'error')
-        return redirect(url_for('home'))
-
-    email = user_account.email  # Retrieve the email from the user's account
-    pitch = request.form.get('pitch')
-    start = request.form.get('start')
-    end = request.form.get('end')
-    date = request.form.get('date')
-    amenities = request.form.get('amenities')
-
-    new_booking = Booking(email=email, pitch=pitch, start=start, end=end, date=date, amenities=amenities)
+# Route for editing a booking
+@app.route('/edit_booking/<int:booking_id>', methods=['POST'])
+def edit_booking(booking_id):
+    booking = Booking.query.get_or_404(booking_id)
+    booking.pitch = request.form['pitch']
+    booking.start = request.form['start']
+    booking.end = request.form['end']
+    booking.date = request.form['date']
+    booking.amenities = request.form['amenities']
 
     try:
-        db.session.add(new_booking)
         db.session.commit()
-        flash('Booking entered successfully!', 'success')
+        flash('Booking updated successfully!', 'success')
     except Exception as e:
         db.session.rollback()
-        flash('An error occurred while booking the class.', 'error')
+        flash('An error occurred while updating the booking.', 'error')
 
-    return redirect(url_for('home'))
+    return redirect(url_for('account'))
+
+
+# Route for deleting a booking
+@app.route('/delete_booking/<int:booking_id>', methods=['POST'])
+def delete_booking(booking_id):
+    booking = Booking.query.get_or_404(booking_id)
+
+    try:
+        db.session.delete(booking)
+        db.session.commit()
+        flash('Booking deleted successfully!', 'success')
+    except Exception as e:
+        db.session.rollback()
+        flash('An error occurred while deleting the booking.', 'error')
+
+    return redirect(url_for('account'))
 
 
 if __name__ == '__main__':
