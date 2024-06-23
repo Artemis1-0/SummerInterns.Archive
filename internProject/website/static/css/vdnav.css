@@ -9,62 +9,82 @@ body {
 }
 
 header {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7); /* Set background to black with 70% opacity */
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px;
+  padding: 20px;
 }
 
 .logo {
-  color: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-  width: auto;
-  height: 30px;
-  padding-left: 50px
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
 
 #menuList {
   display: flex;
-  justify-content: center; /
+  justify-content: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 #menuList li {
-  margin-right: 75px;
-  letter-spacing: 4px;
-}
-
-
-#menuList li:last-child {
+  margin-left: 50px;
   margin-right: 50px;
+  letter-spacing: 4px;
 }
 
 #menuList li a {
   text-decoration: none;
   color: #fff;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
   font-size: 15px;
+  padding-bottom: 25px; /* Set consistent padding-bottom */
 }
 
 #menuList li a:hover {
-  padding-bottom: 25px;
+  transform: scale(1.1); /* Scale the text */
   border-bottom: 3px solid white;
 }
 
-.menu-icon {
-  display: none; /* Initially hide the menu icon for larger screens */
+.profileicon {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
 }
 
-.menu-icon i {
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
+.profileicon a {
+  display: flex;
+  align-items: center;
+}
+
+.profileicon img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.profileicon img:hover {
+  transform: scale(1.1);
 }
