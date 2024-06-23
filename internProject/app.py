@@ -51,7 +51,12 @@ def register():
     form = RegisterForm()
 
     if form.validate_on_submit():
-        return '<h1>' + form.username.data + ' ' + form.email.data + ' ' + form.password.data + '</h1>'
+        new_user = User(username=form.username.data, email=form.email.data, password=form.password.data)
+        db.session.add(new_user)
+        db.session.commit()
+
+        return '<h1>New User Created</h1>'
+        #return '<h1>' + form.username.data + ' ' + form.email.data + ' ' + form.password.data + '</h1>'
 
     return render_template('register.html', form=form)
 
