@@ -3,11 +3,19 @@ from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField
 from wtforms.validators import InputRequired, Email, Length
+from sqlalchemy import
+
+USERNAME = 'root'
+PASSWORD = ''
+HOST = 'localhost'
+DB_NAME = 'vidhur'
 
 app = Flask(__name__, template_folder='website/template', static_folder='website/static')
 app.config['SECRET_KEY'] = 'topsecret!'
 Bootstrap(app)
-
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + USERNAME + ':' + PASSWORD + '@' + HOST + '/' + DB_NAME
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 class LoginForm(FlaskForm):
     username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
