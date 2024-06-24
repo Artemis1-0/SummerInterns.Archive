@@ -8,68 +8,133 @@
 html,body{
     height: 100%;
     width: 100%;
-    background: transparent;
+
 }
 
-nav{
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #257400;
-    position: relative;
-    height: 70px;
+body{
+  background: linear-gradient(-45deg, #b889ce, #192A51, #358CC9, #6CCFF6);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.logo{
-    color: #fff;
+h1 {
+  pointer-events: none;
+  font-size: 4rem;
+  background-image: linear-gradient(#183960, #102544);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fade ease-in 1s;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Reset and basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Set background to black with 70% opacity */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: black; /* Set background color to black */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    width: 100px;  /* Adjust the width as necessary */
-    height: auto;
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-nav ul{
-    display: flex;
-    gap: 30px;
-    align-items: center;
+.logo img:hover {
+  transform: scale(1.1);
 }
 
-nav ul li{
-    list-style-type: none;
+
+#menuList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
+#menuList li {
+  margin-left: 50px;
+  margin-right: 50px;
+  letter-spacing: 4px;
 }
 
-.menu-icon{
-    display: none;
+#menuList li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
+  font-size: 15px;
+  padding-bottom: 25px; /* Set consistent padding-bottom */
 }
 
-.menu-icon i{
-    color: #fff;
-    font-size: 30px;
+#menuList li a:hover {
+  transform: scale(1.1); /* Scale the text */
+  border-bottom: 3px solid white;
 }
 
-@media (max-width:600px) {
-    nav ul{
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        text-align: center;
-        background: #004274;
-        gap: 0;
-        overflow: hidden;
-    }
-    nav ul li{
-        padding: 20px;
-        padding-top: 0;
-    }
+.profileicon {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.profileicon a {
+  display: flex;
+  align-items: center;
+}
+
+.profileicon img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.profileicon img:hover {
+  transform: scale(1.1);
+}
+
     .menu-icon{
         display: block;
     }
@@ -77,40 +142,185 @@ nav ul li a{
         transition: all 0.5s;
     }
 }
+
+/* Container and Content Styles */
 .container {
-    margin: auto;
-    width: 50%;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-label {
-    font-weight: bold;
+.accountSection {
+  display: none;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+#accountContent h2 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+#myBookings .booking {
+  background: #f9f9f9;
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+#myBookings .booking p {
+  margin: 5px 0;
+}
+
+.editForm {
+  margin-top: 10px;
+  padding: 15px;
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.editForm label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.editForm input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .container {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 8;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  }
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+#signupform {
+  display: flex;
+  justify-content: center;
+}
+
+form.container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+form.container label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+form.container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+form.container input:focus {
+  border-color: #007bff;
+}
+
+form.container label:hover {
+  color: #007bff;
+}
+
+.button-group {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-group:hover {
+  background: #0056b3;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container {
     width: 100%;
-    font-size: 16px;
+  }
 }
 
