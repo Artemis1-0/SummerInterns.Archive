@@ -21,7 +21,7 @@ class Account(db.Model):
     password = db.Column(db.String(255), nullable=False)
 
 
- Define the Booking model
+
 class Booking(db.Model):
     __tablename__ = 'booking'
     id = db.Column(db.Integer, primary_key=True)
@@ -85,7 +85,7 @@ def new_booking():
         flash('User account not found.', 'error')
         return redirect(url_for('home'))
 
-    email = user_account.email
+    email = user_account.email  # Retrieve the email from the user's account
     pitch = request.form.get('pitch')
     start = request.form.get('start')
     end = request.form.get('end')
@@ -127,6 +127,7 @@ def signup():
 def signinpage():
     return render_template('signinpage.html')
 
+# Route for signing up
 @app.route('/create_account', methods=['GET', 'POST'])
 def create_account():
     if request.method == 'POST':
