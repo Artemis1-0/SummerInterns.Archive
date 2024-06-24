@@ -246,3 +246,10 @@ color: white;
   background-image: linear-gradient(#333, #fff);
   opacity: 1;
 }
+
+#loader {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin: 0;
+}
