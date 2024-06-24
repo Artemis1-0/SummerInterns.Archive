@@ -226,6 +226,10 @@ footer {
   padding: 10px 0;
 }
 
+footer p a{
+color: white;
+}
+
 /* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 10px;
