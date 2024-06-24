@@ -112,6 +112,41 @@ def dashboard():
 def booking():
     return render_template('booking.html')
 
+# Route for editing a booking
+@app.route('/edit_booking/<int:booking_id>', methods=['POST'])
+def edit_booking(booking_id):
+    booking = Booking.query.get_or_404(booking_id)
+    booking.pitch = request.form['pitch']
+    booking.start = request.form['start']
+    booking.end = request.form['end']
+    booking.date = request.form['date']
+    booking.amenities = request.form['amenities']
+
+    try:
+        db.session.commit()
+        flash('Booking updated successfully!', 'success')
+    except Exception as e:
+        db.session.rollback()
+        flash('An error occurred while updating the booking.', 'error')
+
+    return redirect(url_for('account'))
+
+
+# Route for deleting a booking
+@app.route('/delete_booking/<int:booking_id>', methods=['POST'])
+def delete_booking(booking_id):
+    booking = Booking.query.get_or_404(booking_id)
+
+    try:
+        db.session.delete(booking)
+        db.session.commit()
+        flash('Booking deleted successfully!', 'success')
+    except Exception as e:
+        db.session.rollback()
+        flash('An error occurred while deleting the booking.', 'error')
+
+    return redirect(url_for('account'))
+
 @app.route('/logout')
 @login_required
 def logout():
