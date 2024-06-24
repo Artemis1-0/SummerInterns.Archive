@@ -167,7 +167,7 @@ main {
     padding: 12px;
     border: none;
     border-radius: 5px;
-    background: linear-gradient(-45deg, #b889ce, #192A51, #358CC9, #6CCFF6);
+    background: linear-gradient(-45deg, #192a51, #333, #ffffff, rgba(0, 0, 0, 0.8));
     cursor: pointer;
     color: white;
     font-size: 16px;
