@@ -44,76 +44,114 @@ h1 {
 	}
 }
 
-nav{
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #257400;
-    position: relative;
-    height: 70px;
+/* Reset and basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.logo{
-    color: #fff;
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Set background to black with 70% opacity */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Set background color to black with 50% opacity */
+  width: 100%; /* Ensure full width of page */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin: 0; /* Remove default margin */
+  position: fixed; /* Fix the nav bar to the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    width: 100px;  /* Adjust the width as necessary */
-    height: auto;
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-nav ul{
-    display: flex;
-    gap: 30px;
-    align-items: center;
+.logo img:hover {
+  transform: scale(1.1);
 }
 
-nav ul li{
-    list-style-type: none;
+#menuList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
+#menuList li {
+  margin-left: 50px;
+  margin-right: 50px;
+  letter-spacing: 4px;
 }
 
-nav ul li a:hover{
-    color: rgb(182, 255, 200);
+#menuList li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
+  font-size: 15px;
+  position: relative; /* Add relative positioning */
 }
 
-.menu-icon{
-    display: none;
+#menuList li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjusts the distance between the text and the underline */
 }
 
-.menu-icon i{
-    color: #fff;
-    font-size: 30px;
+#menuList li a:hover::after {
+  width: 100%; /* Expands the underline to the full width of the text */
 }
 
-@media (max-width:600px) {
-    nav ul{
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        text-align: center;
-        background: #004274;
-        gap: 0;
-        overflow: hidden;
-    }
-    nav ul li{
-        padding: 20px;
-        padding-top: 0;
-    }
-    .menu-icon{
-        display: block;
-    }
-    #menuList{
-        transition: all 0.5s;
-    }
+.profileicon {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
 }
+
+.profileicon a {
+  display: flex;
+  align-items: center;
+}
+
+.profileicon img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.profileicon img:hover {
+  transform: scale(1.1);
+}
+
 
 /* Container and Content Styles */
 .container {
@@ -188,38 +226,12 @@ nav ul li a:hover{
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container {
   width: 80%;
   margin: auto;
   overflow: hidden;
   padding: 20px;
   background: #fff;
-  margin-top: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

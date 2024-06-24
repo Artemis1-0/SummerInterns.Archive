@@ -174,7 +174,6 @@ input:checked + label .description {
     object-fit: cover;
 }
 
-
 /* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 10px;
@@ -191,7 +190,3 @@ input:checked + label .description {
     background-image: linear-gradient(#71ff4e, #07b9ff);
     opacity: 1;
 }
-
-<style>
-  background-image: "url({{ url_for('static', filename='media/svg/madrid-santiago.jpg') }}"
-</style>
