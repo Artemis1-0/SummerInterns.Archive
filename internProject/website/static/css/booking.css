@@ -201,7 +201,8 @@ footer {
       opacity: 0.3;
       transition: opacity 400ms;
   }
-  
+
+
   ::-webkit-scrollbar-thumb:hover {
       background-image: linear-gradient(#71ff4e, #07b9ff);
       opacity: 1;
