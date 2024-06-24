@@ -79,6 +79,38 @@ def about_r():
 def form_r():
     return render_template('form_r.html')
 
+@app.route('/new_booking', methods=['POST'])
+def new_booking():
+    if 'user_id' not in session:
+        return redirect(url_for('signinpage'))
+
+    user_id = session['user_id']
+    user_account = Account.query.filter_by(id=user_id).first()
+
+    if not user_account:
+        flash('User account not found.', 'error')
+        return redirect(url_for('home'))
+
+    email = user_account.email  # Retrieve the email from the user's account
+    pitch = request.form.get('pitch')
+    start = request.form.get('start')
+    end = request.form.get('end')
+    date = request.form.get('date')
+    amenities = request.form.get('amenities')
+
+    new_booking = Booking(email=email, pitch=pitch, start=start, end=end, date=date, amenities=amenities)
+
+    try:
+        db.session.add(new_booking)
+        db.session.commit()
+        flash('Booking entered successfully!', 'success')
+    except Exception as e:
+        db.session.rollback()
+        flash('An error occurred while booking the class.', 'error')
+
+    return redirect(url_for('home'))
+
+
 
 @app.route('/account')
 def account():
@@ -92,7 +124,6 @@ def account():
 
     # If user is not logged in or account not found, render account.html with default values
     return render_template('account.html', username=None, logged_in=False, bookings=[])
-
 
 @app.route('/signup')
 def signup():
