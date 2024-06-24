@@ -167,15 +167,18 @@ main {
     padding: 12px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
+    background: linear-gradient(-45deg, #b889ce, #192A51, #358CC9, #6CCFF6);
+    cursor: pointer;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 300ms;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position .5s;
 }
 
 #bookingform button:hover {
-    background-color: #45a049;
+  background-position: 0 0;
 }
 
 /* Footer */
