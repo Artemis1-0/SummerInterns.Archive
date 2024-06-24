@@ -254,13 +254,18 @@ nav {
     background: #e1306c;
 }
 
+/* Footer */
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    margin-top: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
+
+footer p a{
+color: white;
+}
+
 
 
 /* Scrollbar styles */
@@ -269,13 +274,13 @@ footer {
   }
   
   ::-webkit-scrollbar-thumb {
-      background-image: linear-gradient(#89ce94, #6ccff6);
+      background-image: linear-gradient(#ffffff, rgba(0, 0, 0, 0.8));
       border-radius: 5px;
       opacity: 0.3;
       transition: opacity 400ms;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-      background-image: linear-gradient(#71ff4e, #07b9ff);
+      background-image: linear-gradient(#ffffff, rgba(0, 0, 0, 0.8));
       opacity: 1;
   }

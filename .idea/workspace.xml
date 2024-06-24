@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="Fixed overflow error" />
+    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="colour changes booking.css">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/static/css/booking.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/booking.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/static/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/template/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/template/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/contact.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -432,21 +439,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719231996307</updated>
     </task>
-    <task id="LOCAL-00045" summary="Fixed overflow error">
+    <task id="LOCAL-00045" summary="scroll bar colours">
       <option name="closed" value="true" />
-      <created>1719233303146</created>
+      <created>1719243017411</created>
       <option name="number" value="00045" />
       <option name="presentableId" value="LOCAL-00045" />
       <option name="project" value="LOCAL" />
-      <updated>1719233303146</updated>
+      <updated>1719243017411</updated>
     </task>
-    <task id="LOCAL-00046" summary="Fixed overflow error">
+    <task id="LOCAL-00046" summary="colour changes booking.css">
       <option name="closed" value="true" />
-      <created>1719233551618</created>
+      <created>1719243196184</created>
       <option name="number" value="00046" />
       <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
-      <updated>1719233551618</updated>
+      <updated>1719243196185</updated>
     </task>
     <option name="localTasksCounter" value="47" />
     <servers />
@@ -465,7 +472,8 @@
     <MESSAGE value="fixed contact page" />
     <MESSAGE value="vd" />
     <MESSAGE value="nav bar" />
-    <MESSAGE value="Fixed overflow error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed overflow error" />
+    <MESSAGE value="scroll bar colours" />
+    <MESSAGE value="colour changes booking.css" />
+    <option name="LAST_COMMIT_MESSAGE" value="colour changes booking.css" />
   </component>
 </project>
