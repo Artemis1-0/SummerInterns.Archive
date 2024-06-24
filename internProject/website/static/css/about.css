@@ -84,7 +84,6 @@ nav ul li a{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white; /* Changed to white */
 }
 
 .card {
