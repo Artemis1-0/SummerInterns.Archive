@@ -231,7 +231,6 @@ nav {
 .container {
   width: 80%;
   margin: auto;
-  overflow: hidden;
   padding: 20px;
   background: #fff;
   border-radius: 8px;
