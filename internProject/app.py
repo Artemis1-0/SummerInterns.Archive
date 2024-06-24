@@ -1,35 +1,29 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_sqlalchemy import SQLAlchemy
 
-# Database configuration
+
 USERNAME = 'root'
 PASSWORD = ''
 HOST = 'localhost'
 DB_NAME = 'vidhur'
-# Initialize the Flask application and specify the template and static folders
 app = Flask(__name__, template_folder='website/template', static_folder='website/static')
-# Configure the SQLAlchemy part of the app instance
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + USERNAME + ':' + PASSWORD + '@' + HOST + '/' + DB_NAME
-# Disable modification tracking
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-# Set the secret key for session management
 app.config['SECRET_KEY'] = 'root'
-# Initialize the SQLAlchemy object with the app
 db = SQLAlchemy(app)
 
 
-# Define the Account model for sign-up/sign-in
 class Account(db.Model):
-    __tablename__ = 'account'  # Explicit table name
+    __tablename__ = 'account'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(255), unique=True, nullable=False)
     email = db.Column(db.String(255), unique=True, nullable=False)
     password = db.Column(db.String(255), nullable=False)
 
 
-# Define the Booking model
+ Define the Booking model
 class Booking(db.Model):
-    __tablename__ = 'booking'  # Explicit table name
+    __tablename__ = 'booking'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(255), nullable=False)
     pitch = db.Column(db.Integer, nullable=False)
@@ -39,7 +33,7 @@ class Booking(db.Model):
     amenities = db.Column(db.String(255), nullable=False)
 
 
-# Route for the home page
+
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -91,7 +85,7 @@ def new_booking():
         flash('User account not found.', 'error')
         return redirect(url_for('home'))
 
-    email = user_account.email  # Retrieve the email from the user's account
+    email = user_account.email
     pitch = request.form.get('pitch')
     start = request.form.get('start')
     end = request.form.get('end')
@@ -122,7 +116,7 @@ def account():
             bookings = Booking.query.filter_by(email=account.email).all()
             return render_template('account.html', username=username, logged_in=True, bookings=bookings)
 
-    # If user is not logged in or account not found, render account.html with default values
+
     return render_template('account.html', username=None, logged_in=False, bookings=[])
 
 @app.route('/signup')
@@ -133,14 +127,12 @@ def signup():
 def signinpage():
     return render_template('signinpage.html')
 
-# Route for signing up
 @app.route('/create_account', methods=['GET', 'POST'])
 def create_account():
     if request.method == 'POST':
         username = request.form['username']
         email = request.form['email']
         password = request.form['password']
-        # Check if email or username already exists
         existing_user = Account.query.filter((Account.email == email) | (Account.username == username)).first()
         if existing_user:
             return redirect(url_for('signup'))
@@ -151,7 +143,7 @@ def create_account():
     return render_template('signup.html')
 
 
-# Route for signing in
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -193,7 +185,7 @@ def edit_booking(booking_id):
     return redirect(url_for('account'))
 
 
-# Route for deleting a booking
+
 @app.route('/delete_booking/<int:booking_id>', methods=['POST'])
 def delete_booking(booking_id):
     booking = Booking.query.get_or_404(booking_id)
