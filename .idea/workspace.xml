@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="before reverting code" />
+    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="vd">
+      <change beforePath="$PROJECT_DIR$/.idea/SummerInterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SummerInterns.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="958079f980f0ec3e1d1e048620ffcce9725798e5" />
+        <entry key="$PROJECT_DIR$" value="UX" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -378,53 +382,13 @@
     </task>
     <task id="LOCAL-00038" summary="vd">
       <option name="closed" value="true" />
-      <created>1719147208938</created>
+      <created>1719229607805</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1719147208938</updated>
+      <updated>1719229607805</updated>
     </task>
-    <task id="LOCAL-00039" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719147360553</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1719147360553</updated>
-    </task>
-    <task id="LOCAL-00040" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719220565881</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1719220565881</updated>
-    </task>
-    <task id="LOCAL-00041" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719220646352</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1719220646352</updated>
-    </task>
-    <task id="LOCAL-00042" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719220875279</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1719220875279</updated>
-    </task>
-    <task id="LOCAL-00043" summary="before reverting code">
-      <option name="closed" value="true" />
-      <created>1719222055407</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1719222055407</updated>
-    </task>
-    <option name="localTasksCounter" value="44" />
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -440,18 +404,6 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml" />
     <MESSAGE value="fixed contact page" />
     <MESSAGE value="vd" />
-    <MESSAGE value="before reverting code" />
-    <option name="LAST_COMMIT_MESSAGE" value="before reverting code" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/internProject/app.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="vd" />
   </component>
 </project>

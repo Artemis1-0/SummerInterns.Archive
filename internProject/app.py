@@ -18,7 +18,6 @@ app.config['SECRET_KEY'] = 'root'
 db = SQLAlchemy(app)
 
 
-# Define the Account model for sign-up/sign-in
 class Account(db.Model):
     __tablename__ = 'account'  # Explicit table name
     id = db.Column(db.Integer, primary_key=True)
@@ -27,7 +26,6 @@ class Account(db.Model):
     password = db.Column(db.String(255), nullable=False)
 
 
-# Define the Booking model
 class Booking(db.Model):
     __tablename__ = 'booking'  # Explicit table name
     id = db.Column(db.Integer, primary_key=True)
@@ -39,7 +37,6 @@ class Booking(db.Model):
     amenities = db.Column(db.String(255), nullable=False)
 
 
-# Route for the home page
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -122,7 +119,6 @@ def account():
             bookings = Booking.query.filter_by(email=account.email).all()
             return render_template('account.html', username=username, logged_in=True, bookings=bookings)
 
-    # If user is not logged in or account not found, render account.html with default values
     return render_template('account.html', username=None, logged_in=False, bookings=[])
 
 @app.route('/signup')
@@ -133,7 +129,6 @@ def signup():
 def signinpage():
     return render_template('signinpage.html')
 
-# Route for signing up
 @app.route('/create_account', methods=['GET', 'POST'])
 def create_account():
     if request.method == 'POST':
@@ -151,7 +146,6 @@ def create_account():
     return render_template('signup.html')
 
 
-# Route for signing in
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -166,14 +160,12 @@ def login():
             return render_template('signin.html')
 
 
-# Route for logging out
 @app.route('/logout')
 def logout():
     session.pop('user_id', None)
     return redirect(url_for('home'))
 
 
-# Route for editing a booking
 @app.route('/edit_booking/<int:booking_id>', methods=['POST'])
 def edit_booking(booking_id):
     booking = Booking.query.get_or_404(booking_id)
@@ -193,7 +185,6 @@ def edit_booking(booking_id):
     return redirect(url_for('account'))
 
 
-# Route for deleting a booking
 @app.route('/delete_booking/<int:booking_id>', methods=['POST'])
 def delete_booking(booking_id):
     booking = Booking.query.get_or_404(booking_id)
