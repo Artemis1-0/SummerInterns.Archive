@@ -121,9 +121,13 @@ def account():
 
     return render_template('account.html', username=None, logged_in=False, bookings=[])
 
+
 @app.route('/signup')
 def signup():
     return render_template('signup.html')
+@app.route('/ts')
+def ts():
+    return render_template('ts.html')
 
 @app.route('/signinpage')
 def signinpage():
@@ -199,6 +203,9 @@ def delete_booking(booking_id):
 
     return redirect(url_for('account'))
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404  
 
 if __name__ == '__main__':
     app.run(debug=True)

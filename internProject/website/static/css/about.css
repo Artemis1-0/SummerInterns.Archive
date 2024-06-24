@@ -1,82 +1,112 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+/* Reset and basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://pitchbooking.com/img/_v1/hero/carousel-pitchbooking.webp")
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
-    background-image: url("https://germinalamenity.com/media/ggb/wp/wp-content/uploads/2022/12/Football-pitch-maintenance-Stirling-Albion-2.webp");
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Set background to black with 70% opacity */
 }
 
-nav{
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #257400;
-    position: relative;
-    height: 70px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Set background color to black with 50% opacity */
+  width: 100%; /* Ensure full width of page */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin: 0; /* Remove default margin */
+  position: fixed; /* Fix the nav bar to the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
-.logo{
-    color: #fff;
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    width: 100px;  /* Adjust the width as necessary */
-    height: auto;
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-nav ul{
-    display: flex;
-    gap: 30px;
-    align-items: center;
+.logo img:hover {
+  transform: scale(1.1);
 }
 
-nav ul li{
-    list-style-type: none;
+#menuList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
+#menuList li {
+  margin-left: 50px;
+  margin-right: 50px;
+  letter-spacing: 4px;
 }
 
-.menu-icon{
-    display: none;
+#menuList li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
+  font-size: 15px;
+  position: relative; /* Add relative positioning */
 }
 
-.menu-icon i{
-    color: #fff;
-    font-size: 30px;
+#menuList li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjusts the distance between the text and the underline */
 }
 
-@media (max-width:600px) {
-    nav ul{
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        text-align: center;
-        background: #004274;
-        gap: 0;
-        overflow: hidden;
-    }
-    nav ul li{
-        padding: 20px;
-        padding-top: 0;
-    }
-    .menu-icon{
-        display: block;
-    }
-    #menuList{
-        transition: all 0.5s;
-    }
+#menuList li a:hover::after {
+  width: 100%; /* Expands the underline to the full width of the text */
 }
+
+.profileicon {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.profileicon a {
+  display: flex;
+  align-items: center;
+}
+
+.profileicon img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.profileicon img:hover {
+  transform: scale(1.1);
+}
+
 /* Card styles */
 .wrapper {
     width: 100%;
@@ -84,7 +114,6 @@ nav ul li a{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white; /* Changed to white */
 }
 
 .card {

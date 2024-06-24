@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Whoops!</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/404.css') }}">
+        <script type="text/javascript" src="{{ url_for('static', filename='scripts/404.js') }}"></script>
+    </head>
+    <body>
+        <h1><a href="{{ url_for('home') }}">404</a></h1>
+        <p>You brought us here for nothing!<br>- You (Probably)</p>
+        <div class="travolta"></div>
+        <div id="loader"></div>
+    </body>
+</html>
