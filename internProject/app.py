@@ -76,6 +76,10 @@ def about_r():
 def form_r():
     return render_template('form_r.html')
 
+@app.route('/account_r')
+def account_r():
+    return render_template('account_r.html')
+
 @app.route('/new_booking', methods=['POST'])
 def new_booking():
     if 'user_id' not in session:
