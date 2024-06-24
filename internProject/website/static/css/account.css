@@ -55,6 +55,7 @@ body {
 
 header {
   background-color: rgba(0, 0, 0, 0.7); /* Set background to black with 70% opacity */
+  padding-bottom: 350px;
 }
 
 nav {
