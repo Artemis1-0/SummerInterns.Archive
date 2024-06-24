@@ -44,8 +44,20 @@ class RegisterForm(FlaskForm):
     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('home.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/account')
+def account():
+    return render_template('account.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -83,11 +95,16 @@ def register():
 def dashboard():
     return render_template('dashboard.html')
 
+@app.route('/booking')
+@login_required
+def booking():
+    return render_template('booking.html')
+
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for('home'))
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -31,35 +31,9 @@
       <!-- Content for logged out state -->
       <div id="loggedOut" class="accountSection">
         <h2>Sign In or Sign Up</h2>
-        <a href="{{ url_for('signinpage') }}" class="btn">Sign In</a>
-        <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
+        <a href="{{ url_for('login') }}" class="btn">Sign In</a>
+        <a href="{{ url_for('register') }}" class="btn">Sign Up</a>
       </div>
-
-      <!-- Content for logged in state -->
-      <div id="loggedIn" class="accountSection">
-        <h2>Logged in as: {{ username }}</h2>
-        <a href="{{ url_for('logout') }}" id="logoutBtn" class="btn">Log Out</a>
-      </div>
-    </div>
   </div>
-
-  <!-- JavaScript -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const loggedOutSection = document.getElementById('loggedOut');
-      const loggedInSection = document.getElementById('loggedIn');
-
-      // Example logic for checking if user is logged in (simulated with a variable)
-      const isLoggedIn = {{ logged_in|tojson|safe }}; // Replace with actual logic to check if user is logged in
-
-      if (isLoggedIn) {
-        loggedOutSection.style.display = 'none'; // Hide logged out section
-        loggedInSection.style.display = 'block'; // Show logged in section
-      } else {
-        loggedOutSection.style.display = 'block'; // Show logged out section if not logged in
-        loggedInSection.style.display = 'none'; // Hide logged in section if not logged in
-      }
-    });
-  </script>
 </body>
 </html>
