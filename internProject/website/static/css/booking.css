@@ -1,99 +1,92 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+/* Reset and basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
-    background: transparent;
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Set background to black with 70% opacity */
 }
 
-h1 {
-    pointer-events: none;
-    position: absolute;
-    bottom: 5%;
-    right: 0;
-    font-size: 7rem;
-    background-image: linear-gradient(#183960, #102544);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #eeeeea;
-    animation: fade ease-in 1s;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: black; /* Set background color to black */
 }
 
-nav{
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #257400;
-    position: relative;
-    height: 70px;
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
 }
 
-.logo{
-    color: #fff;
+.logo a {
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    width: 100px;  /* Adjust the width as necessary */
-    height: auto;
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-nav ul{
-    display: flex;
-    gap: 30px;
-    align-items: center;
+.logo img:hover {
+  transform: scale(1.1);
 }
 
-nav ul li{
-    list-style-type: none;
+
+#menuList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
+#menuList li {
+  margin-left: 50px;
+  margin-right: 50px;
+  letter-spacing: 4px;
 }
 
-.menu-icon{
-    display: none;
+#menuList li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
+  font-size: 15px;
+  padding-bottom: 25px; /* Set consistent padding-bottom */
 }
 
-nav ul li a:hover{
-    color: rgb(182, 255, 200);
-}
-.menu-icon i{
-    color: #fff;
-    font-size: 30px;
+#menuList li a:hover {
+  transform: scale(1.1); /* Scale the text */
+  border-bottom: 3px solid white;
 }
 
-@media (max-width:600px) {
-    nav ul{
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        text-align: center;
-        background: #004274;
-        gap: 0;
-        overflow: hidden;
-    }
-    nav ul li{
-        padding: 20px;
-        padding-top: 0;
-    }
-    .menu-icon{
-        display: block;
-    }
-    #menuList{
-        transition: all 0.5s;
-    }
+.profileicon {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.profileicon a {
+  display: flex;
+  align-items: center;
+}
+
+.profileicon img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.profileicon img:hover {
+  transform: scale(1.1);
 }
 .parallax {
     background-image: url(https://www.fifeleisure.org.uk/livepublic/assets/Image/iStock-954142740.jpg); /* Replace with your new image URL */
