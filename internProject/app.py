@@ -95,8 +95,7 @@ def register():
         new_user = User(username=form.username.data, email=form.email.data, password=form.password.data)
         db.session.add(new_user)
         db.session.commit()
-
-        return '<h1>New User Created</h1>'
+        return redirect(url_for('login'))
         #return '<h1>' + form.username.data + ' ' + form.email.data + ' ' + form.password.data + '</h1>'
 
     return render_template('register.html', form=form)
