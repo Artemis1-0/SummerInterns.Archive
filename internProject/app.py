@@ -1,35 +1,31 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_sqlalchemy import SQLAlchemy
-from flask_bootstrap import Bootstrap
-from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField
-from wtforms.validators import InputRequired, Email, Length
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 
+# Database configuration
 USERNAME = 'root'
 PASSWORD = ''
 HOST = 'localhost'
 DB_NAME = 'vidhur'
-
+# Initialize the Flask application and specify the template and static folders
 app = Flask(__name__, template_folder='website/template', static_folder='website/static')
-app.config['SECRET_KEY'] = 'topsecret!'
-Bootstrap(app)
+# Configure the SQLAlchemy part of the app instance
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + USERNAME + ':' + PASSWORD + '@' + HOST + '/' + DB_NAME
+# Disable modification tracking
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# Set the secret key for session management
+app.config['SECRET_KEY'] = 'root'
+# Initialize the SQLAlchemy object with the app
 db = SQLAlchemy(app)
-login_manager = LoginManager()
-login_manager.init_app(app)
-login_manager.login_view = 'login'
 
-class User(UserMixin, db.Model):
+
+class Account(db.Model):
     __tablename__ = 'account'  # Explicit table name
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(15), unique=True, nullable=False)
-    email = db.Column(db.String(50), unique=True, nullable=False)
-    password = db.Column(db.String(80), nullable=False)
+    username = db.Column(db.String(255), unique=True, nullable=False)
+    email = db.Column(db.String(255), unique=True, nullable=False)
+    password = db.Column(db.String(255), nullable=False)
 
-# Define the Booking model
+
 class Booking(db.Model):
     __tablename__ = 'booking'  # Explicit table name
     id = db.Column(db.Integer, primary_key=True)
@@ -41,123 +37,175 @@ class Booking(db.Model):
     amenities = db.Column(db.String(255), nullable=False)
 
 
-@login_manager.user_loader
-def load_user(user_id):
-    return User.query.get(int(user_id))
-
-class LoginForm(FlaskForm):
-    username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
-    password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
-    remember = BooleanField('remember')
-
-class RegisterForm(FlaskForm):
-    email = StringField('email', validators=[InputRequired(), Email(message = 'Invalid Email'), Length(max=50)])
-    username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
-    password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
-
 @app.route('/')
 def home():
-    register_form = RegisterForm()
-    login_form = LoginForm()
-    return render_template('home.html', register_form=register_form, login_form=login_form)
+    return render_template('home.html')
+
+
+@app.route('/booking')
+def booking():
+    return render_template('booking.html')
+
 
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
 
+
 @app.route('/about')
 def about():
     return render_template('about.html')
 
-@app.route('/account')
-def account():
-    return render_template('account.html')
+@app.route('/nav')
+def nav():
+    return render_template('nav.html')
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    register_form = RegisterForm()
-    login_form = LoginForm()
-
-    if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
-        if user:
-            if user.password == form.password.data:
-                login_user(user, remember=form.remember.data)
-                return redirect(url_for('dashboard'))
-            
-        return '<h1> Invalid Username or Password </h1>'
-
-    return render_template('home.html', register_form=register_form, login_form=login_form)
-
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    register_form = RegisterForm()
-    login_form = LoginForm()
-
-    if form.validate_on_submit():
-        new_user = User(username=form.username.data, email=form.email.data, password=form.password.data)
-        db.session.add(new_user)
-        db.session.commit()
-        return redirect(url_for('login'))
-       
-    return render_template('home.html', register_form=register_form, login_form=login_form)
-
-@app.route('/form_r')
-def form_r():
-    return render_template('form_r.html')
+@app.route('/vdnav')
+def vdnav():
+    return render_template('vdnav.html')
 
 @app.route('/test')
 def test():
     return render_template('test.html')
 
-@app.route('/dashboard')
-@login_required
-def dashboard():
-    return render_template('dashboard.html')
+@app.route('/about_r')
+def about_r():
+    return render_template('about_r.html')
 
-@app.route('/booking')
-@login_required
-def booking():
-    return render_template('booking.html')
+@app.route('/form_r')
+def form_r():
+    return render_template('form_r.html')
 
-# Define the route to handle form submission for entering a submission
-@app.route('/booking', methods=['POST'])
-def enter_name():
-    # Retrieve everything from the form data
-    email = request.form.get('email')
+@app.route('/new_booking', methods=['POST'])
+def new_booking():
+    if 'user_id' not in session:
+        return redirect(url_for('signinpage'))
+
+    user_id = session['user_id']
+    user_account = Account.query.filter_by(id=user_id).first()
+
+    if not user_account:
+        flash('User account not found.', 'error')
+        return redirect(url_for('home'))
+
+    email = user_account.email  # Retrieve the email from the user's account
     pitch = request.form.get('pitch')
     start = request.form.get('start')
     end = request.form.get('end')
     date = request.form.get('date')
     amenities = request.form.get('amenities')
-    # Create a new User object with the form data
-    new_name = User(email=email, pitch=pitch, start=start, end=end, date=date,amenities=amenities)
+
+    new_booking = Booking(email=email, pitch=pitch, start=start, end=end, date=date, amenities=amenities)
 
     try:
-        # Attempt to add the new User object to the database
-        db.session.add(new_name)
-        # Commit the transaction
+        db.session.add(new_booking)
         db.session.commit()
-        print('Name entered successfully!')
+        flash('Booking entered successfully!', 'success')
     except Exception as e:
-        # If an error occurs, roll back the transaction
         db.session.rollback()
-        print('An error occurred while booking the class.')
+        flash('An error occurred while booking the class.', 'error')
+
+    return redirect(url_for('home'))
 
 
-    # Redirect to the booking page after form submission
-    return redirect(url_for('booking'))
-#test
+
+@app.route('/account')
+def account():
+    if 'user_id' in session:
+        user_id = session['user_id']
+        account = Account.query.filter_by(id=user_id).first()
+        if account:
+            username = account.username
+            bookings = Booking.query.filter_by(email=account.email).all()
+            return render_template('account.html', username=username, logged_in=True, bookings=bookings)
+
+    return render_template('account.html', username=None, logged_in=False, bookings=[])
+
+
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
+@app.route('/ts')
+def ts():
+    return render_template('ts.html')
+
+@app.route('/signinpage')
+def signinpage():
+    return render_template('signinpage.html')
+
+@app.route('/create_account', methods=['GET', 'POST'])
+def create_account():
+    if request.method == 'POST':
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+        # Check if email or username already exists
+        existing_user = Account.query.filter((Account.email == email) | (Account.username == username)).first()
+        if existing_user:
+            return redirect(url_for('signup'))
+        new_account = Account(username=username, email=email, password=password)
+        db.session.add(new_account)
+        db.session.commit()
+        return redirect(url_for('signup'))
+    return render_template('signup.html')
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        account = Account.query.filter_by(email=email, password=password).first()
+        if account:
+            session['user_id'] = account.id
+            return redirect(url_for('account'))
+        else:
+            flash('Invalid email or password', 'error')
+            return render_template('signin.html')
+
 
 @app.route('/logout')
-@login_required
 def logout():
-    logout_user()
+    session.pop('user_id', None)
     return redirect(url_for('home'))
+
+
+@app.route('/edit_booking/<int:booking_id>', methods=['POST'])
+def edit_booking(booking_id):
+    booking = Booking.query.get_or_404(booking_id)
+    booking.pitch = request.form['pitch']
+    booking.start = request.form['start']
+    booking.end = request.form['end']
+    booking.date = request.form['date']
+    booking.amenities = request.form['amenities']
+
+    try:
+        db.session.commit()
+        flash('Booking updated successfully!', 'success')
+    except Exception as e:
+        db.session.rollback()
+        flash('An error occurred while updating the booking.', 'error')
+
+    return redirect(url_for('account'))
+
+
+@app.route('/delete_booking/<int:booking_id>', methods=['POST'])
+def delete_booking(booking_id):
+    booking = Booking.query.get_or_404(booking_id)
+
+    try:
+        db.session.delete(booking)
+        db.session.commit()
+        flash('Booking deleted successfully!', 'success')
+    except Exception as e:
+        db.session.rollback()
+        flash('An error occurred while deleting the booking.', 'error')
+
+    return redirect(url_for('account'))
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('page_not_found.html'), 404  
+    return render_template('404.html'), 404  
 
 if __name__ == '__main__':
     app.run(debug=True)
