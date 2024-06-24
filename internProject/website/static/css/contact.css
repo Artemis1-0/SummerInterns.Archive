@@ -16,7 +16,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: black; /* Set background color to black */
+  background-color: rgba(0, 0, 0, 0.8); /* Set background color to black with 50% opacity */
+  width: 100%; /* Ensure full width of page */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin: 0; /* Remove default margin */
+  position: fixed; /* Fix the nav bar to the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 .logo {
@@ -40,7 +47,6 @@ nav {
   transform: scale(1.1);
 }
 
-
 #menuList {
   display: flex;
   justify-content: center;
@@ -60,12 +66,23 @@ nav {
   color: #fff;
   transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
   font-size: 15px;
-  padding-bottom: 25px; /* Set consistent padding-bottom */
+  position: relative; /* Add relative positioning */
 }
 
-#menuList li a:hover {
-  transform: scale(1.1); /* Scale the text */
-  border-bottom: 3px solid white;
+#menuList li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjusts the distance between the text and the underline */
+}
+
+#menuList li a:hover::after {
+  width: 100%; /* Expands the underline to the full width of the text */
 }
 
 .profileicon {
@@ -89,13 +106,6 @@ nav {
   transform: scale(1.1);
 }
 
-    .menu-icon {
-        display: block;
-    }
-    #menuList {
-        transition: all 0.5s;
-    }
-}
 
 .container {
     text-align: center;

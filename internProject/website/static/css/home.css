@@ -16,7 +16,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: black; /* Set background color to black */
+  background-color: rgba(0, 0, 0, 0.8); /* Set background color to black with 50% opacity */
+  width: 100%; /* Ensure full width of page */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin: 0; /* Remove default margin */
+  position: fixed; /* Fix the nav bar to the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 .logo {
@@ -40,7 +47,6 @@ nav {
   transform: scale(1.1);
 }
 
-
 #menuList {
   display: flex;
   justify-content: center;
@@ -60,12 +66,23 @@ nav {
   color: #fff;
   transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
   font-size: 15px;
-  padding-bottom: 25px; /* Set consistent padding-bottom */
+  position: relative; /* Add relative positioning */
 }
 
-#menuList li a:hover {
-  transform: scale(1.1); /* Scale the text */
-  border-bottom: 3px solid white;
+#menuList li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjusts the distance between the text and the underline */
+}
+
+#menuList li a:hover::after {
+  width: 100%; /* Expands the underline to the full width of the text */
 }
 
 .profileicon {
@@ -89,140 +106,140 @@ nav {
   transform: scale(1.1);
 }
 
+/* Parallax section */
 .parallax {
-    background-image: url(https://marylandtang.gaa.ie/wp-content/uploads/sites/113/2023/04/692D3DB8-C51C-46BD-8C3E-C2E541AC4714-870x490.jpeg); /* Replace with your new image URL */
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(https://cdn.pafc.co.uk/sites/default/files/styles/cc_640x480/public/2022-12/book_pitch.png?h=d1cb525d&itok=hWPdBKGr); /* Replace with your new image URL */
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Main content adjustments */
 main {
-    background-color: white;
-    padding-top: 20px;
-    margin-top: 44px; /* To offset the fixed nav bar */
+  background-color: white;
+  padding-top: 20px;
+  margin-top: 84px; /* To offset the fixed nav bar */
 }
 
 /* Slideshow Styles */
 .slideshow-container {
-    position: relative;
-    max-width: 1000px;
-    margin: 20px auto;
+  position: relative;
+  max-width: 1000px;
+  margin: 20px auto;
 }
 
 .mySlides {
-    display: none;
+  display: none;
 }
 
 .mySlides img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
-    from {opacity: 0.4}
-    to {opacity: 1}
+  from {opacity: 0.4}
+  to {opacity: 1}
 }
 
 .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    -webkit-user-select: none;
-    user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .slide-text {
-    color: #fff;
-    font-size: 24px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 4px;
-    width: 100%;
-    text-align: scenter;
-    background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-    background-color: #717171;
+  background-color: #717171;
 }
 
 /* Welcome Section */
 .welcome {
-    text-align: center;
-    padding: 50px 20px;
-    color: #333;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 800px;
+  text-align: center;
+  padding: 50px 20px;
+  color: #333;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
 }
 
 .welcome h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
 .welcome p {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
-
 
 /* Scrollbar styles */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-      background-image: linear-gradient(#fff, #333);
-      border-radius: 5px;
-      opacity: 0.3;
-      transition: opacity 400ms;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-      background-image: linear-gradient(#333, #fff);
-      opacity: 1;
-  }
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#fff, #333);
+  border-radius: 5px;
+  opacity: 0.3;
+  transition: opacity 400ms;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(#333, #fff);
+  opacity: 1;
+}
