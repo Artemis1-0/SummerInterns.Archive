@@ -11,6 +11,19 @@ html,body{
     background-image: url("https://germinalamenity.com/media/ggb/wp/wp-content/uploads/2022/12/Football-pitch-maintenance-Stirling-Albion-2.webp");
 }
 
+h1 {
+    pointer-events: none;
+    font-size: 5rem;
+    text-align: center;
+    background-image: linear-gradient(#183960, #102544);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #eeeeea;
+    animation: fade ease-in 1s;
+}
+
 nav{
     padding: 10px 30px;
     display: flex;
@@ -84,7 +97,6 @@ nav ul li a{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white; /* Changed to white */
 }
 
 .card {
