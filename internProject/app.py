@@ -57,7 +57,9 @@ class RegisterForm(FlaskForm):
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    register_form = RegisterForm()
+    login_form = LoginForm()
+    return render_template('home.html', register_form=register_form, login_form=login_form)
 
 @app.route('/contact')
 def contact():
@@ -73,7 +75,8 @@ def account():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    form = LoginForm()
+    register_form = RegisterForm()
+    login_form = LoginForm()
 
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -84,11 +87,12 @@ def login():
             
         return '<h1> Invalid Username or Password </h1>'
 
-    return render_template('login.html', form=form)
+    return render_template('home.html', register_form=register_form, login_form=login_form)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    form = RegisterForm()
+    register_form = RegisterForm()
+    login_form = LoginForm()
 
     if form.validate_on_submit():
         new_user = User(username=form.username.data, email=form.email.data, password=form.password.data)
@@ -96,7 +100,7 @@ def register():
         db.session.commit()
         return redirect(url_for('login'))
        
-    return render_template('register.html', form=form)
+    return render_template('home.html', register_form=register_form, login_form=login_form)
 
 @app.route('/form_r')
 def form_r():
