@@ -112,40 +112,34 @@ def dashboard():
 def booking():
     return render_template('booking.html')
 
-# Route for editing a booking
-@app.route('/edit_booking/<int:booking_id>', methods=['POST'])
-def edit_booking(booking_id):
-    booking = Booking.query.get_or_404(booking_id)
-    booking.pitch = request.form['pitch']
-    booking.start = request.form['start']
-    booking.end = request.form['end']
-    booking.date = request.form['date']
-    booking.amenities = request.form['amenities']
+# Define the route to handle form submission for entering a submission
+@app.route('/booking', methods=['POST'])
+def enter_name():
+    # Retrieve everything from the form data
+    email = request.form.get('email')
+    pitch = request.form.get('pitch')
+    start = request.form.get('start')
+    end = request.form.get('end')
+    date = request.form.get('date')
+    amenities = request.form.get('amenities')
+    # Create a new User object with the form data
+    new_name = User(email=email, pitch=pitch, start=start, end=end, date=date,amenities=amenities)
 
     try:
+        # Attempt to add the new User object to the database
+        db.session.add(new_name)
+        # Commit the transaction
         db.session.commit()
-        flash('Booking updated successfully!', 'success')
+        print('Name entered successfully!')
     except Exception as e:
+        # If an error occurs, roll back the transaction
         db.session.rollback()
-        flash('An error occurred while updating the booking.', 'error')
-
-    return redirect(url_for('account'))
+        print('An error occurred while booking the class.')
 
 
-# Route for deleting a booking
-@app.route('/delete_booking/<int:booking_id>', methods=['POST'])
-def delete_booking(booking_id):
-    booking = Booking.query.get_or_404(booking_id)
-
-    try:
-        db.session.delete(booking)
-        db.session.commit()
-        flash('Booking deleted successfully!', 'success')
-    except Exception as e:
-        db.session.rollback()
-        flash('An error occurred while deleting the booking.', 'error')
-
-    return redirect(url_for('account'))
+    # Redirect to the booking page after form submission
+    return redirect(url_for('booking'))
+#test
 
 @app.route('/logout')
 @login_required
