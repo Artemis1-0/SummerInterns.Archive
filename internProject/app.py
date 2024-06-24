@@ -125,6 +125,7 @@ def account():
     # If user is not logged in or account not found, render account.html with default values
     return render_template('account.html', username=None, logged_in=False, bookings=[])
 
+
 @app.route('/signup')
 def signup():
     return render_template('signup.html')
