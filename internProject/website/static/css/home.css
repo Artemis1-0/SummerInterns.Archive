@@ -105,7 +105,6 @@ nav {
 .profileicon img:hover {
   transform: scale(1.1);
 }
-
 /* Parallax section */
 .parallax {
   background-image: url(https://cdn.pafc.co.uk/sites/default/files/styles/cc_640x480/public/2022-12/book_pitch.png?h=d1cb525d&itok=hWPdBKGr); /* Replace with your new image URL */
