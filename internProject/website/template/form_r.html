@@ -29,9 +29,9 @@
                 </div>
                 <span>or use your email for registration</span>
                 {{ register_form.hidden_tag() }}
-                {{wtf.form_field(form.username) }}
-                {{wtf.form_field(form.email) }}
-                {{wtf.form_field(form.password) }}
+                {{wtf.form_field(register_form.username) }}
+                {{wtf.form_field(register_form.email) }}
+                {{wtf.form_field(register_form.password) }}
                 <button type="submit" class="button-group" id="sign_up">Sign Up</button>
             </form>
         </div>
@@ -53,10 +53,10 @@
                     </a>
                 </div>
                 <span>or use your email and password</span>
-                <input type="email" 
-                placeholder="Email">
-                <input type="password" 
-                placeholder="Password">
+                {{ login_form.hidden_tag() }}
+                {{ wtf.form_field(form.username) }}
+                {{ wtf.form_field(form.password) }}
+                {{ wtf.form_field(form.remember) }}
                 <a href="">Forgot your email or password?</a>
                 <button>Sign in</button>
             </form>
