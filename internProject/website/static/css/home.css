@@ -1,86 +1,94 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+/* Reset and basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
-    background: transparent;
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Set background to black with 70% opacity */
 }
 
-nav{
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #257400;
-    position: relative;
-    height: 70px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: black; /* Set background color to black */
 }
 
-.logo{
-    color: #fff;
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    width: 100px;  /* Adjust the width as necessary */
-    height: auto;
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-nav ul{
-    display: flex;
-    gap: 30px;
-    align-items: center;
+.logo img:hover {
+  transform: scale(1.1);
 }
 
-nav ul li{
-    list-style-type: none;
+
+#menuList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
+#menuList li {
+  margin-left: 50px;
+  margin-right: 50px;
+  letter-spacing: 4px;
 }
 
-nav ul li a:hover{
-    color: rgb(182, 255, 200);
+#menuList li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
+  font-size: 15px;
+  padding-bottom: 25px; /* Set consistent padding-bottom */
 }
 
-.menu-icon{
-    display: none;
+#menuList li a:hover {
+  transform: scale(1.1); /* Scale the text */
+  border-bottom: 3px solid white;
 }
 
-.menu-icon i{
-    color: #fff;
-    font-size: 30px;
+.profileicon {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
 }
 
-@media (max-width:600px) {
-    nav ul{
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        text-align: center;
-        background: #004274;
-        gap: 0;
-        overflow: hidden;
-    }
-    nav ul li{
-        padding: 20px;
-        padding-top: 0;
-    }
-    .menu-icon{
-        display: block;
-    }
-    #menuList{
-        transition: all 0.5s;
-    }
+.profileicon a {
+  display: flex;
+  align-items: center;
 }
+
+.profileicon img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.profileicon img:hover {
+  transform: scale(1.1);
+}
+
 .parallax {
     background-image: url(https://cdn.pafc.co.uk/sites/default/files/styles/cc_640x480/public/2022-12/book_pitch.png?h=d1cb525d&itok=hWPdBKGr); /* Replace with your new image URL */
     height: 500px;
@@ -208,13 +216,13 @@ footer {
   }
   
   ::-webkit-scrollbar-thumb {
-      background-image: linear-gradient(#89ce94, #6ccff6);
+      background-image: linear-gradient(#fff, #333);
       border-radius: 5px;
       opacity: 0.3;
       transition: opacity 400ms;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-      background-image: linear-gradient(#71ff4e, #07b9ff);
+      background-image: linear-gradient(#333, #fff);
       opacity: 1;
   }

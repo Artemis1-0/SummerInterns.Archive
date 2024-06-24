@@ -64,6 +64,9 @@ nav ul li a{
     display: none;
 }
 
+nav ul li a:hover{
+    color: rgb(182, 255, 200);
+}
 .menu-icon i{
     color: #fff;
     font-size: 30px;
