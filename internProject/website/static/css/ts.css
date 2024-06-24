@@ -1,0 +1,114 @@
+/* Reset and basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Set background to black with 70% opacity */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Set background color to black with 50% opacity */
+  width: 100%; /* Ensure full width of page */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin: 0; /* Remove default margin */
+  position: fixed; /* Fix the nav bar to the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+#menuList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menuList li {
+  margin-left: 50px;
+  margin-right: 50px;
+  letter-spacing: 4px;
+}
+
+#menuList li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
+  font-size: 15px;
+  position: relative; /* Add relative positioning */
+}
+
+#menuList li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjusts the distance between the text and the underline */
+}
+
+#menuList li a:hover::after {
+  width: 100%; /* Expands the underline to the full width of the text */
+}
+
+.profileicon {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.profileicon a {
+  display: flex;
+  align-items: center;
+}
+
+.profileicon img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.profileicon img:hover {
+  transform: scale(1.1);
+}
+
+/* Main content adjustments */
+main {
+  background-color: white;
+  padding-top: 20px;
+  margin-top: 84px; /* To offset the fixed nav bar */
+}

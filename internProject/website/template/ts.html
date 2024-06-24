@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions</title>
+  <link rel="stylesheet" href="ts.css"> <!-- Ensure you link to your existing CSS file -->
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logo">
+         <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='media/ERIC.D.png') }}" alt="Profile Icon">
+            </a>        </div>
+        <ul id="menuList">
+        <li><a href="{{ url_for('booking') }}">Booking</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+        <div class="profileicon">
+            <a href="{{ url_for('account') }}">
+                <img src="{{ url_for('static', filename='media/profiileicon.png') }}" alt="Profile Icon">
+            </a>
+        </div>
+    </nav>
+</header>
+
+  <main>
+    <section class="terms-and-conditions">
+      <h1>Terms and Conditions</h1>
+      <p>Welcome to our website! By accessing and using this site, you accept the following terms and conditions:</p>
+
+      <h2>1. Introduction</h2>
+      <p>These terms and conditions govern your use of our website. By using our website, you accept these terms and conditions in full.</p>
+
+      <h2>2. Intellectual Property Rights</h2>
+      <p>Unless otherwise stated, we own the intellectual property rights in the website and material on the website. All these intellectual property rights are reserved.</p>
+
+      <h2>3. License to Use Website</h2>
+      <p>You may view, download for caching purposes only, and print pages from the website for your own personal use, subject to the restrictions set out below.</p>
+
+      <h2>4. Acceptable Use</h2>
+      <p>You must not use our website in any way that causes, or may cause, damage to the website or impairment of the availability or accessibility of the website.</p>
+
+      <h2>5. Restricted Access</h2>
+      <p>Access to certain areas of our website is restricted. We reserve the right to restrict access to other areas of our website, or indeed our whole website, at our discretion.</p>
+
+      <h2>6. User Content</h2>
+      <p>In these terms and conditions, "your user content" means material that you submit to our website, for whatever purpose.</p>
+
+      <h2>7. Limitations of Liability</h2>
+      <p>We will not be liable to you in relation to the contents of, or use of, or otherwise in connection with, this website.</p>
+
+      <h2>8. Indemnity</h2>
+      <p>You hereby indemnify us and undertake to keep us indemnified against any losses, damages, costs, liabilities and expenses incurred or suffered by us arising out of any breach by you of any provision of these terms and conditions.</p>
+
+      <h2>9. Breaches of These Terms and Conditions</h2>
+      <p>Without prejudice to our other rights under these terms and conditions, if you breach these terms and conditions in any way, we may take such action as we deem appropriate to deal with the breach.</p>
+
+      <h2>10. Variation</h2>
+      <p>We may revise these terms and conditions from time-to-time. Revised terms and conditions will apply to the use of our website from the date of publication of the revised terms and conditions on our website.</p>
+
+      <h2>11. Entire Agreement</h2>
+      <p>These terms and conditions constitute the entire agreement between you and us in relation to your use of our website and supersede all previous agreements in respect of your use of this website.</p>
+
+      <h2>12. Law and Jurisdiction</h2>
+      <p>These terms and conditions will be governed by and construed in accordance with the laws, and any disputes relating to these terms and conditions will be subject to the exclusive jurisdiction of the courts.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Your Company. All rights reserved.</p>
+    <p><a href="ts.html">Terms and Conditions</a></p> <!-- Add link to T&C page in footer -->
+  </footer>
+</body>
+</html>
