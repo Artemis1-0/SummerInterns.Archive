@@ -79,30 +79,36 @@ def about_r():
 def form_r():
     return render_template('form_r.html')
 
-@app.route('/booking', methods=['POST'])
+@app.route('/new_booking', methods=['POST'])
 def new_booking():
-    if
-    # Retrieve everything from the form data
+    if 'user_id' not in session:
+        return redirect(url_for('signinpage'))
+
+    user_id = session['user_id']
+    user_account = Account.query.filter_by(id=user_id).first()
+
+    if not user_account:
+        flash('User account not found.', 'error')
+        return redirect(url_for('home'))
+
+    email = user_account.email  # Retrieve the email from the user's account
     pitch = request.form.get('pitch')
     start = request.form.get('start')
     end = request.form.get('end')
     date = request.form.get('date')
     amenities = request.form.get('amenities')
-    # Create a new User object with the form data
-    new_name = User(email=email, pitch=pitch, start=start, end=end, date=date,amenities=amenities)
-    try:
-        # Attempt to add the new User object to the database
-        db.session.add(new_name)
-        # Commit the transaction
-        db.session.commit()
-        print('Name entered successfully!')
-    except Exception as e:
-        # If an error occurs, roll back the transaction
-        db.session.rollback()
-        print('An error occurred while booking the class.')
 
-    # Redirect to the booking page after form submission
-    return redirect(url_for('booking'))
+    new_booking = Booking(email=email, pitch=pitch, start=start, end=end, date=date, amenities=amenities)
+
+    try:
+        db.session.add(new_booking)
+        db.session.commit()
+        flash('Booking entered successfully!', 'success')
+    except Exception as e:
+        db.session.rollback()
+        flash('An error occurred while booking the class.', 'error')
+
+    return redirect(url_for('home'))
 
 
 
