@@ -83,7 +83,6 @@ def login():
                 return redirect(url_for('dashboard'))
             
         return '<h1> Invalid Username or Password </h1>'
-        #return '<h1>' + form.username.data + ' ' + form.password.data + '</h1>'
 
     return render_template('login.html', form=form)
 
@@ -96,10 +95,34 @@ def register():
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for('login'))
-        #return '<h1>' + form.username.data + ' ' + form.email.data + ' ' + form.password.data + '</h1>'
-
+       
     return render_template('register.html', form=form)
 
+@app.route('/form_r')
+def form_r():
+        form = LoginForm()
+
+        if form.validate_on_submit():
+            user = User.query.filter_by(username=form.username.data).first()
+        if user:
+            if user.password == form.password.data:
+                login_user(user, remember=form.remember.data)
+                return redirect(url_for('dashboard'))
+            
+        return '<h1> Invalid Username or Password </h1>'
+
+        return render_template('login.html', form=form)
+
+
+        form = RegisterForm()
+
+        if form.validate_on_submit():
+            new_user = User(username=form.username.data, email=form.email.data, password=form.password.data)
+        db.session.add(new_user)
+        db.session.commit()
+        return redirect(url_for('login'))
+       
+        return render_template('register.html', form=form)
 
 @app.route('/dashboard')
 @login_required
