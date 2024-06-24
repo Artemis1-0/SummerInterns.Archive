@@ -1,126 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Account login/sign up</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='/css/account.css') }}">
-        <script src="script.js"></script>
-</head>
-        <style>
-            body {
-                background-image: url("{{ url_for('static', filename='/media/madrid-santiago.jpg') }}")
-            }
-        </style>
-<test></test>
-    <body class="account-page">
-    <div class="nav-container">
-    <nav>
-        <div class="logo">
-             <h1><img src="{{ url_for('static', filename='media/ericsson-logo.png') }}" alt="Logo"></h1>
-        </div>
-        <ul id="menuList">
-             <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('booking') }}">Booking</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('account') }}">Account</a></li>
-        </ul>
-        <div class="menu-icon">
-            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-        </div>
-    </nav>
-</div>
-  <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.container {
-  position: relative;
-  width: 50%;
-}
-
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container:hover .image {
-  opacity: 0.3;
-}
-
-.container:hover .middle {
-  opacity: 1;
-}
-
-.text {
-  background-color: #04AA6D;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/account.css') }}">
 </head>
 <body>
 
+  <header>
+    <nav>
+      <div class="logo">
+        <h1><img src="{{ url_for('static', filename='media/ericsson-logo.png') }}" alt="Logo"></h1>
+      </div>
+      <ul id="menuList">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('booking') }}">Booking</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('account') }}">Account</a></li>
+      </ul>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+    </nav>
+  </header>
 
-<div class="container">
-  <div class="middle">
-    <div class="text">S</div>
+  <div class="container">
+    <h1>Welcome to My Account</h1>
+    <div id="accountContent">
+      <!-- Content for logged out state -->
+      <div id="loggedOut" class="accountSection">
+        <h2>Sign In or Sign Up</h2>
+        <a href="{{ url_for('signinpage') }}" class="btn">Sign In</a>
+        <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
+      </div>
+
+      <!-- Content for logged in state -->
+      <div id="loggedIn" class="accountSection">
+        <h2>Logged in as: {{ username }}</h2>
+        <a href="{{ url_for('logout') }}" id="logoutBtn" class="btn">Log Out</a>
+        <div id="myBookings">
+          <h2>My Bookings</h2>
+          {% for booking in bookings %}
+          <div class="booking">
+            <p>Pitch: {{ booking.pitch }}</p>
+            <p>Date: {{ booking.date }}</p>
+            <p>Start Time: {{ booking.start }}</p>
+            <p>End Time: {{ booking.end }}</p>
+            <p>Amenities: {{ booking.amenities }}</p>
+            <button class="btn" onclick="toggleEditForm('{{ booking.id }}')">Edit</button>
+            <form method="POST" action="{{ url_for('delete_booking', booking_id=booking.id) }}" style="display:inline;">
+              <button type="submit" class="btn">Delete</button>
+            </form>
+            <div id="editForm-{{ booking.id }}" class="editForm" style="display:none;">
+              <form method="POST" action="{{ url_for('edit_booking', booking_id=booking.id) }}">
+                <label for="pitch">Pitch:</label>
+                <input type="text" id="pitch" name="pitch" value="{{ booking.pitch }}">
+                <br>
+                <label for="start">Start Time:</label>
+                <input type="time" id="start" name="start" value="{{ booking.start }}">
+                <br>
+                <label for="end">End Time:</label>
+                <input type="time" id="end" name="end" value="{{ booking.end }}">
+                <br>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" value="{{ booking.date }}">
+                <br>
+                <label for="amenities">Amenities:</label>
+                <input type="text" id="amenities" name="amenities" value="{{ booking.amenities }}">
+                <br>
+                <button type="submit" class="btn">Save</button>
+              </form>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
-</body>
-</html>
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const loggedOutSection = document.getElementById('loggedOut');
+      const loggedInSection = document.getElementById('loggedIn');
 
+      // Example logic for checking if user is logged in (simulated with a variable)
+      const isLoggedIn = {{ logged_in|tojson|safe }}; // Replace with actual logic to check if user is logged in
 
-    <div></div>
-<div id="accountform">
-    <form class="container" action="{{ url_for('account') }}" method="post">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" required><br>
+      if (isLoggedIn) {
+        loggedOutSection.style.display = 'none'; // Hide logged out section
+        loggedInSection.style.display = 'block'; // Show logged in section
+      } else {
+        loggedOutSection.style.display = 'block'; // Show logged out section if not logged in
+        loggedInSection.style.display = 'none'; // Hide logged in section if not logged in
+      }
+    });
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="password1">Password</label>
-        <input type="password" id="password1" name="password1" required><br>
-
-        <button type="submit" class="button-group" id="submit_account" onclick="doConfirm();">Submit</button>
-    </form>
-</div>
-
-<!-- Remember to also copy the code in the CSS area! -->
-<div id="snow" class="snowflakes" style="display: none;">
-  <!-- add your 'snowflake' images below - you can add more or less if needed -->
-  <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
-  <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
-    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
-    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
-   <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
-  <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
-    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
-    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
-    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
-  <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
-    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
-    <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
-</div>
-</div>
+    function toggleEditForm(id) {
+      const form = document.getElementById('editForm-' + id);
+      if (form.style.display === 'none') {
+        form.style.display = 'block';
+      } else {
+        form.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>

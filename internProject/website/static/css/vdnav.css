@@ -1,0 +1,90 @@
+/* Reset and basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.hdcarwallpapers.com/walls/porsche_911_turbo_s_4k_2-HD.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Set background to black with 70% opacity */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+
+#menuList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menuList li {
+  margin-left: 50px;
+  margin-right: 50px;
+  letter-spacing: 4px;
+}
+
+#menuList li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
+  font-size: 15px;
+  padding-bottom: 25px; /* Set consistent padding-bottom */
+}
+
+#menuList li a:hover {
+  transform: scale(1.1); /* Scale the text */
+  border-bottom: 3px solid white;
+}
+
+.profileicon {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.profileicon a {
+  display: flex;
+  align-items: center;
+}
+
+.profileicon img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.profileicon img:hover {
+  transform: scale(1.1);
+}
