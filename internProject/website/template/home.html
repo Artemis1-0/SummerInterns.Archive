@@ -10,23 +10,25 @@
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}">
 </head>
 <body>
-    <header>
-     <nav>
+ <header>
+    <nav>
         <div class="logo">
-             <h1><img src="{{ url_for('static', filename='media/ericsson-logo.png') }}" alt="Logo"></h1>
-        </div>
+         <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='media/ERIC.D.png') }}" alt="Profile Icon">
+            </a>        </div>
         <ul id="menuList">
-             <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('booking') }}">Booking</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('account') }}">Account</a></li>
+           <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('booking') }}">Booking</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
         </ul>
-        <div class="menu-icon">
-            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        <div class="profileicon">
+            <a href="{{ url_for('account') }}">
+                <img src="{{ url_for('static', filename='media/profiileicon.png') }}" alt="Profile Icon">
+            </a>
         </div>
     </nav>
-    </header>
+</header>
     <script>
         let menuList = document.getElementById("menuList")
         menuList.style.maxHeight = "0px";
@@ -85,4 +87,5 @@
         <p>&copy; 2024 Football Pitch Booking. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
