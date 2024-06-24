@@ -29,6 +29,18 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(50), unique=True, nullable=False)
     password = db.Column(db.String(80), nullable=False)
 
+# Define the Booking model
+class Booking(db.Model):
+    __tablename__ = 'booking'  # Explicit table name
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(255), nullable=False)
+    pitch = db.Column(db.Integer, nullable=False)
+    start = db.Column(db.Time, nullable=False)
+    end = db.Column(db.Time, nullable=False)
+    date = db.Column(db.Date, nullable=False)
+    amenities = db.Column(db.String(255), nullable=False)
+
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
