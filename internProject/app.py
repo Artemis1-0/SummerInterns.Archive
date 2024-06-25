@@ -140,6 +140,7 @@ def edit_booking(booking_id):
 
     # Check for booking conflicts
     if is_booking_conflict(pitch, start, end, date, exclude_booking_id=booking_id):
+        flash('The pitch is already booked for the selected time.', 'error')
         return redirect(url_for('account'))
 
     booking.pitch = pitch
