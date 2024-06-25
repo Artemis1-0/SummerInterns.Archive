@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="Fixed overflow error">
-      <change beforePath="$PROJECT_DIR$/internProject/website/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/template/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/home.html" afterDir="false" />
+    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="added comments to the code so the ops cant catch me out">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/template/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/about.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -467,7 +468,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719233733129</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="added comments to the code so the ops cant catch me out">
+      <option name="closed" value="true" />
+      <created>1719305478713</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1719305478713</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -485,6 +494,7 @@
     <MESSAGE value="vd" />
     <MESSAGE value="nav bar" />
     <MESSAGE value="Fixed overflow error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed overflow error" />
+    <MESSAGE value="added comments to the code so the ops cant catch me out" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments to the code so the ops cant catch me out" />
   </component>
 </project>

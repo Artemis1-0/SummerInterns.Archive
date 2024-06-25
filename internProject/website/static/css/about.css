@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("https://pitchbooking.com/img/_v1/hero/carousel-pitchbooking.webp")
+  background-image: url("https://www.thetrainline.com/cms/media/10683/digital-rendering-of-soccer-field.jpg?mode=crop&width=860&height=574&quality=70")
 }
 
 header {
@@ -199,7 +199,7 @@ input:checked + label .description {
 }
 
 .card[for="c4"] {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAC2CAMAAABDLoc2AAAAA1BMVEUAAACnej3aAAAAN0lEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8A2CGgABvGlVPgAAAABJRU5ErkJggg==");
+    background-image: url("https://www.ccgrasseurope.com/wp-content/uploads/2020/09/moate3.jpg");
     object-fit: cover;
 }
 
@@ -222,8 +222,12 @@ input:checked + label .description {
 
 /* Footer */
 footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
+  background-color: #333; /* Set background color */
+  color: white; /* Set text color */
+  text-align: center; /* Center align text */
+  padding: 10px 0; /* Add padding */
+}
+
+footer p a {
+  color: white; /* Set link color */
 }
