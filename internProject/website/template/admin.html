@@ -169,6 +169,39 @@
                 </div>
             </div>
         </div>
+        {% for booking in bookings %}
+                  <div class="booking">
+                    <p>Pitch: {{ booking.pitch }}</p>
+                    <p>Date: {{ booking.date }}</p>
+                    <p>Start Time: {{ booking.start }}</p>
+                    <p>End Time: {{ booking.end }}</p>
+                    <p>Amenities: {{ booking.amenities }}</p>
+                    <button class="btn" onclick="toggleEditForm('{{ booking.id }}')">Edit</button>
+                    <form method="POST" action="{{ url_for('delete_booking', booking_id=booking.id) }}" style="display:inline;">
+                      <button type="submit" class="btn">Delete</button>
+                    </form>
+                    <div id="editForm-{{ booking.id }}" class="editForm" style="display:none;">
+                      <form method="POST" action="{{ url_for('edit_booking', booking_id=booking.id) }}">
+                        <label for="pitch">Pitch:</label>
+                        <input type="text" id="pitch" name="pitch" value="{{ booking.pitch }}">
+                        <br>
+                        <label for="start">Start Time:</label>
+                        <input type="time" id="start" name="start" value="{{ booking.start }}">
+                        <br>
+                        <label for="end">End Time:</label>
+                        <input type="time" id="end" name="end" value="{{ booking.end }}">
+                        <br>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" value="{{ booking.date }}">
+                        <br>
+                        <label for="amenities">Amenities:</label>
+                        <input type="text" id="amenities" name="amenities" value="{{ booking.amenities }}">
+                        <br>
+                        <button type="submit" class="btn">Save</button>
+                      </form>
+                    </div>
+                  </div>
+                  {% endfor %}
     </div>
 </body>
 
