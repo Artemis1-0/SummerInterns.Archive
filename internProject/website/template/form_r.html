@@ -9,9 +9,10 @@
     <script type="text/javascript" defer src="{{url_for('static', filename='scripts/test.js')}}"></script>
 </head>
 <body>
+    {% import "bootstrap/wtf.html" as wtf %}
     <div class="container" id="container">
-        <div class="form-container sign-up" action="{{ url_for('register') }}" method="post">
-            <form >
+        <div class="form-container sign-up" method="post">
+            <form action="{{ url_for('register') }}">
                 <h1>Create Account</h1>
                 <div class="social-icons">
                     <a href="#" class="icon">
@@ -29,14 +30,14 @@
                 </div>
                 <span>or use your email for registration</span>
                 {{ register_form.hidden_tag() }}
-                {{wtf.form_field(register_form.username) }}
-                {{wtf.form_field(register_form.email) }}
-                {{wtf.form_field(register_form.password) }}
+                {{ (register_form.username) }}
+                {{  (register_form.email) }}
+                {{ (register_form.password) }}
                 <button type="submit" class="button-group" id="sign_up">Sign Up</button>
             </form>
         </div>
-        <div class="form-container sign-in" action="{{ url_for('login') }}" method="post">
-            <form >
+        <div class="form-container sign-in" method="post">
+            <form action="{{ url_for('login') }}">
                 <h1>Sign In</h1>
                 <div class="social-icons">
                     <a href="#" class="icon">
@@ -54,9 +55,9 @@
                 </div>
                 <span>or use your email and password</span>
                 {{ login_form.hidden_tag() }}
-                {{ wtf.form_field(form.username) }}
-                {{ wtf.form_field(form.password) }}
-                {{ wtf.form_field(form.remember) }}
+                {{ (login_form.username) }}
+                {{ (login_form.password) }}
+                {{ (login_form.remember) }}
                 <a href="">Forgot your email or password?</a>
                 <button>Sign in</button>
             </form>
