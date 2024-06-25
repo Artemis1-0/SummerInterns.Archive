@@ -64,6 +64,10 @@ def nav():
 def vdnav():
     return render_template('vdnav.html')
 
+@app.route('/admin')
+def admin():
+    return render_template('admin.html')
+
 @app.route('/test')
 def test():
     return render_template('test.html')
@@ -79,6 +83,19 @@ def form_r():
 @app.route('/account_r')
 def account_r():
     return render_template('account_r.html', username=None, logged_in=False, bookings=[])
+
+
+# Check for overlapping bookings
+def is_booking_conflict(pitch, start, end, date, exclude_booking_id=None):
+    query = Booking.query.filter_by(pitch=pitch, date=date)
+    if exclude_booking_id:
+        query = query.filter(Booking.id != exclude_booking_id)
+
+    existing_bookings = query.all()
+    for booking in existing_bookings:
+        if (start < booking.end.strftime('%H:%M') and end > booking.start.strftime('%H:%M')):
+            return True
+    return False
 
 @app.route('/new_booking', methods=['POST'])
 def new_booking():
@@ -99,6 +116,11 @@ def new_booking():
     date = request.form.get('date')
     amenities = request.form.get('amenities')
 
+    # Check for booking conflicts
+    if is_booking_conflict(pitch, start, end, date):
+        flash('The pitch is already booked for the selected time.', 'error')
+        return redirect(url_for('booking'))
+
     new_booking = Booking(email=email, pitch=pitch, start=start, end=end, date=date, amenities=amenities)
 
     try:
@@ -107,10 +129,37 @@ def new_booking():
         flash('Booking entered successfully!', 'success')
     except Exception as e:
         db.session.rollback()
-        flash('An error occurred while booking the class.', 'error')
+        flash('An error occurred while booking the pitch.', 'error')
 
     return redirect(url_for('home'))
 
+@app.route('/edit_booking/<int:booking_id>', methods=['POST'])
+def edit_booking(booking_id):
+    booking = Booking.query.get_or_404(booking_id)
+    pitch = request.form['pitch']
+    start = request.form['start']
+    end = request.form['end']
+    date = request.form['date']
+    amenities = request.form['amenities']
+
+    # Check for booking conflicts
+    if is_booking_conflict(pitch, start, end, date, exclude_booking_id=booking_id):
+        return redirect(url_for('account'))
+
+    booking.pitch = pitch
+    booking.start = start
+    booking.end = end
+    booking.date = date
+    booking.amenities = amenities
+
+    try:
+        db.session.commit()
+        flash('Booking updated successfully!', 'success')
+    except Exception as e:
+        db.session.rollback()
+        flash('An error occurred while updating the booking.', 'error')
+
+    return redirect(url_for('account'))
 
 
 @app.route('/account')
@@ -174,23 +223,7 @@ def logout():
     return redirect(url_for('home'))
 
 
-@app.route('/edit_booking/<int:booking_id>', methods=['POST'])
-def edit_booking(booking_id):
-    booking = Booking.query.get_or_404(booking_id)
-    booking.pitch = request.form['pitch']
-    booking.start = request.form['start']
-    booking.end = request.form['end']
-    booking.date = request.form['date']
-    booking.amenities = request.form['amenities']
 
-    try:
-        db.session.commit()
-        flash('Booking updated successfully!', 'success')
-    except Exception as e:
-        db.session.rollback()
-        flash('An error occurred while updating the booking.', 'error')
-
-    return redirect(url_for('account'))
 
 
 @app.route('/delete_booking/<int:booking_id>', methods=['POST'])
