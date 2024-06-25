@@ -491,6 +491,8 @@
     <MESSAGE value="nav bar" />
     <MESSAGE value="Fixed overflow error" />
     <MESSAGE value="vd" />
-    <option name="LAST_COMMIT_MESSAGE" value="vd" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="added comments to contact html" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments to contact html" />
   </component>
 </project>
