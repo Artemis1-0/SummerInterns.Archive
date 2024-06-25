@@ -64,6 +64,10 @@ def nav():
 def vdnav():
     return render_template('vdnav.html')
 
+@app.route('/admin')
+def admin():
+    return render_template('admin.html')
+
 @app.route('/test')
 def test():
     return render_template('test.html')
