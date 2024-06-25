@@ -172,9 +172,10 @@ def edit_booking(booking_id):
 
 @app.route('/account')
 def account():
-    if 'user_id' in session:
+    if 'user_id' in session or not admin:
         user_id = session['user_id']
         account = Account.query.filter_by(id=user_id).first()
+
         if account:
             username = account.username
             bookings = Booking.query.filter_by(email=account.email).all()
