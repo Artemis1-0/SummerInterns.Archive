@@ -148,7 +148,6 @@ def edit_booking(booking_id):
     booking.date = date
     booking.amenities = amenities
 
-
     try:
         db.session.commit()
         flash('Booking updated successfully!', 'success')
