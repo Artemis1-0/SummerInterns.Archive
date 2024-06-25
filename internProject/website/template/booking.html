@@ -11,15 +11,15 @@
 <body>
     <header>
     <nav>
-
         <div class="logo">
-         <a href="{{ url_for('home') }}">
+            <a href="{{ url_for('home') }}">
                 <img src="{{ url_for('static', filename='media/ERIC.D.png') }}" alt="Profile Icon">
-            </a>        </div>
+            </a>
+        </div>
         <ul id="menuList">
-        <li><a href="{{ url_for('booking') }}">Booking</a></li>
-        <li><a href="{{ url_for('contact') }}">Contact</a></li>
-        <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('booking') }}">Booking</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
         </ul>
         <div class="profileicon">
             <a href="{{ url_for('account') }}">
@@ -28,82 +28,80 @@
         </div>
     </nav>
 </header>
-    <div class="parallax">
-    </div>
-    <main>
-        <div class="booking-container">
-            <div id="bookingform">
-                <form action="{{ url_for('new_booking') }}" method="post">
-                    <label for="pitch">Pitch</label>
-                    <select id="pitch" name="pitch" required>
-                        <option value="" disabled selected>Select Pitch</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select><br>
-
-                    <div class="input-container">
-                        <label for="start">Start Time</label>
-                        <span class="tooltip" id="start-tooltip">Our pitches can only be booked between times, 7:00 and 21:00.</span>
-                        <input type="time" id="start" name="start" required><br>
-                    </div>
-
-                    <div class="input-container">
-                        <label for="end">End Time</label>
-                        <span class="tooltip" id="end-tooltip">Our pitches can only be booked between times, 7:00 and 21:00.</span>
-                        <input type="time" id="end" name="end" required><br>
-                    </div>
-
-                    <label for="date">Date</label>
-                    <input type="date" id="date" name="date" required><br>
-
-                    <label for="amenities">Amenities</label>
-                    <input type="text" id="amenities" name="amenities"><br>
-
-                    <button type="submit" class="button-group" id="submit_booking">Submit</button>
-                </form>
-
-            </div>
+<div class="parallax"></div>
+<main>
+    <div class="booking-container">
+        <div id="bookingform">
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class="flashes">
+                        {% for category, message in messages %}
+                            <li class="{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <form action="{{ url_for('new_booking') }}" method="post">
+                <label for="pitch">Pitch</label>
+                <select id="pitch" name="pitch" required>
+                    <option value="" disabled selected>Select Pitch</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br>
+                <div class="input-container">
+                    <label for="start">Start Time</label>
+                    <span class="tooltip" id="start-tooltip">Our pitches can only be booked between times, 7:00 and 21:00.</span>
+                    <input type="time" id="start" name="start" required><br>
+                </div>
+                <div class="input-container">
+                    <label for="end">End Time</label>
+                    <span class="tooltip" id="end-tooltip">Our pitches can only be booked between times, 7:00 and 21:00.</span>
+                    <input type="time" id="end" name="end" required><br>
+                </div>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required><br>
+                <label for="amenities">Amenities</label>
+                <input type="text" id="amenities" name="amenities"><br>
+                <button type="submit" class="button-group" id="submit_booking">Submit</button>
+            </form>
         </div>
-    </main>
-    <!-- Footer -->
-    <footer>
+    </div>
+</main>
+<!-- Footer -->
+<footer>
   <p>&copy; 2024 Your Company. All rights reserved.</p>
   <p><a href="ts">Terms and Conditions</a></p> <!-- Add link to T&C page in footer -->
 </footer>
 <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var startTime = document.getElementById("start");
-            var endTime = document.getElementById("end");
-            var startTooltip = document.getElementById("start-tooltip");
-            var endTooltip = document.getElementById("end-tooltip");
-
-            function restrictTime(input, tooltip) {
-                var minTime = "07:00";
-                var maxTime = "21:00";
-
-                input.addEventListener("focus", function() {
-                    tooltip.style.display = "block";
-                });
-
-                input.addEventListener("blur", function() {
-                    tooltip.style.display = "none";
-                });
-
-                input.addEventListener("input", function() {
-                    var value = input.value;
-                    if (value < minTime) {
-                        input.value = minTime;
-                    } else if (value > maxTime) {
-                        input.value = maxTime;
-                    }
-                });
-            }
-
-            restrictTime(startTime, startTooltip);
-            restrictTime(endTime, endTooltip);
-        });
-    </script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var startTime = document.getElementById("start");
+        var endTime = document.getElementById("end");
+        var startTooltip = document.getElementById("start-tooltip");
+        var endTooltip = document.getElementById("end-tooltip");
+        function restrictTime(input, tooltip) {
+            var minTime = "07:00";
+            var maxTime = "21:00";
+            input.addEventListener("focus", function() {
+                tooltip.style.display = "block";
+            });
+            input.addEventListener("blur", function() {
+                tooltip.style.display = "none";
+            });
+            input.addEventListener("input", function() {
+                var value = input.value;
+                if (value < minTime) {
+                    input.value = minTime;
+                } else if (value > maxTime) {
+                    input.value = maxTime;
+                }
+            });
+        }
+        restrictTime(startTime, startTooltip);
+        restrictTime(endTime, endTooltip);
+    });
+</script>
 </body>
 </html>
