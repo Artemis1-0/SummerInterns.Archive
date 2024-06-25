@@ -64,6 +64,17 @@ def nav():
 def vdnav():
     return render_template('vdnav.html')
 
+@app.route('/admin')
+def admin():
+    if 'user_id' in session:
+            user_id = session['user_id']
+            account = Account.query.filter_by(id=user_id).first()
+            if account:
+                username = account.username
+                bookings = Booking.query.filter_by(email=account.email).all()
+                return render_template('admin.html', username=None, logged_in=False, bookings=[])
+
+
 @app.route('/test')
 def test():
     return render_template('test.html')
@@ -140,6 +151,7 @@ def edit_booking(booking_id):
 
     # Check for booking conflicts
     if is_booking_conflict(pitch, start, end, date, exclude_booking_id=booking_id):
+        flash('The pitch is already booked for the selected time.', 'error')
         return redirect(url_for('account'))
 
     booking.pitch = pitch
