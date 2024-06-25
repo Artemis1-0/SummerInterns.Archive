@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.7); /* Set background to black with 70% opacity */
+  padding-bottom: 70px;
 }
 
 nav {
@@ -24,7 +24,7 @@ nav {
   position: fixed; /* Fix the nav bar to the top */
   top: 0;
   left: 0;
-  z-index: 1000; /* Ensure it stays above other content */
+  z-index: 10000; /* Ensure it stays above other content */
 }
 
 .logo {
