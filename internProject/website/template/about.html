@@ -18,11 +18,12 @@
         <div class="logo">
          <a href="{{ url_for('home') }}">
                 <img src="{{ url_for('static', filename='media/ERIC.D.png') }}" alt="Profile Icon">
-            </a>        </div>
+            </a>
+        </div>
         <ul id="menuList">
-        <li><a href="{{ url_for('booking') }}">Booking</a></li>
-        <li><a href="{{ url_for('contact') }}">Contact</a></li>
-        <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('booking') }}">Booking</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
         </ul>
         <div class="profileicon">
             <a href="{{ url_for('account') }}">
@@ -31,72 +32,69 @@
         </div>
     </nav>
 </header>
-        </div>
 
-        <div class="parallax"></div>
+<h2 class="heading">What we offer</h2> <!-- Place "What we offer" heading here -->
 
-        <div class="content">
+<div class="parallax"></div>
 
-        <div class="wrapper">
-            <div class="container">
-                <input type="radio" name="slide" id="c1" checked>
-                <label for="c1" class="card">
-                    <div class="row">
-                        <div class="icon">1</div>
-                        <div class="description">
-                            <h4>Pitch 1</h4>
-                            <p>A football pitch with floodlights that have solar sensors, that automatically turn on during late training sessions. Amenities such as the clubhouse, dressing room and gym can be added as extras</p>
-                            <p>Price: Є40/hr</p>
-                        </div>
+<div class="content">
+    <div class="wrapper">
+        <div class="container">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card">
+                <div class="row">
+                    <div class="icon">1</div>
+                    <div class="description">
+                        <h4>Pitch 1</h4>
+                        <p>A football pitch with floodlights that have solar sensors, that automatically turn on during late training sessions. Amenities such as the clubhouse, dressing room and gym can be added as extras</p>
+                        <p>Price: Є40/hr</p>
                     </div>
-                </label>
-                <input type="radio" name="slide" id="c2">
-                <label for="c2" class="card">
-                    <div class="row">
-                        <div class="icon">2</div>
-                        <div class="description">
-                            <h4>Pitch 2</h4>
-                            <p>A gaelic pitch which includes a clubhouse that has lots of different pieces of training equipment, such as; gaelic footballs, cones, bibs, etc. There is a first aid station, that is well equipped with a first aid bag and a physio table, however staff are not provided.</p>
-                            <p>Price: Є50/hr</p>
-                        </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="card">
+                <div class="row">
+                    <div class="icon">2</div>
+                    <div class="description">
+                        <h4>Pitch 2</h4>
+                        <p>A gaelic pitch which includes a clubhouse that has lots of different pieces of training equipment, such as; gaelic footballs, cones, bibs, etc. There is a first aid station, that is well equipped with a first aid bag and a physio table, however staff are not provided.</p>
+                        <p>Price: Є50/hr</p>
                     </div>
-                </label>
-                <input type="radio" name="slide" id="c3">
-                <label for="c3" class="card">
-                    <div class="row">
-                        <div class="icon">3</div>
-                        <div class="description">
-                            <h4>Pitch 3</h4>
-                            <p>This pitch has grand stands for fans, and includes an entrance area with a ticket sales area. This pitch can be used for a variety of sports events as we have basketball courts, gaelic goals, football goals, tennis court, and rugby goals that can be added to the pitch. The stands have a capacity for 1300.</p>
-                            <p>Price: Є120/hr</p>
-                        </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c3">
+            <label for="c3" class="card">
+                <div class="row">
+                    <div class="icon">3</div>
+                    <div class="description">
+                        <h4>Pitch 3</h4>
+                        <p>This pitch has grand stands for fans, and includes an entrance area with a ticket sales area. This pitch can be used for a variety of sports events as we have basketball courts, gaelic goals, football goals, tennis court, and rugby goals that can be added to the pitch. The stands have a capacity for 1300.</p>
+                        <p>Price: Є120/hr</p>
                     </div>
-                </label>
-                <input type="radio" name="slide" id="c4">
-                <label for="c4" class="card">
-                    <div class="row">
-                        <div class="icon">4</div>
-                        <div class="description">
-                            <h4>Amenities</h4>
-                            <p>Welcome to the Elite Turf Arena, the crown jewel of our football pitch offerings. This state-of-the-art facility is designed for players who demand the very best. Featuring premium artificial grass that mimics the feel of natural turf, this pitch ensures top-notch performance and safety. The Elite Turf Arena is equipped with advanced drainage systems, ensuring a perfect playing surface even after heavy rain.</p>
-                            <p>Price: Є120/Hour</p>
-                        </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c4">
+            <label for="c4" class="card">
+                <div class="row">
+                    <div class="icon">4</div>
+                    <div class="description">
+                        <h4>Amenities</h4>
+                        <p>Welcome to the Elite Turf Arena, the crown jewel of our football pitch offerings. This state-of-the-art facility is designed for players who demand the very best. Featuring premium artificial grass that mimics the feel of natural turf, this pitch ensures top-notch performance and safety. The Elite Turf Arena is equipped with advanced drainage systems, ensuring a perfect playing surface even after heavy rain.</p>
+                        <p>Price: Є120/Hour</p>
                     </div>
-                </label>
-            </div>
+                </div>
+            </label>
         </div>
     </div>
-<html>
-<body>
+</div>
 
-<h2>Map of facilities</h2>
-<img class="map" SRC="{{ url_for('static', filename='media/map.png') }}" alt="Trulli" width="500" height="333">
+<h2>Map of Facilities</h2> <!-- Place "Map of Facilities" heading here -->
+<img class="map" src="{{ url_for('static', filename='media/map.png') }}" alt="Map of Facilities" width="500" height="333">
 
-</body>
-</html>
-    <footer>
-        <p>&copy; 2024 Nexus Company. All rights reserved.</p>
-        <p><a href="ts">Terms and Conditions</a></p>
-      </footer>
+<footer>
+    <p>&copy; 2024 Nexus Company. All rights reserved.</p>
+    <p><a href="ts">Terms and Conditions</a></p>
+</footer>
+
 </body>
 </html>

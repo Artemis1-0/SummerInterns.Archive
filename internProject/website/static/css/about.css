@@ -1,12 +1,12 @@
 /* Reset and basic styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("https://www.thetrainline.com/cms/media/10683/digital-rendering-of-soccer-field.jpg?mode=crop&width=860&height=574&quality=70")
-}
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-repeat: no-repeat;
+    background-image: url("https://www.thetrainline.com/cms/media/10683/digital-rendering-of-soccer-field.jpg?mode=crop&width=860&height=574&quality=70");
+    height: 100vh; /* Set height to 100% of the viewport height */
 
 header {
   background-color: rgba(0, 0, 0, 0.7); /* Set background to black with 70% opacity */
@@ -245,4 +245,55 @@ footer p a {
 }
 h2{
 text-align: center;
+}
+/* Styles for the map of facilities */
+.map {
+  display: block;
+  margin: 40px auto; /* Center the map and add vertical margin */
+  max-width: 100%; /* Ensure the map is responsive */
+  height: auto; /* Maintain aspect ratio */
+  border: 2px solid #ccc; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #f9f9f9; /* Light background color */
+  padding: 20px; /* Add padding inside the map container */
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px; /* Adjust top margin for spacing */
+  color: #ffffff; /* Darken text color */
+  font-size: 28px; /* Increase font size */
+  font-weight: bold; /* Make the text bold */
+  text-transform: uppercase; /* Convert text to uppercase */
+  letter-spacing: 2px; /* Add letter spacing for clarity */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add subtle text shadow */
+  background-color: #000; /* Light background color */
+  padding: 10px 20px; /* Add padding around the text */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Heading styles */
+.heading {
+  text-align: center;
+  margin-bottom: 20px; /* Adjust bottom margin for spacing */
+  color: #ffffff; /* Darken text color */
+  font-size: 28px; /* Increase font size */
+  font-weight: bold; /* Make the text bold */
+  text-transform: uppercase; /* Convert text to uppercase */
+  letter-spacing: 2px; /* Add letter spacing for clarity */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add subtle text shadow */
+}
+
+/* Adjust the radio button placement */
+.map {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px; /* Adjust top margin for spacing */
+}
+
+.heading {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin-top to create spacing */
 }
