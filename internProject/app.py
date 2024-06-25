@@ -193,11 +193,11 @@ def create_account():
         # Check if email or username already exists
         existing_user = Account.query.filter((Account.email == email) | (Account.username == username)).first()
         if existing_user:
-            return redirect(url_for('signup'))
+            return redirect(url_for('signinpage'))
         new_account = Account(username=username, email=email, password=password)
         db.session.add(new_account)
         db.session.commit()
-        return redirect(url_for('signup'))
+        return redirect(url_for('signinpage'))
     return render_template('signup.html')
 
 
