@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="vd" />
+    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="vd">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/app.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,14 +83,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718279792084</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml">
-      <option name="closed" value="true" />
-      <created>1718359295327</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1718359295327</updated>
     </task>
     <task id="LOCAL-00012" summary="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml">
       <option name="closed" value="true" />
@@ -473,7 +468,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719322698189</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="vd">
+      <option name="closed" value="true" />
+      <created>1719323469519</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1719323469519</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
