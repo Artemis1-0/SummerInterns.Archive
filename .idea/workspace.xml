@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="vd" />
+    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="vd">
+      <change beforePath="$PROJECT_DIR$/.idea/SummerInterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SummerInterns.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/template/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/contact.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,6 +85,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718279792084</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added images">
+      <option name="closed" value="true" />
+      <created>1718312430776</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1718312430776</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Finished">
+      <option name="closed" value="true" />
+      <created>1718312959806</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718312959806</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Trying scrolling animations">
+      <option name="closed" value="true" />
+      <created>1718354603189</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718354603189</updated>
     </task>
     <task id="LOCAL-00010" summary="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml">
       <option name="closed" value="true" />
@@ -449,31 +478,7 @@
       <option name="project" value="LOCAL" />
       <updated>1719309540339</updated>
     </task>
-    <task id="LOCAL-00056" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719316804296</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1719316804296</updated>
-    </task>
-    <task id="LOCAL-00057" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719316865002</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1719316865002</updated>
-    </task>
-    <task id="LOCAL-00058" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719318618095</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1719318618095</updated>
-    </task>
-    <option name="localTasksCounter" value="59" />
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
