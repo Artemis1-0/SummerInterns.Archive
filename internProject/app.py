@@ -66,13 +66,7 @@ def vdnav():
 
 @app.route('/admin')
 def admin():
-    if 'user_id' in session:
-            user_id = session['user_id']
-            account = Account.query.filter_by(id=user_id).first()
-            if account:
-                username = account.username
-                bookings = Booking.query.filter_by(email=account.email).all()
-                return render_template('admin.html', username=None, logged_in=False, bookings=[])
+    return render_template('admin.html', username=None, logged_in=False, bookings=[])
 
 
 @app.route('/test')
