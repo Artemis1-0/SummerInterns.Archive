@@ -37,7 +37,6 @@ class Booking(db.Model):
     date = db.Column(db.Date, nullable=False)
     amenities = db.Column(db.String(255), nullable=False)
 
-
 @app.route('/')
 def home():
     return render_template('home.html')
