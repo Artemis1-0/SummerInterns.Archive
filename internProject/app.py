@@ -78,7 +78,7 @@ def form_r():
 
 @app.route('/account_r')
 def account_r():
-    return render_template('account_r.html')
+    return render_template('account_r.html', username=None, logged_in=False, bookings=[])
 
 @app.route('/new_booking', methods=['POST'])
 def new_booking():
