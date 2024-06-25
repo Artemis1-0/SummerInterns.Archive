@@ -68,3 +68,8 @@ nav ul li a:hover{
         transition: all 0.5s;
     }
 }
+
+.flash.error {
+     background-color: red;
+     color: white;
+}

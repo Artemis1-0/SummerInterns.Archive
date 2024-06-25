@@ -231,3 +231,8 @@ footer {
 footer p a {
   color: white; /* Set link color */
 }
+
+.flash.error {
+     background-color: red;
+     color: white;
+}

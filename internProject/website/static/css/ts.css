@@ -219,3 +219,8 @@ footer a:hover {
 footer p {
   margin: 5px 0;
 }
+
+.flash.error {
+     background-color: red;
+     color: white;
+}

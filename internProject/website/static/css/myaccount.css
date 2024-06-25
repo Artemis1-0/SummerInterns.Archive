@@ -10,3 +10,8 @@ body{
     position: absolute;
     bottom: 0;
 }
+
+.flash.error {
+     background-color: red;
+     color: white;
+}

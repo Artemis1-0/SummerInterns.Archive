@@ -317,3 +317,7 @@ form.container label:hover {
   }
 }
 
+.flash.error {
+     background-color: red;
+     color: white;
+}
