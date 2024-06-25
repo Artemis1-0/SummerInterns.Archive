@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="Fixed overflow error" />
+    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment=".">
+      <change beforePath="$PROJECT_DIR$/.idea/SummerInterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SummerInterns.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -376,79 +380,39 @@
       <option name="project" value="LOCAL" />
       <updated>1719093477182</updated>
     </task>
-    <task id="LOCAL-00038" summary="vd">
+    <task id="LOCAL-00038" summary=".">
       <option name="closed" value="true" />
-      <created>1719147208938</created>
+      <created>1719229843795</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1719147208938</updated>
+      <updated>1719229843795</updated>
     </task>
-    <task id="LOCAL-00039" summary="vd">
+    <task id="LOCAL-00039" summary=".">
       <option name="closed" value="true" />
-      <created>1719147360553</created>
+      <created>1719230276617</created>
       <option name="number" value="00039" />
       <option name="presentableId" value="LOCAL-00039" />
       <option name="project" value="LOCAL" />
-      <updated>1719147360553</updated>
+      <updated>1719230276617</updated>
     </task>
-    <task id="LOCAL-00040" summary="vd">
+    <task id="LOCAL-00040" summary=".">
       <option name="closed" value="true" />
-      <created>1719220565881</created>
+      <created>1719231206597</created>
       <option name="number" value="00040" />
       <option name="presentableId" value="LOCAL-00040" />
       <option name="project" value="LOCAL" />
-      <updated>1719220565881</updated>
+      <updated>1719231206597</updated>
     </task>
-    <task id="LOCAL-00041" summary="vd">
+    <task id="LOCAL-00041" summary=".">
       <option name="closed" value="true" />
-      <created>1719220646352</created>
+      <created>1719231357754</created>
       <option name="number" value="00041" />
       <option name="presentableId" value="LOCAL-00041" />
       <option name="project" value="LOCAL" />
-      <updated>1719220646352</updated>
+      <updated>1719231357754</updated>
     </task>
-    <task id="LOCAL-00042" summary="nav bar">
-      <option name="closed" value="true" />
-      <created>1719231900867</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1719231900867</updated>
-    </task>
-    <task id="LOCAL-00043" summary="nav bar">
-      <option name="closed" value="true" />
-      <created>1719231939604</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1719231939604</updated>
-    </task>
-    <task id="LOCAL-00044" summary="nav bar">
-      <option name="closed" value="true" />
-      <created>1719231996307</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1719231996307</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Fixed overflow error">
-      <option name="closed" value="true" />
-      <created>1719233303146</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1719233303146</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Fixed overflow error">
-      <option name="closed" value="true" />
-      <created>1719233551618</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1719233551618</updated>
-    </task>
-    <option name="localTasksCounter" value="47" />
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -464,8 +428,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml" />
     <MESSAGE value="fixed contact page" />
     <MESSAGE value="vd" />
-    <MESSAGE value="nav bar" />
-    <MESSAGE value="Fixed overflow error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed overflow error" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
