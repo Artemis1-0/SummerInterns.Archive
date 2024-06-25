@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import Enum
 
 # Database configuration
 USERNAME = 'root'
@@ -24,7 +25,7 @@ class Account(db.Model):
     username = db.Column(db.String(255), unique=True, nullable=False)
     email = db.Column(db.String(255), unique=True, nullable=False)
     password = db.Column(db.String(255), nullable=False)
-
+    role = db.Column(Enum('user', 'admin'), nullable=False)
 
 
 class Booking(db.Model):
@@ -36,6 +37,7 @@ class Booking(db.Model):
     end = db.Column(db.Time, nullable=False)
     date = db.Column(db.Date, nullable=False)
     amenities = db.Column(db.String(255), nullable=False)
+
 
 @app.route('/')
 def home():
@@ -56,27 +58,31 @@ def contact():
 def about():
     return render_template('about.html')
 
+
 @app.route('/nav')
 def nav():
     return render_template('nav.html')
+
 
 @app.route('/vdnav')
 def vdnav():
     return render_template('vdnav.html')
 
 
-
 @app.route('/test')
 def test():
     return render_template('test.html')
+
 
 @app.route('/about_r')
 def about_r():
     return render_template('about_r.html')
 
+
 @app.route('/form_r')
 def form_r():
     return render_template('form_r.html')
+
 
 @app.route('/account_r')
 def account_r():
@@ -88,12 +94,11 @@ def is_booking_conflict(pitch, start, end, date, exclude_booking_id=None):
     query = Booking.query.filter_by(pitch=pitch, date=date)
     if exclude_booking_id:
         query = query.filter(Booking.id != exclude_booking_id)
-
     existing_bookings = query.all()
     for booking in existing_bookings:
         booking_start = booking.start.strftime('%H:%M')
         booking_end = booking.end.strftime('%H:%M')
-        if (start < booking_end and end > booking_start):
+        if start < booking_end and end > booking_start:
             return True
     return False
 
@@ -102,35 +107,30 @@ def is_booking_conflict(pitch, start, end, date, exclude_booking_id=None):
 def new_booking():
     if 'user_id' not in session:
         return redirect(url_for('signinpage'))
-
     user_id = session['user_id']
     user_account = Account.query.filter_by(id=user_id).first()
-
     if not user_account:
         return redirect(url_for('signinpage'))
-
     email = user_account.email  # Retrieve the email from the user's account
     pitch = request.form.get('pitch')
     start = request.form.get('start')
     end = request.form.get('end')
     date = request.form.get('date')
     amenities = request.form.get('amenities')
-
     # Check for booking conflicts
     if is_booking_conflict(pitch, start, end, date):
         flash('The pitch is already booked for the selected time.', 'error')
         return redirect(url_for('booking'))
-
     new_booking = Booking(email=email, pitch=pitch, start=start, end=end, date=date, amenities=amenities)
-
     try:
         db.session.add(new_booking)
         db.session.commit()
     except Exception as e:
         db.session.rollback()
         flash('An error occurred while booking the pitch.', 'error')
-
     return redirect(url_for('home'))
+
+
 @app.route('/edit_booking/<int:booking_id>', methods=['POST'])
 def edit_booking(booking_id):
     booking = Booking.query.get_or_404(booking_id)
@@ -139,24 +139,20 @@ def edit_booking(booking_id):
     end = request.form['end']
     date = request.form['date']
     amenities = request.form['amenities']
-
     # Check for booking conflicts
     if is_booking_conflict(pitch, start, end, date, exclude_booking_id=booking_id):
         flash('The pitch is already booked for the selected time.', 'error')
         return redirect(url_for('account'))
-
     booking.pitch = pitch
     booking.start = start
     booking.end = end
     booking.date = date
     booking.amenities = amenities
-
     try:
         db.session.commit()
     except Exception as e:
         db.session.rollback()
         flash('An error occurred while updating the booking.', 'error')
-
     return redirect(url_for('account'))
 
 
@@ -167,22 +163,28 @@ def account():
         account = Account.query.filter_by(id=user_id).first()
         if account:
             username = account.username
-            bookings = Booking.query.filter_by(email=account.email).all()
+            if account.role == 'admin':
+                bookings = Booking.query.all()  # Fetch all bookings for admin
+            else:
+                bookings = Booking.query.filter_by(email=account.email).all()
             return render_template('account.html', username=username, logged_in=True, bookings=bookings)
-
     return render_template('account.html', username=None, logged_in=False, bookings=[])
 
 
 @app.route('/signup')
 def signup():
     return render_template('signup.html')
+
+
 @app.route('/ts')
 def ts():
     return render_template('ts.html')
 
+
 @app.route('/signinpage')
 def signinpage():
     return render_template('signinpage.html')
+
 
 @app.route('/create_account', methods=['GET', 'POST'])
 def create_account():
@@ -190,11 +192,12 @@ def create_account():
         username = request.form['username']
         email = request.form['email']
         password = request.form['password']
+        role = 'user'
         # Check if email or username already exists
         existing_user = Account.query.filter((Account.email == email) | (Account.username == username)).first()
         if existing_user:
             return redirect(url_for('signinpage'))
-        new_account = Account(username=username, email=email, password=password)
+        new_account = Account(username=username, email=email, password=password, role=role)
         db.session.add(new_account)
         db.session.commit()
         return redirect(url_for('signinpage'))
@@ -221,25 +224,45 @@ def logout():
     return redirect(url_for('account'))
 
 
-
-
-
 @app.route('/delete_booking/<int:booking_id>', methods=['POST'])
 def delete_booking(booking_id):
     booking = Booking.query.get_or_404(booking_id)
-
     try:
         db.session.delete(booking)
         db.session.commit()
     except Exception as e:
         db.session.rollback()
         flash('An error occurred while deleting the booking.', 'error')
-
     return redirect(url_for('account'))
 
+
+# Helper function to check if the user is an admin
+def is_admin():
+    if 'user_id' in session:
+        user_id = session['user_id']
+        account = Account.query.filter_by(id=user_id).first()
+        print(f"User ID: {user_id}", file=sys.stderr)  # Debugging print
+        print(f"Account: {account}", file=sys.stderr)  # Debugging print
+        print(f"Role: {account.role if account else 'None'}", file=sys.stderr)  # Debugging print
+        return account and account.role == 'admin'
+    return False
+
+
+@app.route('/admin/bookings')
+def admin_bookings():
+    if not is_admin():
+        # Render a 404 page if the user is not an admin
+        return render_template('404.html'), 404
+    # Fetch all bookings if the user is an admin
+    bookings = Booking.query.all()
+    return render_template('admin.html', bookings=bookings)
+
+
+# Other routes and functions
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('404.html'), 404  
+    return render_template('404.html'), 404
+
 
 if __name__ == '__main__':
     app.run(debug=True)
