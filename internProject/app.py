@@ -26,6 +26,7 @@ class Account(db.Model):
     password = db.Column(db.String(255), nullable=False)
 
 
+
 class Booking(db.Model):
     __tablename__ = 'booking'  # Explicit table name
     id = db.Column(db.Integer, primary_key=True)
