@@ -73,6 +73,10 @@ def about():
 def account():
     return render_template('account.html')
 
+@app.route('/admin')
+def admin():
+    return render_template('admin.html', username=None, logged_in=False, bookings=[])
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     register_form = RegisterForm()
