@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="vd">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/template/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/booking.html" afterDir="false" />
+    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="Fixed overflow error">
+      <change beforePath="$PROJECT_DIR$/internProject/website/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/template/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +21,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="UX" />
@@ -83,6 +82,54 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718279792084</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Fixed Carousel and added custom scroll bar">
+      <option name="closed" value="true" />
+      <created>1718281164820</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718281164820</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added custom scroll bar">
+      <option name="closed" value="true" />
+      <created>1718281358686</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718281358686</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Tried something with about page">
+      <option name="closed" value="true" />
+      <created>1718285280186</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718285280186</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Tried something with about page">
+      <option name="closed" value="true" />
+      <created>1718286067959</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718286067959</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Tried something with css">
+      <option name="closed" value="true" />
+      <created>1718308041688</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718308041688</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Tried something with css">
+      <option name="closed" value="true" />
+      <created>1718312252050</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718312252050</updated>
     </task>
     <task id="LOCAL-00007" summary="Added images">
       <option name="closed" value="true" />
@@ -420,63 +467,7 @@
       <option name="project" value="LOCAL" />
       <updated>1719233733129</updated>
     </task>
-    <task id="LOCAL-00049" summary="Fixed overflow error">
-      <option name="closed" value="true" />
-      <created>1719304582253</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1719304582253</updated>
-    </task>
-    <task id="LOCAL-00050" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719305535137</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1719305535138</updated>
-    </task>
-    <task id="LOCAL-00051" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719305625561</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1719305625561</updated>
-    </task>
-    <task id="LOCAL-00052" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719305688704</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1719305688704</updated>
-    </task>
-    <task id="LOCAL-00053" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719305743875</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1719305743875</updated>
-    </task>
-    <task id="LOCAL-00054" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719309483178</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1719309483178</updated>
-    </task>
-    <task id="LOCAL-00055" summary="vd">
-      <option name="closed" value="true" />
-      <created>1719309540339</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1719309540339</updated>
-    </task>
-    <option name="localTasksCounter" value="56" />
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -491,9 +482,9 @@
     <MESSAGE value="Scroll animations?" />
     <MESSAGE value="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml" />
     <MESSAGE value="fixed contact page" />
+    <MESSAGE value="vd" />
     <MESSAGE value="nav bar" />
     <MESSAGE value="Fixed overflow error" />
-    <MESSAGE value="vd" />
-    <option name="LAST_COMMIT_MESSAGE" value="vd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed overflow error" />
   </component>
 </project>
