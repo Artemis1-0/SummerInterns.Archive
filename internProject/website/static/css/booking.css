@@ -257,3 +257,8 @@ form {
 form div {
     margin-bottom: 10px; /* Example: adjust vertical spacing */
 }
+
+.flash.error {
+     background-color: red;
+     color: white;
+}
