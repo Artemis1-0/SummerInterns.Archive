@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="vd">
-      <change beforePath="$PROJECT_DIR$/internProject/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/template/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/account.html" afterDir="false" />
-    </list>
+    <list default="true" id="07eb96c1-40a1-407a-b871-f6105311c235" name="Changes" comment="vd" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,14 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718279792084</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml">
-      <option name="closed" value="true" />
-      <created>1718355672504</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1718355672504</updated>
     </task>
     <task id="LOCAL-00011" summary="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/SummerInterns.iml&#10;#&#9;.idea/misc.xml">
       <option name="closed" value="true" />
@@ -476,7 +465,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719318618095</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="vd">
+      <option name="closed" value="true" />
+      <created>1719322698189</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1719322698189</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -494,6 +491,8 @@
     <MESSAGE value="nav bar" />
     <MESSAGE value="Fixed overflow error" />
     <MESSAGE value="vd" />
-    <option name="LAST_COMMIT_MESSAGE" value="vd" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/development' into development&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="added comments to contact html" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments to contact html" />
   </component>
 </project>
