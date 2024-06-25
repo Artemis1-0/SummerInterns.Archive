@@ -8,9 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internProject/website/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/about.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internProject/website/static/css/booking.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/booking.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/static/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/css/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internProject/website/static/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/static/scripts/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internProject/website/template/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internProject/website/template/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/internProject/website/template/contact.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -457,6 +456,17 @@
     </task>
     <option name="localTasksCounter" value="47" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed Carousel and added custom scroll bar" />

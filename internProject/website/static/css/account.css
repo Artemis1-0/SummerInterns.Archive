@@ -175,6 +175,7 @@ nav {
 
 .btn {
   display: inline-block;
+  border-radius: 4px; 
   padding: 10px 20px;
   margin: 10px 0;
   background: linear-gradient(-45deg, #b889ce, #192A51, #358CC9, #6CCFF6);
@@ -289,6 +290,7 @@ form.container label:hover {
 }
 
 .button-group {
+  border-radius: 4px;
   display: inline-block;
   padding: 10px 20px;
   margin: 10px 0;
