@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Glassmorphism login Form Tutorial in html css</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/account_r.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}">
+</head>
+<body>
+
+        <div>
+           <div class="wave"></div>
+           <div class="wave"></div>
+           <div class="wave"></div>
+        </div>
+
+        <div class="container">
+            <h1>Welcome to My Account</h1>
+            <div id="accountContent">
+              <div id="loggedOut" class="accountSection">
+                <h2>Sign In or Sign Up</h2>
+                <a href="{{ url_for('signinpage') }}" class="btn">Sign In</a>
+                <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
+              </div>
+        
+              <div id="loggedIn" class="accountSection">
+                <h2>Logged in as: {{ username }}</h2>
+                <a href="{{ url_for('logout') }}" id="logoutBtn" class="btn">Log Out</a>
+                <div id="myBookings">
+                  <h2>My Bookings</h2>
+                  {% for booking in bookings %}
+                  <div class="booking">
+                    <p>Pitch: {{ booking.pitch }}</p>
+                    <p>Date: {{ booking.date }}</p>
+                    <p>Start Time: {{ booking.start }}</p>
+                    <p>End Time: {{ booking.end }}</p>
+                    <p>Amenities: {{ booking.amenities }}</p>
+                    <button class="btn" onclick="toggleEditForm('{{ booking.id }}')">Edit</button>
+                    <form method="POST" action="{{ url_for('delete_booking', booking_id=booking.id) }}" style="display:inline;">
+                      <button type="submit" class="btn">Delete</button>
+                    </form>
+                    <div id="editForm-{{ booking.id }}" class="editForm" style="display:none;">
+                      <form method="POST" action="{{ url_for('edit_booking', booking_id=booking.id) }}">
+                        <label for="pitch">Pitch:</label>
+                        <input type="text" id="pitch" name="pitch" value="{{ booking.pitch }}">
+                        <br>
+                        <label for="start">Start Time:</label>
+                        <input type="time" id="start" name="start" value="{{ booking.start }}">
+                        <br>
+                        <label for="end">End Time:</label>
+                        <input type="time" id="end" name="end" value="{{ booking.end }}">
+                        <br>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" value="{{ booking.date }}">
+                        <br>
+                        <label for="amenities">Amenities:</label>
+                        <input type="text" id="amenities" name="amenities" value="{{ booking.amenities }}">
+                        <br>
+                        <button type="submit" class="btn">Save</button>
+                      </form>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const loggedOutSection = document.getElementById('loggedOut');
+              const loggedInSection = document.getElementById('loggedIn');
+        
+              const isLoggedIn = {{ logged_in|tojson|safe }}; 
+        
+              if (isLoggedIn) {
+                loggedOutSection.style.display = 'none';
+                loggedInSection.style.display = 'block';
+              } else {
+                loggedOutSection.style.display = 'block';
+                loggedInSection.style.display = 'none';
+              }
+            });
+        
+            function toggleEditForm(id) {
+              const form = document.getElementById('editForm-' + id);
+              if (form.style.display === 'none') {
+                form.style.display = 'block';
+              } else {
+                form.style.display = 'none';
+              }
+            }
+          </script>
+
+</body>
+</html>

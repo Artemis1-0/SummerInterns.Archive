@@ -219,3 +219,11 @@ input:checked + label .description {
     background-image: linear-gradient(#71ff4e, #07b9ff);
     opacity: 1;
 }
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}

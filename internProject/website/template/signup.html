@@ -4,43 +4,75 @@
     <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/account.css') }}">
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}">
 </head>
+
+<style>
+    body {
+        background-image: url("{{ url_for('static', filename='media/madrid-santiago.jpg') }}");
+    }
+</style>
 <body class="account-page">
-<header>
-    <nav>
-        <div class="logo">
-         <a href="{{ url_for('home') }}">
-                <img src="{{ url_for('static', filename='media/ERIC.D.png') }}" alt="Profile Icon">
-            </a>        </div>
-        <ul id="menuList">
-        <li><a href="{{ url_for('booking') }}">Booking</a></li>
-        <li><a href="{{ url_for('contact') }}">Contact</a></li>
-        <li><a href="{{ url_for('about') }}">About</a></li>
-        </ul>
-        <div class="profileicon">
-            <a href="{{ url_for('account') }}">
-                <img src="{{ url_for('static', filename='media/profiileicon.png') }}" alt="Profile Icon">
-            </a>
-        </div>
-    </nav>
-</header>
+    <div class="nav-container">
+        <nav>
+            <ul class="desktop-nav">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('account') }}">Account</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="container">
         <div class="middle">
             <div class="text">Sign Up</div>
         </div>
     </div>
-    <div id="signupform">
-        <form class="container" action="{{ url_for('create_account') }}" method="post">
+    <div id="signinform">
+        <form class="container" action="{{ url_for('create_account') }}" method="post" id="signupForm">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required><br>
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required><br>
+            <span id="emailError" style="color:red;"></span><br>
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required><br>
-            <button type="submit" class="button-group" id="signup">Submit</button>
+            <span id="passwordError" style="color:red;"></span><br>
+            <button type="submit" class="button-group" id="signup">Sign Up</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            const email = document.getElementById('email').value;
+            const emailError = document.getElementById('emailError');
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            let valid = true;
+
+            if (!emailPattern.test(email)) {
+                emailError.textContent = 'Please enter a valid email address';
+                valid = false;
+            } else {
+                emailError.textContent = '';
+            }
+
+            const password = document.getElementById('password').value;
+            const passwordError = document.getElementById('passwordError');
+            const passwordPattern = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
+
+            if (!passwordPattern.test(password)) {
+                passwordError.textContent = 'Password must be at least 8 characters long and include at least one number, one uppercase letter, and one symbol';
+                valid = false;
+            } else {
+                passwordError.textContent = '';
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>

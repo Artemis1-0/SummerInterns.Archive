@@ -1,92 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Declare the document type and set the language to English -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home - Football Pitch Booking</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
-    <script type="text/javascript" src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
-    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}">
+    <meta charset="UTF-8"> <!-- Set the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensure proper scaling on different devices -->
+    <title>Home - Football Pitch Booking</title> <!-- Set the title of the webpage -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}"> <!-- Link to the CSS file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/script.js') }}" defer></script> <!-- Link to the JavaScript file and defer its execution -->
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script> <!-- Link to Font Awesome for icons -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}"> <!-- Link to the favicon -->
 </head>
 <body>
     <header>
-    <nav>
-        <div class="logo">
-         <a href="{{ url_for('home') }}">
-                <img src="{{ url_for('static', filename='media/ERIC.D.png') }}" alt="Profile Icon">
-            </a>        </div>
-        <ul id="menuList">
-        <li><a href="{{ url_for('booking') }}">Booking</a></li>
-        <li><a href="{{ url_for('contact') }}">Contact</a></li>
-        <li><a href="{{ url_for('about') }}">About</a></li>
-        </ul>
-        <div class="profileicon">
-            <a href="{{ url_for('account') }}">
-                <img src="{{ url_for('static', filename='media/profiileicon.png') }}" alt="Profile Icon">
-            </a>
-        </div>
-    </nav>
-</header>
-    <script>
-        let menuList = document.getElementById("menuList")
-        menuList.style.maxHeight = "0px";
+        <nav>
+            <div class="logo">
+                <a href="{{ url_for('home') }}"> <!-- Link to the home page -->
+                    <img src="{{ url_for('static', filename='media/ERIC.D.png') }}" alt="Profile Icon"> <!-- Logo image -->
+                </a>
+            </div>
+            <ul id="menuList">
+                <li><a href="{{ url_for('booking') }}">Booking</a></li> <!-- Link to the booking page -->
+                <li><a href="{{ url_for('contact') }}">Contact</a></li> <!-- Link to the contact page -->
+                <li><a href="{{ url_for('about') }}">About</a></li> <!-- Link to the about page -->
+            </ul>
+            <div class="profileicon">
+                <a href="{{ url_for('account') }}"> <!-- Link to the account page -->
+                    <img src="{{ url_for('static', filename='media/profiileicon.png') }}" alt="Profile Icon"> <!-- Profile icon image -->
+                </a>
+            </div>
+        </nav>
+    </header>
 
-        function toggleMenu(){
-            if(menuList.style.maxHeight == "0px")
-            {
-                menuList.style.maxHeight = "300px";
-            }
-            else{
-                menuList.style.maxHeight = "0px";
+    <script>
+        let menuList = document.getElementById("menuList"); <!-- Get the menu list element -->
+        menuList.style.maxHeight = "0px"; <!-- Initially set the menu list height to 0 -->
+
+        function toggleMenu() {
+            if(menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "300px"; <!-- Expand the menu list -->
+            } else {
+                menuList.style.maxHeight = "0px"; <!-- Collapse the menu list -->
             }
         }
     </script>
 
-    </header>
-
-    <div class="parallax"></div>
+    <div class="parallax"></div> <!-- Parallax background section -->
 
     <main>
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="https://pitchbooking.com/img/_v1/hero/carousel-pitchbooking.webp" alt="Book You're Pitch Today" style="width:100%">
-                <div class="slide-text">Book Your Pitch Today!</div>
+                <img src="https://pitchbooking.com/img/_v1/hero/carousel-pitchbooking.webp" alt="Book You're Pitch Today" style="width:100%"> <!-- Slideshow image -->
+                <div class="slide-text">Book Your Pitch Today!</div> <!-- Caption text -->
             </div>
             <div class="mySlides fade">
-                <img src=" https://jfcsports.co.uk/wp-content/uploads/2022/08/bigstock-Boys-Running-Soccer-Balls-Betw-390988997.jpg" alt="Quality Equipment Available" style="width:100%">
-                <div class="slide-text">Quality Equipment Available</div>
+                <img src="https://jfcsports.co.uk/wp-content/uploads/2022/08/bigstock-Boys-Running-Soccer-Balls-Betw-390988997.jpg" alt="Quality Equipment Available" style="width:100%"> <!-- Slideshow image -->
+                <div class="slide-text">Quality Equipment Available</div> <!-- Caption text -->
             </div>
             <div class="mySlides fade">
-                <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/99/83/52.jpg" alt="Join Our Community" style="width:100%">
-                <div class="slide-text">Join Our Community</div>
-
+                <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/99/83/52.jpg" alt="Join Our Community" style="width:100%"> <!-- Slideshow image -->
+                <div class="slide-text">Join Our Community</div> <!-- Caption text -->
             </div>
             <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <!-- Previous button -->
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> <!-- Next button -->
         </div>
 
         <!-- The dots/circles -->
         <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span> <!-- Dot for the first slide -->
+            <span class="dot" onclick="currentSlide(2)"></span> <!-- Dot for the second slide -->
+            <span class="dot" onclick="currentSlide(3)"></span> <!-- Dot for the third slide -->
         </div>
 
         <!-- Welcome section -->
         <section class="welcome">
-            <h1>Welcome to Our Football Pitch Booking Site</h1>
-            <p>We provide the best football pitches for you and your team. Book a pitch online quickly and easily.</p>
+            <h1>Welcome to Our Football Pitch Booking Site</h1> <!-- Welcome heading -->
+            <p>We provide the best football pitches for you and your team. Book a pitch online quickly and easily.</p> <!-- Welcome message -->
         </section>
     </main>
 
- <footer>
-  <p>&copy; 2024 Your Company. All rights reserved.</p>
-  <p><a href="ts">Terms and Conditions</a></p>
-</footer>
-
-<div id="loader"></div>
+    <footer>
+        <p>&copy; 2024 Nexus Company. All rights reserved.</p> <!-- Footer copyright -->
+        <p><a href="ts">Terms and Conditions</a></p> <!-- Link to terms and conditions -->
+    </footer>
 </body>
-
 </html>
