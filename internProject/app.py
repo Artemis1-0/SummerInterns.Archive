@@ -64,15 +64,6 @@ def nav():
 def vdnav():
     return render_template('vdnav.html')
 
-@app.route('/admin')
-def admin():
-    if 'user_id' in session:
-            user_id = session['user_id']
-            account = Account.query.filter_by(id=user_id).first()
-            if account:
-                username = account.username
-                bookings = Booking.query.filter_by(email=account.email).all()
-                return render_template('admin.html', username=None, logged_in=False, bookings=[])
 
 
 @app.route('/test')
@@ -116,8 +107,7 @@ def new_booking():
     user_account = Account.query.filter_by(id=user_id).first()
 
     if not user_account:
-        flash('User account not found.', 'error')
-        return redirect(url_for('home'))
+        return redirect(url_for('signinpage'))
 
     email = user_account.email  # Retrieve the email from the user's account
     pitch = request.form.get('pitch')
@@ -136,7 +126,6 @@ def new_booking():
     try:
         db.session.add(new_booking)
         db.session.commit()
-        flash('Booking entered successfully!', 'success')
     except Exception as e:
         db.session.rollback()
         flash('An error occurred while booking the pitch.', 'error')
@@ -164,7 +153,6 @@ def edit_booking(booking_id):
 
     try:
         db.session.commit()
-        flash('Booking updated successfully!', 'success')
     except Exception as e:
         db.session.rollback()
         flash('An error occurred while updating the booking.', 'error')
@@ -230,7 +218,7 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop('user_id', None)
-    return redirect(url_for('home'))
+    return redirect(url_for('account'))
 
 
 
@@ -243,7 +231,6 @@ def delete_booking(booking_id):
     try:
         db.session.delete(booking)
         db.session.commit()
-        flash('Booking deleted successfully!', 'success')
     except Exception as e:
         db.session.rollback()
         flash('An error occurred while deleting the booking.', 'error')
