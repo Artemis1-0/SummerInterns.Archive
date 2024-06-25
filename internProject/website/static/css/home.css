@@ -177,7 +177,7 @@ main {
 .slide-text {
   color: #fff; /* Set text color to white */
   font-size: 24px; /* Set font size */
-  padding: 8px 12px; /* Add padding */
+  padding: 8px 1px; /* Add padding */
   position: absolute; /* Absolute positioning */
   bottom: 4px; /* Position at the bottom */
   width: 100%; /* Full width */
