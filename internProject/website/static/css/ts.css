@@ -13,7 +13,7 @@ body {
   font-family: Arial, sans-serif; /* Sets font family */
   margin: 0; /* Removes default margin */
   padding: 0; /* Removes default padding */
-  background: black; /* Sets background color to black */
+  background-color: #000000; /* Sets background color to black */
   background-size: 400%; /* Sets background size */
   background-repeat: no-repeat; /* Prevents background from repeating */
   line-height: 1.6; /* Sets line height */
@@ -150,7 +150,7 @@ nav {
 
 /* Styles for the parallax background */
 .parallax {
-  background-color: black; /* Sets background color to black */
+  background-color: rgb(3, 0, 25);; /* Sets background color to black */
   min-height: 500px; /* Minimum height */
   background-attachment: fixed; /* Fixes background position */
   background-position: center; /* Centers background image */
@@ -160,10 +160,13 @@ nav {
 
 /* Styles for the main content */
 main {
-  background-color: black; /* Sets background color to black */
+  background-color: rgb(3, 0, 25); /* Sets background color to black */
   padding: 20px; /* Adds padding */
   margin-top: 84px; /* Offsets fixed nav bar */
   box-sizing: border-box; /* Includes padding and border in element's total width and height */
+  animation:
+  colorChange auto linear forwards;
+animation-timeline: scroll(root);
 }
 
 /* Styles for the terms and conditions section */
@@ -171,8 +174,6 @@ main {
   max-width: 800px; /* Maximum width */
   margin: 0 auto; /* Centers horizontally */
   padding: 20px; /* Adds padding */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds shadow */
-  border-radius: 10px; /* Rounds corners */
 }
 
 /* Styles for h1 elements in the terms and conditions section */
@@ -257,4 +258,19 @@ footer {
 
 footer p a {
   color: white; /* Set link color */
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #000000;
+  }
+  25% {
+    background-color: #0a0f1c;
+  }
+  50% {
+    background-color: #061018;
+  }
+  100%{
+    background-color: rgb(0, 5, 19);;
+  }
 }
