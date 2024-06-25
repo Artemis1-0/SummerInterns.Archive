@@ -100,9 +100,12 @@ def is_booking_conflict(pitch, start, end, date, exclude_booking_id=None):
 
     existing_bookings = query.all()
     for booking in existing_bookings:
-        if (start < booking.end.strftime('%H:%M') and end > booking.start.strftime('%H:%M')):
+        booking_start = booking.start.strftime('%H:%M')
+        booking_end = booking.end.strftime('%H:%M')
+        if (start < booking_end and end > booking_start):
             return True
     return False
+
 
 @app.route('/new_booking', methods=['POST'])
 def new_booking():
@@ -139,7 +142,6 @@ def new_booking():
         flash('An error occurred while booking the pitch.', 'error')
 
     return redirect(url_for('home'))
-
 @app.route('/edit_booking/<int:booking_id>', methods=['POST'])
 def edit_booking(booking_id):
     booking = Booking.query.get_or_404(booking_id)
