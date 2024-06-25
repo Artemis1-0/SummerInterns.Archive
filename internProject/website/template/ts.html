@@ -1,77 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms and Conditions</title>
- <link rel="stylesheet" href="{{ url_for('static', filename='css/ts.css') }}">
+  <meta charset="UTF-8"> <!-- Specifies the character encoding for the HTML document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport to make the website responsive -->
+  <title>Terms and Conditions</title> <!-- Title of the webpage -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ts.css') }}"> <!-- Link to the external CSS file -->
 </head>
 <body>
   <header>
     <nav>
-        <div class="logo">
-         <a href="{{ url_for('home') }}">
-                <img src="{{ url_for('static', filename='media/ERIC.D.png') }}" alt="Profile Icon">
-            </a>        </div>
-        <ul id="menuList">
-        <li><a href="{{ url_for('booking') }}">Booking</a></li>
-        <li><a href="{{ url_for('contact') }}">Contact</a></li>
-        <li><a href="{{ url_for('about') }}">About</a></li>
+        <div class="logo"> <!-- Container for the logo -->
+          <a href="{{ url_for('home') }}"> <!-- Link to the home page -->
+                <img src="{{ url_for('static', filename='media/ERIC.D.png') }}" alt="Profile Icon"> <!-- Logo image -->
+            </a>
+        </div>
+        <ul id="menuList"> <!-- Navigation menu list -->
+          <li><a href="{{ url_for('booking') }}">Booking</a></li> <!-- Link to the booking page -->
+          <li><a href="{{ url_for('contact') }}">Contact</a></li> <!-- Link to the contact page -->
+          <li><a href="{{ url_for('about') }}">About</a></li> <!-- Link to the about page -->
         </ul>
-        <div class="profileicon">
-            <a href="{{ url_for('account') }}">
-                <img src="{{ url_for('static', filename='media/profiileicon.png') }}" alt="Profile Icon">
+        <div class="profileicon"> <!-- Container for the profile icon -->
+            <a href="{{ url_for('account') }}"> <!-- Link to the account page -->
+                <img src="{{ url_for('static', filename='media/profiileicon.png') }}" alt="Profile Icon"> <!-- Profile icon image -->
             </a>
         </div>
     </nav>
-</header>
+  </header>
 
   <main>
-    <section class="terms-and-conditions">
-      <h1>Terms and Conditions</h1>
-      <p>Welcome to our website! By accessing and using this site, you accept the following terms and conditions:</p>
+    <section class="terms-and-conditions"> <!-- Section for terms and conditions -->
+      <h1>Terms and Conditions</h1> <!-- Main heading for terms and conditions -->
+      <p>Welcome to our website! By accessing and using this site, you accept the following terms and conditions:</p> <!-- Introductory paragraph -->
 
-      <h2>1. Introduction</h2>
-      <p>These terms and conditions govern your use of our website. By using our website, you accept these terms and conditions in full.</p>
+      <h2>1. Introduction</h2> <!-- Subheading for introduction -->
+      <p>These terms and conditions govern your use of our website. By using our website, you accept these terms and conditions in full.</p> <!-- Content for introduction -->
 
-      <h2>2. Intellectual Property Rights</h2>
-      <p>Unless otherwise stated, we own the intellectual property rights in the website and material on the website. All these intellectual property rights are reserved.</p>
+      <h2>2. Intellectual Property Rights</h2> <!-- Subheading for intellectual property rights -->
+      <p>Unless otherwise stated, we own the intellectual property rights in the website and material on the website. All these intellectual property rights are reserved.</p> <!-- Content for intellectual property rights -->
 
-      <h2>3. License to Use Website</h2>
-      <p>You may view, download for caching purposes only, and print pages from the website for your own personal use, subject to the restrictions set out below.</p>
+      <h2>3. License to Use Website</h2> <!-- Subheading for license to use website -->
+      <p>You may view, download for caching purposes only, and print pages from the website for your own personal use, subject to the restrictions set out below.</p> <!-- Content for license to use website -->
 
-      <h2>4. Acceptable Use</h2>
-      <p>You must not use our website in any way that causes, or may cause, damage to the website or impairment of the availability or accessibility of the website.</p>
+      <h2>4. Acceptable Use</h2> <!-- Subheading for acceptable use -->
+      <p>You must not use our website in any way that causes, or may cause, damage to the website or impairment of the availability or accessibility of the website.</p> <!-- Content for acceptable use -->
 
-      <h2>5. Restricted Access</h2>
-      <p>Access to certain areas of our website is restricted. We reserve the right to restrict access to other areas of our website, or indeed our whole website, at our discretion.</p>
+      <h2>5. Restricted Access</h2> <!-- Subheading for restricted access -->
+      <p>Access to certain areas of our website is restricted. We reserve the right to restrict access to other areas of our website, or indeed our whole website, at our discretion.</p> <!-- Content for restricted access -->
 
-      <h2>6. User Content</h2>
-      <p>In these terms and conditions, "your user content" means material that you submit to our website, for whatever purpose.</p>
+      <h2>6. User Content</h2> <!-- Subheading for user content -->
+      <p>In these terms and conditions, "your user content" means material that you submit to our website, for whatever purpose.</p> <!-- Content for user content -->
 
-      <h2>7. Limitations of Liability</h2>
-      <p>We will not be liable to you in relation to the contents of, or use of, or otherwise in connection with, this website.</p>
+      <h2>7. Limitations of Liability</h2> <!-- Subheading for limitations of liability -->
+      <p>We will not be liable to you in relation to the contents of, or use of, or otherwise in connection with, this website.</p> <!-- Content for limitations of liability -->
 
-      <h2>8. Indemnity</h2>
-      <p>You hereby indemnify us and undertake to keep us indemnified against any losses, damages, costs, liabilities and expenses incurred or suffered by us arising out of any breach by you of any provision of these terms and conditions.</p>
+      <h2>8. Indemnity</h2> <!-- Subheading for indemnity -->
+      <p>You hereby indemnify us and undertake to keep us indemnified against any losses, damages, costs, liabilities and expenses incurred or suffered by us arising out of any breach by you of any provision of these terms and conditions.</p> <!-- Content for indemnity -->
 
-      <h2>9. Breaches of These Terms and Conditions</h2>
-      <p>Without prejudice to our other rights under these terms and conditions, if you breach these terms and conditions in any way, we may take such action as we deem appropriate to deal with the breach.</p>
+      <h2>9. Breaches of These Terms and Conditions</h2> <!-- Subheading for breaches of terms and conditions -->
+      <p>Without prejudice to our other rights under these terms and conditions, if you breach these terms and conditions in any way, we may take such action as we deem appropriate to deal with the breach.</p> <!-- Content for breaches of terms and conditions -->
 
-      <h2>10. Variation</h2>
-      <p>We may revise these terms and conditions from time-to-time. Revised terms and conditions will apply to the use of our website from the date of publication of the revised terms and conditions on our website.</p>
+      <h2>10. Variation</h2> <!-- Subheading for variation -->
+      <p>We may revise these terms and conditions from time-to-time. Revised terms and conditions will apply to the use of our website from the date of publication of the revised terms and conditions on our website.</p> <!-- Content for variation -->
 
-      <h2>11. Entire Agreement</h2>
-      <p>These terms and conditions constitute the entire agreement between you and us in relation to your use of our website and supersede all previous agreements in respect of your use of this website.</p>
+      <h2>11. Entire Agreement</h2> <!-- Subheading for entire agreement -->
+      <p>These terms and conditions constitute the entire agreement between you and us in relation to your use of our website and supersede all previous agreements in respect of your use of this website.</p> <!-- Content for entire agreement -->
 
-      <h2>12. Law and Jurisdiction</h2>
-      <p>These terms and conditions will be governed by and construed in accordance with the laws, and any disputes relating to these terms and conditions will be subject to the exclusive jurisdiction of the courts.</p>
+      <h2>12. Law and Jurisdiction</h2> <!-- Subheading for law and jurisdiction -->
+      <p>These terms and conditions will be governed by and construed in accordance with the laws, and any disputes relating to these terms and conditions will be subject to the exclusive jurisdiction of the courts.</p> <!-- Content for law and jurisdiction -->
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2024 Your Company. All rights reserved.</p>
-    <p><a href="ts.html">Terms and Conditions</a></p> <!-- Add link to T&C page in footer -->
+    <p>&copy; 2024 Your Company. All rights reserved.</p> <!-- Copyright notice -->
+    <p><a href="ts.html">Terms and Conditions</a></p> <!-- Link to the terms and conditions page in the footer -->
   </footer>
 </body>
 </html>

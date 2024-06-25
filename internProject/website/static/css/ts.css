@@ -1,226 +1,248 @@
+/* Keyframe animation named fade that changes opacity from 0 to 1 */
 @keyframes fade {
   0% {
       opacity: 0;
-
   }
   100% {
       opacity: 1;
   }
 }
 
+/* Styles for the body element */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: black;
-  background-size: 400%;
-  background-repeat: no-repeat;
-  line-height: 1.6;
-  color: #333;
+  font-family: Arial, sans-serif; /* Sets font family */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  background: black; /* Sets background color to black */
+  background-size: 400%; /* Sets background size */
+  background-repeat: no-repeat; /* Prevents background from repeating */
+  line-height: 1.6; /* Sets line height */
+  color: #333; /* Sets text color */
 }
 
-h2{
-  animation: fade 3s linear;
-  animation-timeline: view();
-  animation-range: entry 20% cover 50%;
+/* Styles for h2 elements */
+h2 {
+  animation: fade 3s linear; /* Applies fade animation over 3 seconds */
+  animation-timeline: view(); /* (Invalid CSS) Placeholder for animation timeline control */
+  animation-range: entry 20% cover 50%; /* (Invalid CSS) Placeholder for animation range control */
 }
 
-p{
-  animation: fade 3s linear;
-  animation-timeline: view();
-  animation-range: entry 20% cover 50%;
+/* Styles for p elements */
+p {
+  animation: fade 3s linear; /* Applies fade animation over 3 seconds */
+  animation-timeline: view(); /* (Invalid CSS) Placeholder for animation timeline control */
+  animation-range: entry 20% cover 50%; /* (Invalid CSS) Placeholder for animation range control */
 }
 
+/* Styles for the header element */
 header {
-  padding-bottom: 80px;
+  padding-bottom: 80px; /* Adds bottom padding */
 }
 
+/* Styles for the nav element */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* Set background color to black with 50% opacity */
-  width: 100%; /* Ensure full width of page */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  margin: 0; /* Remove default margin */
-  position: fixed; /* Fix the nav bar to the top */
-  top: 0;
-  left: 0;
-  z-index: 1000; /* Ensure it stays above other content */
+  display: flex; /* Uses flexbox layout */
+  justify-content: space-between; /* Spaces out items evenly */
+  align-items: center; /* Centers items vertically */
+  padding: 20px; /* Adds padding */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Includes padding and border in element's total width and height */
+  margin: 0; /* Removes default margin */
+  position: fixed; /* Fixes the nav bar at the top */
+  top: 0; /* Positions at the top */
+  left: 0; /* Positions at the left */
+  z-index: 1000; /* Keeps it above other content */
 }
 
+/* Styles for the logo class */
 .logo {
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
+  display: flex; /* Uses flexbox layout */
+  align-items: center; /* Centers items vertically */
+  padding-left: 40px; /* Adds left padding */
 }
 
+/* Styles for logo links */
 .logo a {
-  display: flex;
-  align-items: center;
+  display: flex; /* Uses flexbox layout */
+  align-items: center; /* Centers items vertically */
 }
 
+/* Styles for logo images */
 .logo img {
-  width: 30px;
-  height: auto;
-  transition: transform 0.3s ease;
+  width: 30px; /* Sets width */
+  height: auto; /* Maintains aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transform transition */
 }
 
+/* Hover effect for logo images */
 .logo img:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Scales image up */
 }
 
+/* Styles for the menu list */
 #menuList {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  display: flex; /* Uses flexbox layout */
+  justify-content: center; /* Centers items horizontally */
+  list-style-type: none; /* Removes list bullets */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
 }
 
+/* Styles for list items in the menu list */
 #menuList li {
-  margin-left: 50px;
-  margin-right: 50px;
-  letter-spacing: 4px;
+  margin-left: 50px; /* Adds left margin */
+  margin-right: 50px; /* Adds right margin */
+  letter-spacing: 4px; /* Increases letter spacing */
 }
 
+/* Styles for links in the menu list */
 #menuList li a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
-  font-size: 15px;
-  position: relative; /* Add relative positioning */
+  text-decoration: none; /* Removes underline */
+  color: #fff; /* Sets text color to white */
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease; /* Smooth transitions */
+  font-size: 15px; /* Sets font size */
+  position: relative; /* Positions relative for pseudo-elements */
 }
 
+/* Pseudo-element for hover underline effect */
 #menuList li a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 3px;
-  background: white;
-  transition: width 0.3s ease;
-  position: absolute;
-  left: 0;
-  bottom: -5px; /* Adjusts the distance between the text and the underline */
+  content: ''; /* Empty content */
+  display: block; /* Block-level element */
+  width: 0; /* Initial width */
+  height: 3px; /* Sets height */
+  background: white; /* Sets background color */
+  transition: width 0.3s ease; /* Smooth width transition */
+  position: absolute; /* Absolute positioning */
+  left: 0; /* Positions at the left */
+  bottom: -5px; /* Positions below the text */
 }
 
+/* Hover effect for links in the menu list */
 #menuList li a:hover::after {
-  width: 100%; /* Expands the underline to the full width of the text */
+  width: 100%; /* Expands underline to full width */
 }
 
+/* Styles for the profile icon section */
 .profileicon {
-  display: flex;
-  align-items: center;
-  padding-right: 50px;
+  display: flex; /* Uses flexbox layout */
+  align-items: center; /* Centers items vertically */
+  padding-right: 50px; /* Adds right padding */
 }
 
+/* Styles for links in the profile icon section */
 .profileicon a {
-  display: flex;
-  align-items: center;
+  display: flex; /* Uses flexbox layout */
+  align-items: center; /* Centers items vertically */
 }
 
-
+/* Styles for profile icon images */
 .profileicon img {
-  width: 40px;
-  height: auto;
-  transition: transform 0.3s ease;
+  width: 40px; /* Sets width */
+  height: auto; /* Maintains aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transform transition */
 }
 
+/* Hover effect for profile icon images */
 .profileicon img:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Scales image up */
 }
 
-/* Parallax background */
+/* Styles for the parallax background */
 .parallax {
-  /* The image used */
-  background-color: black;
-
-  /* Set a specific height */
-  min-height: 500px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: black; /* Sets background color to black */
+  min-height: 500px; /* Minimum height */
+  background-attachment: fixed; /* Fixes background position */
+  background-position: center; /* Centers background image */
+  background-repeat: no-repeat; /* Prevents background from repeating */
+  background-size: cover; /* Covers entire area */
 }
 
-/* Main content adjustments */
+/* Styles for the main content */
 main {
-  background-color: black;
-  padding: 20px;
-  margin-top: 84px; /* To offset the fixed nav bar */
-  box-sizing: border-box;
+  background-color: black; /* Sets background color to black */
+  padding: 20px; /* Adds padding */
+  margin-top: 84px; /* Offsets fixed nav bar */
+  box-sizing: border-box; /* Includes padding and border in element's total width and height */
 }
 
+/* Styles for the terms and conditions section */
 .terms-and-conditions {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Centers horizontally */
+  padding: 20px; /* Adds padding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds shadow */
+  border-radius: 10px; /* Rounds corners */
 }
 
+/* Styles for h1 elements in the terms and conditions section */
 .terms-and-conditions h1 {
-  pointer-events: none;
-  font-size: 50px;
-  background-image: linear-gradient(#183960, #102544);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: fade ease-in 1s;
-  margin-bottom: 20px;
+  pointer-events: none; /* Disables pointer events */
+  font-size: 50px; /* Sets font size */
+  background-image: linear-gradient(#183960, #102544); /* Sets gradient background */
+  -webkit-background-clip: text; /* Clips background to text (for WebKit browsers) */
+  background-clip: text; /* Clips background to text */
+  -webkit-text-fill-color: transparent; /* Fills text with transparent color (for WebKit browsers) */
+  animation: fade ease-in 1s; /* Applies fade animation */
+  margin-bottom: 20px; /* Adds bottom margin */
 }
 
+/* Styles for h2 elements in the terms and conditions section */
 .terms-and-conditions h2 {
-  font-size: 24px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: white;
+  font-size: 24px; /* Sets font size */
+  margin-top: 20px; /* Adds top margin */
+  margin-bottom: 10px; /* Adds bottom margin */
+  color: white; /* Sets text color */
 }
 
+/* Styles for p elements in the terms and conditions section */
 .terms-and-conditions p {
-  margin-bottom: 10px;
-  color: white;
+  margin-bottom: 10px; /* Adds bottom margin */
+  color: white; /* Sets text color */
 }
 
+/* Styles for ul elements in the terms and conditions section */
 .terms-and-conditions ul {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  color: white;
+  margin-bottom: 10px; /* Adds bottom margin */
+  padding-left: 20px; /* Adds left padding */
+  color: white; /* Sets text color */
 }
 
+/* Styles for li elements in the terms and conditions section */
 .terms-and-conditions ul li {
-  list-style-type: disc;
+  list-style-type: disc; /* Sets list item marker to disc */
 }
 
-/* Footer */
+/* Styles for the footer element */
 footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  background-color: #333; /* Sets background color */
+  color: white; /* Sets text color */
+  text-align: center; /* Centers text */
+  padding: 20px 0; /* Adds padding */
+  position: relative; /* Relative positioning */
+  bottom: 0; /* Positions at the bottom */
+  width: 100%; /* Full width */
 }
 
+/* Styles for links in the footer */
 footer a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: #fff; /* Sets text color */
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
+/* Hover effect for links in the footer */
 footer a:hover {
-  color: #ddd;
+  color: #ddd; /* Changes text color on hover */
 }
 
+/* Styles for p elements in the footer */
 footer p {
-  margin: 5px 0;
+  margin: 5px 0; /* Adds vertical margin */
 }
 
+/* Styles for flash messages with error class */
 .flash.error {
-     background-color: red;
-     color: white;
+  background-color: red; /* Sets background color to red */
+  color: white; /* Sets text color to white */
 }
