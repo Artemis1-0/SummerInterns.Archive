@@ -37,7 +37,7 @@
                 {% if messages %}
                     <ul class="flashes">
                         {% for category, message in messages %}
-                            <li class="{{ category }}">{{ message }}</li>
+                            <li class="{{ category }}" style="background-color:red; color: white;">{{ message }}</li>
                         {% endfor %}
                     </ul>
                 {% endif %}

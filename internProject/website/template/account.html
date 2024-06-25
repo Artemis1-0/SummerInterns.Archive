@@ -39,7 +39,7 @@
             <h2>Logged in as: {{ username }}</h2>
             <a href="{{ url_for('logout') }}" id="logoutBtn" class="btn">Log Out</a>
             <div id="myBookings">
-                <h2>My Bookings</h2>
+                <h2>Bookings</h2>
                 {% for booking in bookings %}
                 <div class="booking">
                     <p>Pitch: {{ booking.pitch }}</p>

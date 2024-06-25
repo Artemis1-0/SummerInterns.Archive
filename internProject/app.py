@@ -212,7 +212,7 @@ def login():
         account = Account.query.filter_by(email=email, password=password).first()
         if account:
             session['user_id'] = account.id
-            return redirect(url_for('account'))
+            return redirect(url_for('booking'))
         else:
             flash('Invalid email or password', 'error')
             return render_template('signinpage.html')

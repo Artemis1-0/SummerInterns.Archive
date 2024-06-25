@@ -253,10 +253,6 @@ nav {
   color: #333;
 }
 
-#signupform {
-  display: flex;
-  justify-content: center;
-}
 
 form.container {
   width: 100%;
