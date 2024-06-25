@@ -54,9 +54,13 @@
                     </form>
                     <div id="editForm-{{ booking.id }}" class="editForm" style="display:none;">
                         <form method="POST" action="{{ url_for('edit_booking', booking_id=booking.id) }}">
-                            <label for="pitch">Pitch:</label>
-                            <input type="text" id="pitch" name="pitch" value="{{ booking.pitch }}">
-                            <br>
+                <select id="pitch" name="pitch" required>
+                    <option value="{{ booking.pitch}}" disabled selected>{{ booking.pitch}}</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br>
                             <label for="start">Start Time:</label>
                             <input type="time" id="start" name="start" value="{{ booking.start }}">
                             <br>
