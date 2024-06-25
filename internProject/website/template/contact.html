@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact Us</title>
+    <!-- Meta information about the document -->
+    <meta charset="UTF-8">   <!-- Specifies the character encoding for the HTML document -->
+    <title>Contact Us</title> <!-- The title of the web page -->
+    <!-- Link to an external CSS file for styling -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+      <!-- Link to an external CSS file for Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- Link to an external JavaScript file for Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+     <!-- Link to a local JavaScript file for additional functionality -->
     <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
  <header>
     <nav>
         <div class="logo">
+             <!-- Link to the home page with a logo image -->
          <a href="{{ url_for('home') }}">
                 <img src="{{ url_for('static', filename='media/ERIC.D.png') }}" alt="Profile Icon">
             </a>        </div>
         <ul id="menuList">
+            <!-- Navigation links to other pages -->
         <li><a href="{{ url_for('booking') }}">Booking</a></li>
         <li><a href="{{ url_for('contact') }}">Contact</a></li>
         <li><a href="{{ url_for('about') }}">About</a></li>
         </ul>
         <div class="profileicon">
+             <!-- Link to the account page with a profile icon image -->
             <a href="{{ url_for('account') }}">
                 <img src="{{ url_for('static', filename='media/profiileicon.png') }}" alt="Profile Icon">
             </a>
@@ -29,21 +37,26 @@
 </header>
   <div class="container">
       <section class="banner">
+          <!-- Banner image and introductory text -->
         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230822131732/images.png" alt="Welcome to our Contact Us page">
         <h1>Get in Touch With Us</h1>
         <p>We're here to answer any questions you may have.</p>
       </section>
       <section class="contact-info">
+          <!-- Contact information section -->
         <h2>Contact Information</h2>
           <address>
             Nexus<br>
             Ericsson Software Campus<br>
             Cornamaddy, Athlone, Co. Westmeath<br>
+               <!-- Clickable phone number -->
             Phone: <a href="tel:(090) 643 1000">123-456-7890</a><br>
+               <!-- Clickable email address -->
             Email: <a href="mailto:Nexus@gmail.com">Nexus@ericsson.com</a>
           </address>
       </section>
   <div class="wrapper">
+       <!-- Social media links with icons and tooltips -->
     <div class="icon facebook">
       <div class="tooltip">
         Facebook
@@ -68,6 +81,7 @@
 </div>
 
 <footer>
+    <!-- Footer section with copyright and a link to the Terms and Conditions page -->
   <p>&copy; 2024 Your Company. All rights reserved.</p>
   <p><a href="ts">Terms and Conditions</a></p> <!-- Add link to T&C page in footer -->
 </footer>
