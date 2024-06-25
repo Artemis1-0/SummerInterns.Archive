@@ -72,7 +72,7 @@ def admin():
             if account:
                 username = account.username
                 bookings = Booking.query.filter_by(email=account.email).all()
-                    return render_template('admin.html', username=None, logged_in=False, bookings=[])
+                return render_template('admin.html', username=None, logged_in=False, bookings=[])
 
 
 @app.route('/test')
