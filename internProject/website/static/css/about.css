@@ -239,5 +239,10 @@ footer p a {
 }
 
 .map{
-    padding-left:400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2{
+text-align: center;
 }
