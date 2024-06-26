@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>About</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title> <!-- Title of the webpage -->
+    <meta charset="utf-8">  <!-- Character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport settings for responsive design -->
+     <!-- Link to an external CSS file for styling the About page -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <!-- Firebase JavaScript SDKs for initializing Firebase app and database -->
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+     <!-- Link to a local JavaScript file for additional functionality -->
     <script src="{{ url_for('static', filename='scripts/test.js') }}"></script>
+    <!-- Favicon for the webpage -->
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/svg/home.svg') }}">
 </head>
 <body>
 <header>
     <nav>
         <div class="logo">
+            <!-- Link to the home page with a logo image -->
          <a href="{{ url_for('home') }}">
                 <img src="{{ url_for('static', filename='media/ERIC.D.png') }}" alt="Profile Icon">
             </a>
         </div>
+        <!-- Navigation menu list -->
         <ul id="menuList">
             <li><a href="{{ url_for('booking') }}">Booking</a></li>
             <li><a href="{{ url_for('contact') }}">Contact</a></li>
             <li><a href="{{ url_for('about') }}">About</a></li>
         </ul>
+        <!-- Profile icon linking to account page -->
         <div class="profileicon">
             <a href="{{ url_for('account') }}">
                 <img src="{{ url_for('static', filename='media/profiileicon.png') }}" alt="Profile Icon">
@@ -33,11 +40,12 @@
 
 <h2 class="heading">What we offer</h2> <!-- Place "What we offer" heading here -->
 
-<div class="parallax"></div>
+<div class="parallax"></div>  <!-- Parallax effect element -->
 
 <div class="content">
     <div class="wrapper">
         <div class="container">
+             <!-- Input radio buttons and labels for different pitch offerings -->
             <input type="radio" name="slide" id="c1" checked>
             <label for="c1" class="card">
                 <div class="row">
