@@ -207,7 +207,6 @@ def ts():
 def signinpage():
     return render_template('signinpage.html')
 
-
 @app.route('/create_account', methods=['GET', 'POST'])
 def create_account():
     if request.method == 'POST':
@@ -218,12 +217,20 @@ def create_account():
         # Check if email or username already exists
         existing_user = Account.query.filter((Account.email == email) | (Account.username == username)).first()
         if existing_user:
-            return redirect(url_for('signinpage'))
+            flash('Email or username already exists.', 'signuperror')
+            return redirect(url_for('signup'))
         new_account = Account(username=username, email=email, password=password, role=role)
-        db.session.add(new_account)
-        db.session.commit()
-        return redirect(url_for('signinpage'))
+        try:
+            db.session.add(new_account)
+            db.session.commit()
+            # Log in the new user by creating a session
+            session['user_id'] = new_account.id
+            return redirect(url_for('booking'))
+        except Exception as e:
+            db.session.rollback()
+            return redirect(url_for('signup'))
     return render_template('signup.html')
+
 
 
 @app.route('/login', methods=['GET', 'POST'])

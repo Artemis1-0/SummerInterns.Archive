@@ -35,6 +35,17 @@
     <div class="container">
         <div class="middle">
             <div class="text">Sign Up</div>
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class="flashes">
+                        {% for category, message in messages %}
+                            {% if category == 'signuperror' %}
+                                <li class="{{ category }}" style="background-color:red; color: white;">{{ message }}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
         </div>
 
     </div>
