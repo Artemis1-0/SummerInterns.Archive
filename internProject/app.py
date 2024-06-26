@@ -145,7 +145,7 @@ def new_booking():
         db.session.commit()
     except Exception as e:
         db.session.rollback()
-        flash('An error occurred while booking the pitch.', 'error')
+        flash('An error occurred while booking the pitch.', 'bookingerror')
     return redirect(url_for('home'))
 
 
@@ -159,7 +159,7 @@ def edit_booking(booking_id):
     amenities = request.form['amenities']
     # Check for booking conflicts
     if is_booking_conflict(pitch, start, end, date, exclude_booking_id=booking_id):
-        flash('The pitch is already booked for the selected time.', 'error')
+        flash('The pitch is already booked for the selected time.', 'accounterror')
         return redirect(url_for('account'))
     booking.pitch = pitch
     booking.start = start
@@ -170,7 +170,7 @@ def edit_booking(booking_id):
         db.session.commit()
     except Exception as e:
         db.session.rollback()
-        flash('An error occurred while updating the booking.', 'error')
+        flash('An error occurred while updating the booking.', 'accounterror')
     return redirect(url_for('account'))
 
 
@@ -232,7 +232,7 @@ def login():
             session['user_id'] = account.id
             return redirect(url_for('booking'))
         else:
-            flash('Invalid email or password', 'error')
+            flash('Invalid email or password', 'loginerror')
             return render_template('signinpage.html')
 
 
@@ -250,7 +250,7 @@ def delete_booking(booking_id):
         db.session.commit()
     except Exception as e:
         db.session.rollback()
-        flash('An error occurred while deleting the booking.', 'error')
+        flash('An error occurred while deleting the booking.', 'acounterror')
     return redirect(url_for('account'))
 
 
