@@ -173,22 +173,24 @@ def edit_booking(booking_id):
         flash('An error occurred while updating the booking.', 'accounterror')
     return redirect(url_for('account'))
 
-
-@app.route('/account')
-def account():
-    if 'user_id' in session:
-        user_id = session['user_id']
-        account = Account.query.filter_by(id=user_id).first()
-        if account:
-            username = account.username
-            if account.role == 'admin':
-                bookings = Booking.query.all()  # Fetch all bookings for admin
-            else:
-                bookings = Booking.query.filter_by(email=account.email).all()
-            return render_template('account.html', username=username, logged_in=True, bookings=bookings)
-    return render_template('account.html', username=None, logged_in=False, bookings=[])
-
-
+if account.role == 'user' or user.id not in session:
+    @app.route('/account')
+    def account():
+        if 'user_id' in session:
+            user_id = session['user_id']
+            account = Account.query.filter_by(id=user_id).first()
+            if account:
+                username = account.username
+                if account.role == 'admin':
+                    bookings = Booking.query.all()  # Fetch all bookings for admin
+                else:
+                    bookings = Booking.query.filter_by(email=account.email).all()
+                return render_template('account.html', username=username, logged_in=True, bookings=bookings)
+        return render_template('account.html', username=None, logged_in=False, bookings=[])
+else:
+    @app.route('/account')
+    def account():
+        return render_template(admin.html)
 @app.route('/signup')
 def signup():
     return render_template('signup.html')
