@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Enum, func
 
+
 # Database configuration
 USERNAME = 'root'
 PASSWORD = ''
@@ -99,12 +100,15 @@ def admin():
                 bookings = Booking.query.all()  # Fetch all bookings for admin
                 user_no = count_account_rows()
                 booking_no = count_bookings()
+                pitch1_degrees, pitch2_degrees, pitch3_degrees = calculate_pie_chart_degrees()
+    
+                css = generate_pie_chart_css(pitch1_degrees, pitch2_degrees, pitch3_degrees)
+
             else:
             # Render a 404 page if the user is not an admin
                 return render_template('404.html'), 404
-            return render_template('admin.html', username=username, logged_in=True, bookings=bookings, user_no=user_no, booking_no=booking_no)
-    return render_template('account.html', username=None, logged_in=False, bookings=[], user_no=[], booking_no=[])
-
+            return render_template('admin.html', username=username, logged_in=True, bookings=bookings, user_no=user_no, booking_no=booking_no, pie_chart_css=css)
+    return render_template('account.html', username=None, logged_in=False, bookings=[], user_no=[], booking_no=[], pie_chart_css=[])
 
 
 # Check for overlapping bookings
@@ -230,12 +234,14 @@ def login():
         account = Account.query.filter_by(email=email, password=password).first()
         if account:
             session['user_id'] = account.id
-            return redirect(url_for('booking'))
+            if account.role == 'admin':
+                return redirect(url_for('admin'))
+            else:
+                return redirect(url_for('booking'))
         else:
             flash('Invalid email or password', 'loginerror')
             return render_template('signinpage.html')
-
-
+        
 @app.route('/logout')
 def logout():
     session.pop('user_id', None)
@@ -287,6 +293,71 @@ def count_bookings():
         booking_count = db.session.query(func.count(Booking.id)).scalar()
         print(f"Number of bookings: {booking_count}")
         return booking_count
+    
+def get_booking_counts():
+    with app.app_context():
+    # Query the database to get the number of bookings for each pitch
+        pitch_counts = db.session.query(Booking.pitch, func.count(Booking.id)).group_by(Booking.pitch).all()
+
+    # Initialize variables to store the counts for each pitch
+    pitch1_count = 0
+    pitch2_count = 0
+    pitch3_count = 0
+
+    # Iterate over the results and update the counts
+    for pitch, count in pitch_counts:
+        if pitch == 1:
+            pitch1_count = count
+        elif pitch == 2:
+            pitch2_count = count
+        elif pitch == 3:
+            pitch3_count = count
+
+    # Return the counts
+    return pitch1_count, pitch2_count, pitch3_count
+
+# Call the function to get the booking counts
+pitch1_count, pitch2_count, pitch3_count = get_booking_counts()
+
+def calculate_pie_chart_degrees():
+    # Get the booking counts
+    pitch1_count, pitch2_count, pitch3_count = get_booking_counts()
+
+    # Calculate the total number of bookings
+    total_bookings = pitch1_count + pitch2_count + pitch3_count
+
+    # Calculate the degrees for each pitch
+    pitch1_degrees = (pitch1_count / total_bookings) * 360
+    pitch2_degrees = (pitch2_count / total_bookings) * 360
+    pitch3_degrees = (pitch3_count / total_bookings) * 360
+
+    return pitch1_degrees, pitch2_degrees, pitch3_degrees
+
+# Example usage
+pitch1_degrees, pitch2_degrees, pitch3_degrees = calculate_pie_chart_degrees()
+
+def generate_pie_chart_css(pitch1_degrees, pitch2_degrees, pitch3_degrees):
+    return f"""
+    .piechart {{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: conic-gradient(
+            #192A51 {pitch1_degrees}deg,
+            #b889ce 0 {pitch2_degrees}deg,
+            #6CCFF6 0 {pitch3_degrees}deg
+        );
+    }}
+    """
+
+# Print the degrees for each pitch
+print(f"Degrees for Pitch 1: {pitch1_degrees}")
+print(f"Degrees for Pitch 2: {pitch2_degrees}")
+print(f"Degrees for Pitch 3: {pitch3_degrees}")
+# Print the counts
+print(f"Number of bookings for Pitch 1: {pitch1_count}")
+print(f"Number of bookings for Pitch 2: {pitch2_count}")
+print(f"Number of bookings for Pitch 3: {pitch3_count}")
 
 # Other routes and functions
 @app.errorhandler(404)
