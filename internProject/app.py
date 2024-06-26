@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import Enum
+from sqlalchemy import Enum, func
 
 # Database configuration
 USERNAME = 'root'
@@ -87,6 +87,24 @@ def form_r():
 @app.route('/account_r')
 def account_r():
     return render_template('account_r.html', username=None, logged_in=False, bookings=[])
+
+@app.route('/admin')
+def admin():
+    if 'user_id' in session:
+        user_id = session['user_id']
+        account = Account.query.filter_by(id=user_id).first()
+        if account:
+            username = account.username
+            if account.role == 'admin':
+                bookings = Booking.query.all()  # Fetch all bookings for admin
+                user_no = count_account_rows()
+                booking_no = count_bookings()
+            else:
+            # Render a 404 page if the user is not an admin
+                return render_template('404.html'), 404
+            return render_template('admin.html', username=username, logged_in=True, bookings=bookings, user_no=user_no, booking_no=booking_no)
+    return render_template('account.html', username=None, logged_in=False, bookings=[], user_no=[], booking_no=[])
+
 
 
 # Check for overlapping bookings
@@ -257,6 +275,18 @@ def admin_bookings():
     bookings = Booking.query.all()
     return render_template('admin.html', bookings=bookings)
 
+# Function to count rows in the account table
+def count_account_rows():
+    with app.app_context():
+        row_count = db.session.query(func.count(Account.id)).scalar()
+        print(f"Number of rows in the account table: {row_count}")
+        return row_count
+
+def count_bookings():
+    with app.app_context():
+        booking_count = db.session.query(func.count(Booking.id)).scalar()
+        print(f"Number of bookings: {booking_count}")
+        return booking_count
 
 # Other routes and functions
 @app.errorhandler(404)
