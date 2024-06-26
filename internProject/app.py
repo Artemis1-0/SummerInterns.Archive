@@ -189,7 +189,7 @@ def account():
             else:
                 bookings = Booking.query.filter_by(email=account.email).all()
             return render_template('account.html', username=username, logged_in=True, bookings=bookings)
-        return render_template('account.html', username=None, logged_in=False, bookings=[])
+    return render_template('account.html', username=None, logged_in=False, bookings=[])
 
 @app.route('/signup')
 def signup():
