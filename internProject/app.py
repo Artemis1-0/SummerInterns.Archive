@@ -345,9 +345,9 @@ def generate_pie_chart_css(pitch1_degrees, pitch2_degrees, pitch3_degrees):
         height: 100px;
         border-radius: 50%;
         background-image: conic-gradient(
-            #192A51 {pitch1_degrees}deg,
-            #b889ce 0 {pitch2_degrees}deg,
-            #6CCFF6 0 {pitch3_degrees}deg
+            #192A51 0deg, #192A51 {pitch1_degrees}deg,
+            #b889ce {pitch1_degrees}deg, #b889ce { pitch1_degrees + pitch2_degrees }deg,
+            #6CCFF6 {pitch2_degrees}deg, #6CCFF6 {pitch3_degrees}deg
         );
     }}
     """
