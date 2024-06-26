@@ -26,19 +26,9 @@
     </nav>
 </header>
 <body>
-    <div class="side-menu">
-        <div class="brand-name">
-            <h1>Nexus Admin</h1>
-        </div>
-        <ul>
-            <li><img src="dashboard (2).png" alt="">&nbsp; <span>Dashboard</span> </li>
-            <li><img src="teacher2.png" alt="">&nbsp;<span>Past</span> </li>
-            <li><img src="school.png" alt="">&nbsp;<span>Upcoming</span> </li>
-            <li><img src="help-web-button.png" alt="">&nbsp; <span>Help</span></li>
-            <li><img src="settings.png" alt="">&nbsp;<span>Settings</span> </li>
-        </ul>
-    </div>
+
     <div class="container">
+        <h1 class="main-title">Admin</h1>
         <div class="content">
             <div class="cards">
                 <div class="card">
@@ -81,6 +71,7 @@
                     </div>
                     <table>
                         <tr>
+                            <th>User</th>
                             <th>Pitch</th>
                             <th>Date</th>
                             <th>Start Time</th>
@@ -91,6 +82,7 @@
                         </tr>
                         <tr>
                             {% for booking in bookings %}
+                            <td>{{ booking.email}}</td>
                             <td>{{ booking.pitch }}</td>
                             <td>{{ booking.date }}</td>
                             <td>{{ booking.start }}</td>
@@ -126,36 +118,17 @@
                 </div>
                 <div class="new-students">
                     <div class="title">
-                        <h2>New Users</h2>
-                        <a href="#" class="btn">View All</a>
+                        <h2>Users</h2>
                     </div>
                     <table>
                         <tr>
-                            <th>Profile</th>
                             <th>Name</th>
                             <th>option</th>
                         </tr>
                         <tr>
-                            <td><img src="user.png" alt=""></td>
                             <td>John Steve Doe</td>
                             <td><img src="info.png" alt=""></td>
                         </tr>
-                        <tr>
-                            <td><img src="user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="info.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td><img src="user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="info.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td><img src="user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="info.png" alt=""></td>
-                        </tr>
-
                     </table>
                 </div>
             </div>
