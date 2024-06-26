@@ -1,84 +1,83 @@
 /* Reset and basic styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("https://img.freepik.com/premium-photo/football-balls-object-sport-ball-3d-design-football-element_262243-883.jpg")
+  font-family: Arial, sans-serif;  /* Set font family for the body */
+  margin: 0;  /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-size: cover;  /* Ensure background covers the entire area */
+  background-repeat: no-repeat; /* Prevent background from repeating */
+  background-image: url("https://img.freepik.com/premium-photo/football-balls-object-sport-ball-3d-design-football-element_262243-883.jpg")  /* Set background image */
 }
-
 header {
   padding-bottom: 80px;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  display: flex;   /* Use flexbox for layout */
+  justify-content: space-between;   /* Space out items equally */
+  align-items: center;   /* Center items vertically */
+  padding: 20px;  /* Add padding around nav */
   background-color: rgba(0, 0, 0, 0.8); /* Set background color to black with 50% opacity */
   width: 100%; /* Ensure full width of page */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
   margin: 0; /* Remove default margin */
   position: fixed; /* Fix the nav bar to the top */
-  top: 0;
-  left: 0;
+  top: 0; /* Align nav to the top */
+  left: 0;  /* Align nav to the left */
   z-index: 10000; /* Ensure it stays above other content */
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
+  display: flex;  /* Use flexbox for layout */
+  align-items: center;  /* Center items vertically */
+  padding-left: 40px;  /* Add padding to the left */
 }
 
 .logo a {
-  display: flex;
-  align-items: center;
+  display: flex;  /* Use flexbox for layout */
+  align-items: center;  /* Center items vertically */
 }
 
 .logo img {
-  width: 30px;
-  height: auto;
-  transition: transform 0.3s ease;
+  width: 30px;  /* Set width of logo image */
+  height: auto;   /* Maintain aspect ratio */
+  transition: transform 0.3s ease;  /* Add transition for hover effect */
 }
 
 .logo img:hover {
-  transform: scale(1.1);
+  transform: scale(1.1);  /* Scale up logo on hover */
 }
 
 #menuList {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  display: flex;  /* Use flexbox for layout */
+  justify-content: center;  /* Center items horizontally */
+  list-style-type: none;  /* Remove default list styles */
+  margin: 0;  /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
 #menuList li {
-  margin-left: 50px;
-  margin-right: 50px;
-  letter-spacing: 4px;
+  margin-left: 50px; /* Add margin to the left */
+  margin-right: 50px; /* Add margin to the right */
+  letter-spacing: 4px; /* Add letter spacing */
 }
 
 #menuList li a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
-  font-size: 15px;
+  text-decoration: none; /* Add letter spacing */
+  color: #fff; /* Set text color to white */
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;  /* Add transition for hover effects */
+  font-size: 15px; /* Set font size */
   position: relative; /* Add relative positioning */
 }
 
 #menuList li a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 3px;
-  background: white;
-  transition: width 0.3s ease;
-  position: absolute;
-  left: 0;
+  content: '';   /* Add empty content */
+  display: block;  /* Display as block */
+  width: 0;  /* Set initial width to 0 */
+  height: 3px; /* Set height */
+  background: white;  /* Set background color */
+  transition: width 0.3s ease; /* Add transition for width */
+  position: absolute; /* Position absolutely */
+  left: 0; /* Align to the left */
   bottom: -5px; /* Adjusts the distance between the text and the underline */
 }
 
@@ -87,14 +86,14 @@ nav {
 }
 
 .profileicon {
-  display: flex;
-  align-items: center;
-  padding-right: 50px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  padding-right: 50px; /* Add padding to the right */
 }
 
 .profileicon a {
-  display: flex;
-  align-items: center;
+  display: flex; /* Use flexbox for layout */
+  align-items: center;  /* Center items vertically */
 }
 
 .profileicon img {
