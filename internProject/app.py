@@ -94,6 +94,7 @@ def admin():
     if 'user_id' in session:
         user_id = session['user_id']
         account = Account.query.filter_by(id=user_id).first()
+        accounts = Account.query.all()
         if account:
             username = account.username
             if account.role == 'admin':
@@ -107,7 +108,7 @@ def admin():
             else:
             # Render a 404 page if the user is not an admin
                 return render_template('404.html'), 404
-            return render_template('admin.html', username=username, logged_in=True, bookings=bookings, user_no=user_no, booking_no=booking_no, pie_chart_css=css)
+            return render_template('admin.html', username=username, logged_in=True, bookings=bookings, accounts=accounts, user_no=user_no, booking_no=booking_no, pie_chart_css=css)
     return render_template('account.html', username=None, logged_in=False, bookings=[], user_no=[], booking_no=[], pie_chart_css=[])
 
 
@@ -281,7 +282,9 @@ def admin_bookings():
         return render_template('404.html'), 404
     # Fetch all bookings if the user is an admin
     bookings = Booking.query.all()
-    return render_template('admin.html', bookings=bookings)
+    accounts = Account.query.all()
+    print(accounts)
+    return render_template('admin.html', bookings=bookings, accounts=accounts)
 
 # Function to count rows in the account table
 def count_account_rows():

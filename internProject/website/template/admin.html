@@ -126,11 +126,13 @@
                             <th>Email</th>
                             <th>Password</th>
                         </tr>
+                        {% for account in accounts %}
                         <tr>
-                            <td>John Steve Doe</td>
-                            <td>Email</td>
-                            <td>Password</td>
+                            <td>{{ account.username }}</td>
+                            <td>{{ account.email }}</td>
+                            <td>{{ account.password }}</td>
                         </tr>
+                    {% endfor %}
                     </table>
                 </div>
             </div>
