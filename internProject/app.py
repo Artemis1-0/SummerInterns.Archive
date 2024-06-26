@@ -203,7 +203,6 @@ def ts():
 def signinpage():
     return render_template('signinpage.html')
 
-
 @app.route('/create_account', methods=['GET', 'POST'])
 def create_account():
     if request.method == 'POST':
