@@ -35,7 +35,7 @@
                 {% if messages %}
                     <ul class="flashes">
                         {% for category, message in messages %}
-                            {% if category = 'loginerror' %}
+                            {% if category == 'loginerror' %}
                                 <li class="{{ category }}" style="background-color:red; color: white;">{{ message }}</li>
                             {% endif %}
                         {% endfor %}
