@@ -28,15 +28,15 @@
     </nav>
 </header>
 <div class="container">
-    <h1>Welcome to My Account</h1>
     <div id="accountContent">
         <div id="loggedOut" class="accountSection">
+            <h1>Welcome to My Account</h1>
             <h2>Sign In or Sign Up</h2>
             <a href="{{ url_for('signinpage') }}" class="btn">Sign In</a>
             <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
         </div>
         <div id="loggedIn" class="accountSection">
-            <h2>Logged in as: {{ username }}</h2>
+            <h1>Welcome, {{ username }}</h1>
             <a href="{{ url_for('logout') }}" id="logoutBtn" class="btn">Log Out</a>
             <div id="myBookings">
                 <h2>Bookings</h2>
