@@ -204,7 +204,7 @@ td {
     align-items: flex-start;
     flex-wrap: wrap;
 }
-.container .content .content-2 .recent-payments {
+.container .content .content-2 .bookings {
     border-radius: 8px;
     min-height: 50vh;
     flex: 5;
@@ -214,7 +214,7 @@ td {
     display: flex;
     flex-direction: column;
 }
-.container .content .content-2 .new-students {
+.container .content .content-2 .users {
     border-radius: 8px;
     flex: 2;
     background: white;
@@ -224,7 +224,7 @@ td {
     display: flex;
     flex-direction: column;
 }
-.container .content .content-2 .new-students table td:nth-child(1) img {
+.container .content .content-2 .users table td:nth-child(1) img {
     height: 40px;
     width: 40px;
 }

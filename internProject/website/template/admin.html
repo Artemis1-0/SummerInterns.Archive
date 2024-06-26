@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="content-2">
-                <div class="recent-payments">
+                <div class="bookings">
                     <div class="title">
                         <h2>All Bookings</h2>
                     </div>
@@ -89,9 +89,9 @@
                             <td>{{ booking.end }}</td>
                             <td>{{ booking.amenities }}</td>
                             <td><button class="btn" onclick="toggleEditForm('{{ booking.id }}')">Edit</button></td>
-                            <td><form method="POST" action="{{ url_for('delete_booking', booking_id=booking.id) }}" style="display:inline;">
-                                    <button type="submit" class="btn">Delete</button>
-                                </form>
+                            <td><form method="POST" action="{{ url_for('delete_booking', booking_id=booking.id) }}" style="display:inline;" onsubmit="return confirmDelete();">
+                                <button type="submit" class="btn">Delete</button>
+                            </form>
                             </td>
                     <div id="editForm-{{ booking.id }}" class="editForm" style="display:none;">
                       <form method="POST" action="{{ url_for('edit_booking', booking_id=booking.id) }}">
@@ -116,18 +116,20 @@
                         {% endfor %}
                     </table>
                 </div>
-                <div class="new-students">
+                <div class="users">
                     <div class="title">
                         <h2>Users</h2>
                     </div>
                     <table>
                         <tr>
                             <th>Name</th>
-                            <th>option</th>
+                            <th>Email</th>
+                            <th>Password</th>
                         </tr>
                         <tr>
                             <td>John Steve Doe</td>
-                            <td><img src="info.png" alt=""></td>
+                            <td>Email</td>
+                            <td>Password</td>
                         </tr>
                     </table>
                 </div>
