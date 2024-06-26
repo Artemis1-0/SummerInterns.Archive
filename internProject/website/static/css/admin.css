@@ -26,6 +26,18 @@ a {
 li {
     list-style: none;
 }
+
+.main-title {
+    pointer-events: none;
+    font-size: 5rem;
+    background-image: linear-gradient(#183960, #102544);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fade ease-in 1s;
+    text-align: center;
+}
+
 h1,
 h2 {
     color: #444;
@@ -96,8 +108,6 @@ td {
 }
 .container {
     position: absolute;
-    right: 0;
-    width: 80vw;
     height: 100vh;
     background: #f1f1f1;
 }
@@ -166,7 +176,6 @@ td {
 }
 .container .content {
     position: relative;
-    margin-top: 10vh;
     min-height: 90vh;
     background: #f1f1f1;
 }
@@ -276,7 +285,7 @@ td {
 
 header {
     background-color: rgba(0, 0, 0, 0.7); /* Set background to black with 70% opacity */
-    padding-bottom: 13.4vh;
+    padding-bottom: 15.8vh;
   }
   
   
