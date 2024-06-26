@@ -37,6 +37,8 @@
         </div>
         <div id="loggedIn" class="accountSection">
             <h1>Welcome, {{ username }}</h1>
+            <a href="{{ url_for('admin') }}" class="btn">Admin Page</a>
+
             <a href="{{ url_for('logout') }}" id="logoutBtn" class="btn">Log Out</a>
             <div id="myBookings">
                 <h2>Bookings</h2>

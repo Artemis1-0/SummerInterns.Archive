@@ -177,7 +177,6 @@ def edit_booking(booking_id):
         flash('An error occurred while updating the booking.', 'accounterror')
     return redirect(url_for('account'))
 
-
 @app.route('/account')
 def account():
     if 'user_id' in session:
@@ -185,13 +184,9 @@ def account():
         account = Account.query.filter_by(id=user_id).first()
         if account:
             username = account.username
-            if account.role == 'admin':
-                bookings = Booking.query.all()  # Fetch all bookings for admin
-            else:
-                bookings = Booking.query.filter_by(email=account.email).all()
+            bookings = Booking.query.filter_by(email=account.email).all()
             return render_template('account.html', username=username, logged_in=True, bookings=bookings)
     return render_template('account.html', username=None, logged_in=False, bookings=[])
-
 
 @app.route('/signup')
 def signup():
